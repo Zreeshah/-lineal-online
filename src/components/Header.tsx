@@ -1,8 +1,6 @@
-
 import React from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Ruler } from 'lucide-react';
 import MenuButton from './MenuButton';
 import {
   NavigationMenu,
@@ -11,138 +9,71 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle
-} from "@/components/ui/navigation-menu";
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
+
+const blogLinks: { to: string; label: string }[] = [
+  { to: '/blog/lineal-10-cm-originalgroesse', label: 'Lineal 10 cm Originalgröße' },
+  { to: '/blog/lineal-fuer-handy', label: 'Lineal für Handy' },
+  { to: '/blog/massband-online', label: 'Maßband online' },
+  { to: '/blog/wie-benutzt-man-ein-lineal', label: 'Wie benutzt man ein Lineal' },
+  { to: '/blog/1-cm-in-mm', label: '1 cm in mm' },
+  { to: '/blog/metrisches-system', label: 'Metrisches System' },
+  { to: '/blog/mks-system', label: 'MKS-System' },
+  { to: '/blog/klinometer', label: 'Klinometer' },
+];
 
 const Header: React.FC = () => {
-  const { t } = useLanguage();
-  
   return (
     <header className="py-4 mb-6 border-b">
       <div className="container flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" aria-label="Lineal Online Startseite">
           <Ruler size={28} className="text-ruler-primary mr-2" />
-          <span className="text-2xl font-bold text-ruler-primary">Linijka<span className="text-gray-800">-Online</span></span>
+          <span className="text-2xl font-bold text-ruler-primary">
+            Lineal<span className="text-gray-800">.online</span>
+          </span>
         </Link>
-        
+
         <div className="hidden md:flex items-center">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link to="/" className={`${navigationMenuTriggerStyle()} px-4`}>
-                  Strona Główna
+                  Startseite
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link to="/drukuj" className={`${navigationMenuTriggerStyle()} px-4`}>
-                  Drukuj Linijkę
+                <Link to="/lineal-drucken" className={`${navigationMenuTriggerStyle()} px-4`}>
+                  Lineal drucken
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[250px]">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/system-metryczny" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          System Metryczny Dziesiętny
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/system-mks" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          System MKS
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/system-naturalny-jednostek" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          Naturalny System Jednostek
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/system-anglosaski-jednostek" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          System Anglosaski Jednostek
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/klinometr" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          Klinometr: Co To i Jak Używać
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/miernik-glebokosci" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          Miernik Głębokości: Co To i Jak Używać
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/liczby-bezwymiarowe" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          Liczby Bezwymiarowe
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/jak-uzywac-linijki" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          Jak Używać Linijki
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          to="/blog/1-cm-ile-mm" 
-                          className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                        >
-                          1 cm ile mm
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                  <ul className="grid gap-3 p-4 w-[280px]">
+                    {blogLinks.map((link) => (
+                      <li key={link.to}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to={link.to}
+                            className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
+                          >
+                            {link.label}
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Więcej</NavigationMenuTrigger>
+                <NavigationMenuTrigger>Mehr</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px]">
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link to="/o-nas" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
-                          O Nas
+                        <Link to="/ueber-uns" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Über uns
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -155,15 +86,15 @@ const Header: React.FC = () => {
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link to="/privacy" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
-                          {t('privacy')}
+                        <Link to="/datenschutz" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Datenschutz
                         </Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link to="/disclaimer" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
-                          {t('disclaimer')}
+                        <Link to="/impressum" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          Impressum
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -173,7 +104,7 @@ const Header: React.FC = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        
+
         <div className="flex md:hidden items-center">
           <MenuButton />
         </div>
