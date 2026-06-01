@@ -1,5 +1,4 @@
-
 User-agent: *
 Allow: /
 
-Sitemap: https://linijka-online.pl/sitemap.xml
+Sitemap: https://lineal.online/sitemap.xml
