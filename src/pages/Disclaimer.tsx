@@ -1,74 +1,55 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { Helmet } from 'react-helmet-async';
+import CanonicalLink from '@/components/CanonicalLink';
 
 const Disclaimer = () => {
-  const { t } = useLanguage();
-  
-  const content = {
-    title: "Zastrzeżenia prawne Linijka-Online.pl",
-    intro: "Jeśli potrzebujesz więcej informacji lub masz pytania dotyczące zastrzeżeń prawnych naszej strony, skontaktuj się z nami mailowo pod adresem admin@linijka-online.pl.",
-    mainTitle: "Zastrzeżenia prawne Linijka-Online.pl",
-    mainText: "Wszystkie informacje na tej stronie (https://linijka-online.pl) są publikowane w dobrej wierze i wyłącznie w celach informacyjnych. Linijka-Online.pl nie oferuje żadnych gwarancji dotyczących kompletności, niezawodności i dokładności tych informacji. Wszelkie działania podejmowane na podstawie informacji znalezionych na tej stronie (Linijka-Online.pl) są podejmowane na własne ryzyko. Linijka-Online.pl nie ponosi odpowiedzialności za straty lub szkody związane z korzystaniem z naszej strony.",
-    externalLinks: "Z naszej strony możesz odwiedzać inne strony za pośrednictwem zewnętrznych linków. Chociaż staramy się zapewniać tylko linki do przydatnych i etycznych stron, nie mamy kontroli nad treścią ani charakterem tych stron. Te linki do innych stron nie oznaczają rekomendacji całej zawartości znajdującej się na nich. Właściciele i treść stron mogą się zmienić bez uprzedzenia, nawet zanim zdążymy usunąć link, który przestał działać. Należy pamiętać, że po opuszczeniu naszej strony inne strony mogą mieć inne polityki prywatności i warunki, które są poza naszą kontrolą. Upewnij się, że zapoznałeś się z polityką prywatności i warunkami korzystania z takich stron przed dokonaniem jakiejkolwiek transakcji lub przesłaniem informacji.",
-    consentTitle: "Zgoda",
-    consentText: "Korzystając z naszej strony, akceptujesz niniejsze zastrzeżenia prawne i ich warunki.",
-    updateTitle: "Aktualizacja",
-    updateText: "W przypadku aktualizacji, modyfikacji lub wprowadzenia jakichkolwiek zmian w tym dokumencie, zmiany te zostaną opublikowane tutaj w widoczny sposób."
-  };
-  
   return (
     <>
       <Helmet>
-        <title>{content.title} - Linijka-Online.pl</title>
-        <meta name="description" content={content.mainText.substring(0, 160)} />
-        <html lang="pl" />
-        <link rel="canonical" href="https://linijka-online.pl/disclaimer" />
+        <title>Impressum & Haftungsausschluss – Lineal.online</title>
+        <meta name="description" content="Impressum und Haftungsausschluss von Lineal.online – Ihrem kostenlosen Lineal online und Maßband für Handy, Tablet und PC." />
+        <html lang="de" />
       </Helmet>
-      
+      <CanonicalLink />
+
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
-        
+
         <main className="container flex-1 py-8">
-          <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
-            <h1 className="text-2xl font-bold mb-6 text-ruler-primary">
-              {content.title}
-            </h1>
-            
-            <p className="mb-6">
-              {content.intro}
-            </p>
-            
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.mainTitle}
-            </h2>
-            <p className="mb-6">
-              {content.mainText}
-            </p>
-            
-            <p className="mb-6">
-              {content.externalLinks}
-            </p>
-            
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.consentTitle}
-            </h2>
-            <p className="mb-6">
-              {content.consentText}
-            </p>
-            
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">
-              {content.updateTitle}
-            </h2>
+          <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md prose max-w-none">
+            <h1 className="text-2xl font-bold mb-6 text-ruler-primary">Impressum & Haftungsausschluss</h1>
+
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Anbieter</h2>
             <p>
-              {content.updateText}
+              Lineal.online<br />
+              E-Mail: <a href="mailto:admin@lineal.online">admin@lineal.online</a>
             </p>
+
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Haftungsausschluss</h2>
+            <p>
+              Alle Informationen auf dieser Website (<a href="https://lineal.online">https://lineal.online</a>)
+              werden nach bestem Wissen und ausschließlich zu Informationszwecken bereitgestellt. Lineal.online
+              übernimmt keine Garantie für Vollständigkeit, Zuverlässigkeit oder Genauigkeit dieser Informationen.
+              Handlungen auf Grundlage der hier gefundenen Informationen erfolgen auf eigenes Risiko. Für kritische
+              Messungen (z.B. in Technik oder Bauwesen) verwenden Sie bitte zertifizierte physische Messgeräte.
+            </p>
+
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Externe Links</h2>
+            <p>
+              Unsere Website kann Links zu externen Websites enthalten. Wir haben keinen Einfluss auf deren
+              Inhalt und übernehmen keine Verantwortung für externe Inhalte oder deren Datenschutzpraxis.
+            </p>
+
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Zustimmung</h2>
+            <p>Mit der Nutzung unserer Website akzeptieren Sie diesen Haftungsausschluss und seine Bedingungen.</p>
+
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Aktualisierung</h2>
+            <p>Änderungen an diesem Dokument werden hier sichtbar veröffentlicht.</p>
           </div>
         </main>
-        
+
         <Footer />
       </div>
     </>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -9,7 +8,7 @@ interface CanonicalLinkProps {
 
 const CanonicalLink: React.FC<CanonicalLinkProps> = ({ customUrl }) => {
   const location = useLocation();
-  const baseUrl = 'https://linijka-online.pl';
+  const baseUrl = 'https://lineal.online';
   const canonicalUrl = customUrl || `${baseUrl}${location.pathname}`;
 
   return (
