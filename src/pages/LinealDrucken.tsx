@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Head as Helmet } from 'vite-react-ssg';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Printer } from 'lucide-react';

@@ -24,23 +24,25 @@ const MM_PER_INCH = 25.4;
 const CM_PER_INCH = 2.54;
 
 export const CalibrationProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const isBrowser = typeof window !== 'undefined';
   const [pixelsPerCm, setPixelsPerCm] = useState<number>(38); // Default calibration
   const [unit, setUnit] = useState<'cm' | 'mm' | 'inch'>('cm');
   const [orientation, setOrientation] = useState<'horizontal' | 'vertical'>('horizontal');
-  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const [screenHeight, setScreenHeight] = useState<number>(window.innerHeight);
+  const [screenWidth, setScreenWidth] = useState<number>(isBrowser ? window.innerWidth : 1024);
+  const [screenHeight, setScreenHeight] = useState<number>(isBrowser ? window.innerHeight : 768);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
       setScreenHeight(window.innerHeight);
     };
 
     window.addEventListener('resize', handleResize);
-    
+
     // Initial auto-calibration - run once on mount
     autoCalibrate();
-    
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
