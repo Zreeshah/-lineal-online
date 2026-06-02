@@ -3,14 +3,15 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// Strip external scripts (gptengineer.js) from index.html during build — SSG can't resolve remote URLs as entries
-const stripExternalScripts = () => ({
-  name: 'strip-external-scripts',
-  enforce: 'pre' as const,
+// Inject the Lovable dev script only during local development.
+// It cannot live in index.html because vite-react-ssg tries to resolve it as an SSR entry.
+const injectLovableDevScript = () => ({
+  name: 'inject-lovable-dev-script',
+  apply: 'serve' as const,
   transformIndexHtml(html: string) {
     return html.replace(
-      /\s*<script[^>]*src=["']https?:\/\/[^"']+["'][^>]*><\/script>/g,
-      ''
+      '</body>',
+      '  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->\n    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>\n  </body>'
     );
   },
 });
@@ -24,7 +25,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
-    mode !== 'development' && stripExternalScripts(),
+    injectLovableDevScript(),
   ].filter(Boolean),
   resolve: {
     alias: {
