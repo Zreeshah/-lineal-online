@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Helmet } from 'react-helmet-async';
+import { Head as Helmet } from 'vite-react-ssg';
 import CanonicalLink from '@/components/CanonicalLink';
 
 const Disclaimer = () => {

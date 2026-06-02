@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Head as Helmet } from 'vite-react-ssg';
 
 const NotFound = () => {
   const location = useLocation();

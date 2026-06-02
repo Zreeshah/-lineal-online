@@ -6,7 +6,7 @@ import MobileRuler from '@/components/MobileRuler';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { Helmet } from 'react-helmet-async';
+import { Head as Helmet } from 'vite-react-ssg';
 import { Card, CardContent } from '@/components/ui/card';
 import { Ruler as RulerIcon, Maximize, Square, Pencil, Book, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
