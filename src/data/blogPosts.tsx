@@ -490,6 +490,256 @@ export const blogPosts: BlogPostData[] = [
       </Section>
     ),
   },
+  {
+    slug: 'online-lineal-genau-messen',
+    title: 'Online Lineal – genau messen am Bildschirm',
+    metaDescription:
+      'Online Lineal kostenlos: messen Sie präzise in cm, mm und Zoll am Bildschirm. So nutzen Sie ein lineal online ohne Download.',
+    keywords: 'online lineal, lineal online, lineal, messen am bildschirm',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Online Lineal zur Messung am Bildschirm',
+    content: (
+      <Section>
+        <h1>Online Lineal – präzise messen ohne Werkzeug</h1>
+        <p className="lead">
+          Ein <strong>online lineal</strong> ersetzt das physische Lineal überall dort, wo Sie spontan etwas
+          ausmessen müssen. Auf <a href="/">Lineal.online</a> bekommen Sie ein vollwertiges{' '}
+          <strong>lineal online</strong> in Originalgröße.
+        </p>
+
+        <h2>Drei Schritte zur exakten Messung</h2>
+        <ol>
+          <li>Seite öffnen und Lineal anzeigen lassen.</li>
+          <li>Mit EC-Karte (85,6 mm) einmalig kalibrieren.</li>
+          <li>Objekt an den Bildschirm halten und ablesen.</li>
+        </ol>
+
+        <h2>Wann lohnt ein Online-Lineal?</h2>
+        <ul>
+          <li>Schmuck, Knöpfe, Schrauben schnell messen</li>
+          <li>Kleidung und Stoff zuschneiden</li>
+          <li>DIY-Projekte am Schreibtisch</li>
+          <li>Als <strong>Lineal für Handy</strong> unterwegs</li>
+        </ul>
+
+        <p>Einmal kalibriert, ist Ihr <strong>online lineal</strong> exakt wie ein Werkzeug aus der Werkstatt.</p>
+      </Section>
+    ),
+  },
+  {
+    slug: 'lineal-online-kostenlos',
+    title: 'Lineal online kostenlos – ohne Anmeldung nutzen',
+    metaDescription:
+      'Lineal online kostenlos und ohne Anmeldung: cm, mm, Zoll direkt im Browser. Funktioniert auf Handy, Tablet und PC.',
+    keywords: 'lineal online, online lineal, lineal kostenlos, lineal ohne anmeldung',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Lineal online kostenlos im Browser',
+    content: (
+      <Section>
+        <h1>Lineal online kostenlos – das beste Tool im Browser</h1>
+        <p className="lead">
+          <strong>Lineal online</strong> ohne Anmeldung, ohne Werbung im Weg, ohne Download: Lineal.online ist
+          das schnellste Werkzeug für eine präzise Messung am Bildschirm.
+        </p>
+
+        <h2>Warum kostenlos?</h2>
+        <p>
+          Ein Lineal ist Grundausstattung – es sollte jederzeit verfügbar sein. Genau dafür gibt es unser
+          kostenloses <strong>online lineal</strong>.
+        </p>
+
+        <h2>Was Sie damit machen können</h2>
+        <ul>
+          <li>Lineal 10 cm anzeigen in Originalgröße</li>
+          <li>1 centymetr exakt sehen (= 10 mm)</li>
+          <li>Längen auf Handy, Tablet oder PC messen</li>
+          <li>Als <strong>maßband online</strong> nutzen</li>
+        </ul>
+
+        <p>Jetzt öffnen: <a href="/">Lineal.online</a>.</p>
+      </Section>
+    ),
+  },
+  {
+    slug: 'lineal-30-cm-online',
+    title: 'Lineal 30 cm online – das klassische Schullineal digital',
+    metaDescription:
+      'Lineal 30 cm online in Originalgröße – ideal als Schullineal am Bildschirm. Kostenlos, präzise und für Handy, Tablet und PC.',
+    keywords: 'lineal 30 cm, lineal online, schullineal, online lineal',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Lineal 30 cm online – Schullineal im Browser',
+    content: (
+      <Section>
+        <h1>Lineal 30 cm online – das Schullineal digital</h1>
+        <p className="lead">
+          Das klassische 30-cm-Lineal ist Standard in Schule, Studium und Büro. Unser{' '}
+          <strong>lineal online</strong> zeigt es direkt am Bildschirm – auf großen Monitoren in echter
+          Originalgröße.
+        </p>
+
+        <h2>Voraussetzungen</h2>
+        <p>
+          Für ein vollständiges 30-cm-Lineal benötigen Sie einen Bildschirm mit mindestens 13 Zoll Diagonale.
+          Auf dem Handy zeigen wir automatisch ein kürzeres Lineal, das aber genauso exakt skaliert.
+        </p>
+
+        <h2>Typische Einsätze</h2>
+        <ul>
+          <li>Schulaufgaben und Geometrie</li>
+          <li>Skizzen und technische Zeichnungen</li>
+          <li>Bastelarbeiten mit Papier</li>
+        </ul>
+
+        <p>Direkt nutzen: <a href="/">Lineal.online</a>.</p>
+      </Section>
+    ),
+  },
+  {
+    slug: 'zoll-in-cm-umrechnen',
+    title: 'Zoll in cm umrechnen – Tabelle & Online-Lineal',
+    metaDescription:
+      'Zoll in cm umrechnen: 1 Zoll = 2,54 cm. Umrechnungstabelle, Beispiele und ein kostenloses Online-Lineal in cm und Zoll.',
+    keywords: 'zoll in cm, inch in cm, umrechnung, lineal online',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Zoll in cm umrechnen – Tabelle und Online-Lineal',
+    content: (
+      <Section>
+        <h1>Zoll in cm – die schnelle Umrechnung</h1>
+        <p className="lead">
+          <strong>1 Zoll = 2,54 cm</strong>. Mit dieser einfachen Formel rechnen Sie jede angloamerikanische
+          Größe ins metrische System um.
+        </p>
+
+        <h2>Umrechnungstabelle</h2>
+        <table>
+          <thead><tr><th>Zoll (in)</th><th>Zentimeter (cm)</th></tr></thead>
+          <tbody>
+            <tr><td>1"</td><td>2,54 cm</td></tr>
+            <tr><td>5"</td><td>12,7 cm</td></tr>
+            <tr><td>10"</td><td>25,4 cm</td></tr>
+            <tr><td>15"</td><td>38,1 cm</td></tr>
+            <tr><td>24"</td><td>60,96 cm</td></tr>
+            <tr><td>32"</td><td>81,28 cm</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Wo brauchen Sie das?</h2>
+        <p>
+          Bildschirmgrößen, Fahrrad- und Autoreifen, Felgen, Rohre und viele Maschinenteile werden in Zoll
+          angegeben. Mit unserem <a href="/">Lineal online</a> wechseln Sie per Klick zwischen cm und Zoll.
+        </p>
+      </Section>
+    ),
+  },
+  {
+    slug: 'bildschirm-kalibrieren',
+    title: 'Bildschirm kalibrieren – so wird Ihr Lineal exakt',
+    metaDescription:
+      'Bildschirm kalibrieren für ein präzises Online-Lineal: Anleitung mit EC-Karte, Münze oder Maßband. Funktioniert auf Handy, Tablet und PC.',
+    keywords: 'bildschirm kalibrieren, lineal kalibrieren, lineal online, online lineal',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Bildschirm kalibrieren für exaktes Online-Lineal',
+    content: (
+      <Section>
+        <h1>Bildschirm kalibrieren – exakte Maße am Display</h1>
+        <p className="lead">
+          Damit ein <strong>online lineal</strong> exakte Maße anzeigt, muss der Bildschirm kalibriert werden.
+          Jedes Gerät hat eine andere Pixeldichte – ohne Kalibrierung gibt es Abweichungen.
+        </p>
+
+        <h2>Methode 1: EC-/Kreditkarte</h2>
+        <p>
+          Standardkarten haben exakt <strong>85,6 × 53,98 mm</strong>. Karte ans Display halten und die Skala
+          unseres Lineals so verschieben, dass sie zur Karte passt.
+        </p>
+
+        <h2>Methode 2: Münze</h2>
+        <p>
+          Eine 1-Euro-Münze hat 23,25 mm Durchmesser, ein 2-Euro-Stück 25,75 mm. Ideal für die Feinjustierung.
+        </p>
+
+        <h2>Methode 3: Maßband</h2>
+        <p>
+          Wenn Sie ein klassisches Maßband zur Hand haben, vergleichen Sie damit eine 10-cm-Strecke. So wird Ihr{' '}
+          <strong>maßband online</strong> deckungsgleich mit dem echten Werkzeug.
+        </p>
+
+        <p>Einmal kalibriert, bleibt die Einstellung für Ihr Gerät gespeichert.</p>
+      </Section>
+    ),
+  },
+  {
+    slug: 'lineal-fuer-tablet',
+    title: 'Lineal für Tablet – iPad und Android kostenlos messen',
+    metaDescription:
+      'Lineal für Tablet kostenlos online: messen Sie auf iPad und Android-Tablets in cm, mm und Zoll. Größerer Bildschirm = längeres Lineal.',
+    keywords: 'lineal tablet, lineal ipad, lineal online, online lineal',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Lineal für Tablet – iPad und Android',
+    content: (
+      <Section>
+        <h1>Lineal für Tablet – die ideale Bildschirmgröße</h1>
+        <p className="lead">
+          Tablets sind die perfekte Plattform für ein <strong>online lineal</strong>: groß genug für ein
+          komplettes 20-cm-Lineal, mobil genug für jeden Einsatzort.
+        </p>
+
+        <h2>iPad, Galaxy Tab & Co.</h2>
+        <p>
+          Unser Tool funktioniert in jedem modernen Browser – Safari, Chrome, Firefox, Edge. Eine App-Installation
+          ist nicht nötig.
+        </p>
+
+        <h2>Vorteile</h2>
+        <ul>
+          <li>Großes Display = langes Lineal (oft bis 25 cm)</li>
+          <li>Touch-Bedienung für schnelle Kalibrierung</li>
+          <li>Hoch- und Querformat unterstützt</li>
+          <li>Auch als <strong>Lineal für Handy</strong> nutzbar</li>
+        </ul>
+
+        <p>Direkt loslegen: <a href="/">Lineal.online</a>.</p>
+      </Section>
+    ),
+  },
+  {
+    slug: 'mm-genau-messen',
+    title: 'Millimeter genau messen – Tipps & Online-Tools',
+    metaDescription:
+      'Millimeter genau messen: Anleitung für präzise mm-Messungen mit Lineal, Messschieber und Online-Lineal in Originalgröße.',
+    keywords: 'millimeter messen, mm messen, lineal online, präzise messen',
+    publishedAt: '2026-06-01',
+    heroAlt: 'Millimeter genau messen mit Lineal und Messschieber',
+    content: (
+      <Section>
+        <h1>Millimeter genau messen – so geht's richtig</h1>
+        <p className="lead">
+          Bei Heimwerken, Modellbau oder Schmuck zählt jeder Millimeter. Mit den richtigen Techniken und einem
+          präzisen <strong>online lineal</strong> erreichen Sie professionelle Genauigkeit.
+        </p>
+
+        <h2>Tipps für mm-genaue Messungen</h2>
+        <ul>
+          <li>Senkrecht auf die Skala blicken (Parallaxenfehler vermeiden)</li>
+          <li>Nullpunkt sauber anlegen</li>
+          <li>Lineal mit feiner mm-Teilung verwenden</li>
+          <li>Bei sehr kleinen Maßen Messschieber benutzen</li>
+        </ul>
+
+        <h2>Umrechnungen</h2>
+        <p>
+          <strong>1 cm = 10 mm</strong>, <strong>1 Zoll = 25,4 mm</strong>. Unser Tool zeigt alle drei Einheiten
+          gleichzeitig.
+        </p>
+
+        <h2>Online-Lineal mit mm-Skala</h2>
+        <p>
+          Unser <a href="/">Lineal online</a> zeigt jede Millimeter-Markierung deutlich – ideal für präzise
+          Arbeiten am Bildschirm.
+        </p>
+      </Section>
+    ),
+  },
 ];
 
 export const blogPostSlugs = blogPosts.map((p) => p.slug);
