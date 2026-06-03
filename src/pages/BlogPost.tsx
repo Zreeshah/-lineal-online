@@ -45,6 +45,7 @@ const BlogPost: React.FC = () => {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="de_DE" />
+        {post.heroImage && <meta property="og:image" content={`https://lineal.online${post.heroImage}`} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
