@@ -19,7 +19,7 @@ const Section = ({ children }: { children: React.ReactNode }) => (
 export const blogPosts: BlogPostData[] = [
   {
     slug: 'lineal-10-cm-originalgroesse',
-    title: 'Lineal 10 cm anzeigen – Lineal 10 cm Originalgröße online',
+    heroImage: '/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg',title: 'Lineal 10 cm anzeigen – Lineal 10 cm Originalgröße online',
     metaDescription:
       'Lineal 10 cm anzeigen in Originalgröße – kostenlos online, ohne Download. Präzises Online-Lineal in cm und mm für Handy, Tablet und PC.',
     keywords: 'lineal 10 cm anzeigen, lineal 10 cm originalgröße, lineal online, online lineal, lineal',
@@ -70,7 +70,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'lineal-fuer-handy',
-    title: 'Lineal für Handy – Lineal online Handy in cm und mm',
+    heroImage: '/lovable-uploads/6f49caed-ebfe-4019-9c87-44395c2b5eef.jpg',title: 'Lineal für Handy – Lineal online Handy in cm und mm',
     metaDescription:
       'Lineal für Handy kostenlos online – Lineal online Handy in cm, mm und Zoll. Messen direkt auf dem Smartphone, ohne App-Download.',
     keywords: 'lineal für handy, lineal online handy, lineal online, online lineal, maßband online',
@@ -115,7 +115,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'massband-online',
-    title: 'Maßband online – kostenlos in cm und mm messen',
+    heroImage: '/lovable-uploads/regla-midiendo.jpg',title: 'Maßband online – kostenlos in cm und mm messen',
     metaDescription:
       'Maßband online kostenlos – messen Sie Längen in cm, mm und Zoll direkt im Browser. Präzises Online-Maßband für Handy, Tablet und PC.',
     keywords: 'maßband online, lineal online, online lineal, maßband, messen online',
@@ -160,7 +160,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: '1-cm-in-mm',
-    title: '1 cm in mm – Umrechnung & 1 centymetr erklärt',
+    heroImage: '/lovable-uploads/regla-dibujo.jpg',title: '1 cm in mm – Umrechnung & 1 centymetr erklärt',
     metaDescription:
       '1 cm in mm einfach erklärt: 1 Zentimeter = 10 Millimeter. Umrechnungstabelle, Beispiele und ein kostenloses Online-Lineal zum direkten Messen.',
     keywords: '1 centymetr, 1 cm in mm, zentimeter, millimeter, einheiten umrechnen, lineal online',
@@ -204,7 +204,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'wie-benutzt-man-ein-lineal',
-    title: 'Wie benutzt man ein Lineal richtig? Anleitung & Tipps',
+    heroImage: '/lovable-uploads/381e2e34-ef77-4b15-a19c-117866a61d42.jpg',title: 'Wie benutzt man ein Lineal richtig? Anleitung & Tipps',
     metaDescription:
       'Wie benutzt man ein Lineal richtig? Schritt-für-Schritt-Anleitung zum genauen Messen in cm, mm und Zoll – inkl. Online-Lineal in Originalgröße.',
     keywords: 'lineal benutzen, lineal richtig nutzen, lineal online, messen',
@@ -246,7 +246,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'metrisches-system',
-    title: 'Das metrische System einfach erklärt',
+    heroImage: '/lovable-uploads/79ba06b7-f526-4c13-8eda-7f0f2ac9be8f.jpg',title: 'Das metrische System einfach erklärt',
     metaDescription:
       'Das metrische System: Geschichte, Einheiten und Vorteile. Meter, Zentimeter, Millimeter – alles auf einen Blick.',
     keywords: 'metrisches system, einheiten, meter, zentimeter, millimeter',
@@ -284,7 +284,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'mks-system',
-    title: 'MKS-System – Meter, Kilogramm, Sekunde',
+    heroImage: '/lovable-uploads/3d520faf-c186-4486-92e5-9bcbb32657b4.jpg',title: 'MKS-System – Meter, Kilogramm, Sekunde',
     metaDescription:
       'Das MKS-System (Meter, Kilogramm, Sekunde) ist die Basis des SI-Systems. Definition, Geschichte und Anwendung verständlich erklärt.',
     keywords: 'mks system, si einheiten, meter, kilogramm, sekunde',
@@ -319,7 +319,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'angloamerikanisches-system',
-    title: 'Das angloamerikanische Maßsystem – Zoll, Fuß, Yard',
+    heroImage: '/lovable-uploads/2bfee74f-0a29-4825-ba3c-d22d5a01c53d.jpg',title: 'Das angloamerikanische Maßsystem – Zoll, Fuß, Yard',
     metaDescription:
       'Das angloamerikanische Maßsystem mit Inch, Foot, Yard und Mile – Definitionen, Umrechnung in cm und mm sowie praktische Beispiele.',
     keywords: 'angloamerikanisches system, zoll, inch, fuß, foot, yard',
@@ -351,7 +351,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'natuerliches-einheitensystem',
-    title: 'Natürliches Einheitensystem in der Physik',
+    heroImage: '/lovable-uploads/6e30be3b-fb3c-45ac-9368-d0c966ceb463.jpg',title: 'Natürliches Einheitensystem in der Physik',
     metaDescription:
       'Das natürliche Einheitensystem nutzt fundamentale Naturkonstanten als Basis. Verständlich erklärt – mit Bezug zum Alltag.',
     keywords: 'natürliche einheiten, physik, planck einheiten',
@@ -381,7 +381,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'klinometer',
-    title: 'Klinometer – was ist das und wie nutzt man es?',
+    heroImage: '/lovable-uploads/65090091-5d64-4667-af28-509718c18951.jpg',title: 'Klinometer – was ist das und wie nutzt man es?',
     metaDescription:
       'Klinometer einfach erklärt: Was ist ein Klinometer, wie funktioniert es und wofür wird es eingesetzt? Inklusive moderner Smartphone-Anwendungen.',
     keywords: 'klinometer, winkel messen, neigung, gefälle',
@@ -419,7 +419,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'tiefenmesser',
-    title: 'Tiefenmesser – Funktion, Anwendung und Tipps',
+    heroImage: '/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg',title: 'Tiefenmesser – Funktion, Anwendung und Tipps',
     metaDescription:
       'Tiefenmesser: Was ist das, wie funktioniert er und wofür wird er eingesetzt? Übersicht über mechanische und digitale Tiefenmesser.',
     keywords: 'tiefenmesser, messen, tiefe, messschieber',
@@ -456,7 +456,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'dimensionslose-zahlen',
-    title: 'Dimensionslose Zahlen – Bedeutung & Beispiele',
+    heroImage: '/lovable-uploads/numeros-adimensionales.jpg',title: 'Dimensionslose Zahlen – Bedeutung & Beispiele',
     metaDescription:
       'Was sind dimensionslose Zahlen? Reynolds-Zahl, Mach-Zahl und mehr – Definition, Beispiele und Bedeutung in der Physik.',
     keywords: 'dimensionslose zahlen, reynolds zahl, physik',
@@ -492,7 +492,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'online-lineal-genau-messen',
-    title: 'Online Lineal – genau messen am Bildschirm',
+    heroImage: '/lovable-uploads/6328a843-2738-47e0-a58d-69f6ab06586b.jpg',title: 'Online Lineal – genau messen am Bildschirm',
     metaDescription:
       'Online Lineal kostenlos: messen Sie präzise in cm, mm und Zoll am Bildschirm. So nutzen Sie ein lineal online ohne Download.',
     keywords: 'online lineal, lineal online, lineal, messen am bildschirm',
@@ -528,7 +528,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'lineal-online-kostenlos',
-    title: 'Lineal online kostenlos – ohne Anmeldung nutzen',
+    heroImage: '/lovable-uploads/cb6e8a8e-753f-42a5-9096-0c85f9ac17d4.jpg',title: 'Lineal online kostenlos – ohne Anmeldung nutzen',
     metaDescription:
       'Lineal online kostenlos und ohne Anmeldung: cm, mm, Zoll direkt im Browser. Funktioniert auf Handy, Tablet und PC.',
     keywords: 'lineal online, online lineal, lineal kostenlos, lineal ohne anmeldung',
@@ -562,7 +562,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'lineal-30-cm-online',
-    title: 'Lineal 30 cm online – das klassische Schullineal digital',
+    heroImage: '/lovable-uploads/ac043476-ab03-4ce6-b0b3-942cb4d79ac5.jpg',title: 'Lineal 30 cm online – das klassische Schullineal digital',
     metaDescription:
       'Lineal 30 cm online in Originalgröße – ideal als Schullineal am Bildschirm. Kostenlos, präzise und für Handy, Tablet und PC.',
     keywords: 'lineal 30 cm, lineal online, schullineal, online lineal',
@@ -596,7 +596,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'zoll-in-cm-umrechnen',
-    title: 'Zoll in cm umrechnen – Tabelle & Online-Lineal',
+    heroImage: '/lovable-uploads/3aaf4fe4-39fa-4068-9fb3-a5d1decbbc8e.jpg',title: 'Zoll in cm umrechnen – Tabelle & Online-Lineal',
     metaDescription:
       'Zoll in cm umrechnen: 1 Zoll = 2,54 cm. Umrechnungstabelle, Beispiele und ein kostenloses Online-Lineal in cm und Zoll.',
     keywords: 'zoll in cm, inch in cm, umrechnung, lineal online',
@@ -633,7 +633,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'bildschirm-kalibrieren',
-    title: 'Bildschirm kalibrieren – so wird Ihr Lineal exakt',
+    heroImage: '/lovable-uploads/c058baa5-0359-41f1-a81f-fdaeb13aa151.jpg',title: 'Bildschirm kalibrieren – so wird Ihr Lineal exakt',
     metaDescription:
       'Bildschirm kalibrieren für ein präzises Online-Lineal: Anleitung mit EC-Karte, Münze oder Maßband. Funktioniert auf Handy, Tablet und PC.',
     keywords: 'bildschirm kalibrieren, lineal kalibrieren, lineal online, online lineal',
@@ -670,7 +670,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'lineal-fuer-tablet',
-    title: 'Lineal für Tablet – iPad und Android kostenlos messen',
+    heroImage: '/lovable-uploads/7f2b24cb-d011-4b17-aeb8-901c4b6b5fef.jpg',title: 'Lineal für Tablet – iPad und Android kostenlos messen',
     metaDescription:
       'Lineal für Tablet kostenlos online: messen Sie auf iPad und Android-Tablets in cm, mm und Zoll. Größerer Bildschirm = längeres Lineal.',
     keywords: 'lineal tablet, lineal ipad, lineal online, online lineal',
@@ -704,7 +704,7 @@ export const blogPosts: BlogPostData[] = [
   },
   {
     slug: 'mm-genau-messen',
-    title: 'Millimeter genau messen – Tipps & Online-Tools',
+    heroImage: '/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg',title: 'Millimeter genau messen – Tipps & Online-Tools',
     metaDescription:
       'Millimeter genau messen: Anleitung für präzise mm-Messungen mit Lineal, Messschieber und Online-Lineal in Originalgröße.',
     keywords: 'millimeter messen, mm messen, lineal online, präzise messen',
