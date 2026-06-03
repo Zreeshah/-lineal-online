@@ -65,6 +65,17 @@ const BlogPost: React.FC = () => {
               <span>Veröffentlicht: {new Date(post.publishedAt).toLocaleDateString('de-DE')}</span>
             </div>
 
+            {post.heroImage && (
+              <div className="mb-8 rounded-lg overflow-hidden shadow-md">
+                <img
+                  src={post.heroImage}
+                  alt={post.heroAlt}
+                  className="w-full h-auto object-cover max-h-[420px]"
+                  loading="eager"
+                />
+              </div>
+            )}
+
             {post.content}
 
             <RelatedArticlesSection currentUrl={`/blog/${post.slug}`} />
