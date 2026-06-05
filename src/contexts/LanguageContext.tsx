@@ -4,7 +4,7 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-// All UI strings in German for lineal.online
+// All UI strings in German for lineal.onl
 const translations = {
   de: {
     title: 'Lineal online in Originalgröße – kostenlos messen',

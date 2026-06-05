@@ -99,7 +99,7 @@ const Contact = () => {
             <div className="mt-8 pt-6 border-t">
               <h2 className="text-lg font-semibold mb-3 text-ruler-primary">Andere Kontaktmöglichkeiten</h2>
               <p className="text-gray-700">
-                E-Mail: <a href="mailto:info@lineal.online" className="text-ruler-primary hover:underline">info@lineal.online</a>
+                E-Mail: <a href="mailto:info@lineal.onl" className="text-ruler-primary hover:underline">info@lineal.onl</a>
               </p>
             </div>
           </div>

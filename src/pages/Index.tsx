@@ -40,7 +40,7 @@ const Index = () => {
     description: metaDescription,
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Any',
-    url: 'https://lineal.online/',
+    url: 'https://lineal.onl/',
     inLanguage: 'de-DE',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
     featureList: [
@@ -80,7 +80,7 @@ const Index = () => {
         <html lang="de" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content="https://lineal.online/" />
+        <meta property="og:url" content="https://lineal.onl/" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="de_DE" />
         <meta name="theme-color" content="#9b87f5" />

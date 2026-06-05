@@ -2,5 +2,5 @@
 
 ## Project info
 
-**URL**: https://lineal.online/
+**URL**: https://lineal.onl/
 

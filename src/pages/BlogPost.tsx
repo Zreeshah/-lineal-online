@@ -15,7 +15,7 @@ const BlogPost: React.FC = () => {
 
   if (!post) return <NotFound />;
 
-  const url = `https://lineal.online/blog/${post.slug}`;
+  const url = `https://lineal.onl/blog/${post.slug}`;
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -29,7 +29,7 @@ const BlogPost: React.FC = () => {
     publisher: {
       '@type': 'Organization',
       name: 'Lineal.online',
-      url: 'https://lineal.online/',
+      url: 'https://lineal.onl/',
     },
   };
 
@@ -45,7 +45,7 @@ const BlogPost: React.FC = () => {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="de_DE" />
-        {post.heroImage && <meta property="og:image" content={`https://lineal.online${post.heroImage}`} />}
+        {post.heroImage && <meta property="og:image" content={`https://lineal.onl${post.heroImage}`} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

@@ -24,12 +24,12 @@ const Disclaimer = () => {
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Anbieter</h2>
             <p>
               Lineal.online<br />
-              E-Mail: <a href="mailto:admin@lineal.online">admin@lineal.online</a>
+              E-Mail: <a href="mailto:admin@lineal.onl">admin@lineal.onl</a>
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Haftungsausschluss</h2>
             <p>
-              Alle Informationen auf dieser Website (<a href="https://lineal.online">https://lineal.online</a>)
+              Alle Informationen auf dieser Website (<a href="https://lineal.onl">https://lineal.onl</a>)
               werden nach bestem Wissen und ausschließlich zu Informationszwecken bereitgestellt. Lineal.online
               übernimmt keine Garantie für Vollständigkeit, Zuverlässigkeit oder Genauigkeit dieser Informationen.
               Handlungen auf Grundlage der hier gefundenen Informationen erfolgen auf eigenes Risiko. Für kritische
