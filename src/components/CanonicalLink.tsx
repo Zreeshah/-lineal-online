@@ -8,7 +8,7 @@ interface CanonicalLinkProps {
 
 const CanonicalLink: React.FC<CanonicalLinkProps> = ({ customUrl }) => {
   const location = useLocation();
-  const baseUrl = 'https://lineal.online';
+  const baseUrl = 'https://lineal.onl';
   const canonicalUrl = customUrl || `${baseUrl}${location.pathname}`;
 
   return (

@@ -1,4 +1,4 @@
-// Internal links utility for SEO optimisation (German content for lineal.online)
+// Internal links utility for SEO optimisation (German content for lineal.onl)
 import React from 'react';
 
 export type ArticleLink = {
