@@ -3,9 +3,10 @@ import { Head as Helmet } from 'vite-react-ssg';
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Clock, ArrowLeft } from 'lucide-react';
+import { Clock, ArrowLeft, BookOpen } from 'lucide-react';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
+import BlogExtras from '@/components/BlogExtras';
 import { getBlogPostBySlug } from '@/data/blogPosts';
 import NotFound from '@/pages/NotFound';
 
@@ -34,7 +35,7 @@ const BlogPost: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-purple-50/40 via-white to-white">
       <Helmet>
         <title>{post.title} | Lineal.online</title>
         <meta name="description" content={post.metaDescription} />
@@ -53,31 +54,57 @@ const BlogPost: React.FC = () => {
 
       <Header />
 
-      <main className="flex-grow py-6">
+      <main className="flex-grow py-8 sm:py-12">
         <div className="container px-4 mx-auto max-w-4xl">
-          <Link to="/" className="inline-flex items-center text-ruler-primary mb-6 hover:underline">
+          <Link
+            to="/"
+            className="inline-flex items-center text-purple-700 mb-6 hover:text-purple-900 font-medium"
+          >
             <ArrowLeft size={16} className="mr-1" />
             Zurück zur Startseite
           </Link>
 
-          <div className="bg-white rounded-xl shadow-sm p-5 sm:p-8 mb-8">
-            <div className="mb-6 flex items-center text-gray-500 text-sm">
-              <Clock size={16} className="mr-1" />
-              <span>Veröffentlicht: {new Date(post.publishedAt).toLocaleDateString('de-DE')}</span>
+          {/* Article header */}
+          <header className="mb-8">
+            <div className="flex flex-wrap items-center gap-3 mb-5 text-sm">
+              <span className="inline-flex items-center gap-1.5 bg-purple-100 text-purple-800 font-semibold px-3 py-1 rounded-full">
+                <BookOpen size={14} />
+                Ratgeber
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-gray-500">
+                <Clock size={14} />
+                {new Date(post.publishedAt).toLocaleDateString('de-DE', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </span>
+              <span className="text-gray-400">•</span>
+              <span className="text-gray-500">ca. 4 Min. Lesezeit</span>
             </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 leading-[1.15] mb-4">
+              {post.title}
+            </h1>
+            <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">
+              {post.metaDescription}
+            </p>
+          </header>
 
-            {post.heroImage && (
-              <div className="mb-8 rounded-lg overflow-hidden shadow-md">
-                <img
-                  src={post.heroImage}
-                  alt={post.heroAlt}
-                  className="w-full h-auto object-cover max-h-[420px]"
-                  loading="eager"
-                />
-              </div>
-            )}
+          {post.heroImage && (
+            <div className="mb-10 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
+              <img
+                src={post.heroImage}
+                alt={post.heroAlt}
+                className="w-full h-auto object-cover max-h-[460px]"
+                loading="eager"
+              />
+            </div>
+          )}
 
+          <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 sm:p-10">
             {post.content}
+
+            <BlogExtras title={post.title} keywords={post.keywords} />
 
             <RelatedArticlesSection currentUrl={`/blog/${post.slug}`} />
           </div>

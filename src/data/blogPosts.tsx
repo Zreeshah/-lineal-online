@@ -13,7 +13,27 @@ export interface BlogPostData {
 }
 
 const Section = ({ children }: { children: React.ReactNode }) => (
-  <article className="prose prose-sm sm:prose lg:prose-lg max-w-none">{children}</article>
+  <article
+    className="
+      prose prose-sm sm:prose lg:prose-lg max-w-none
+      prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
+      prose-h1:text-3xl sm:prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:leading-tight prose-h1:mb-6 prose-h1:mt-0
+      [&>h1:first-child]:hidden
+      [&_.lead:first-of-type]:mt-0
+      prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-purple-100
+      prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-purple-900
+      prose-p:text-gray-700 prose-p:leading-relaxed
+      prose-a:text-purple-700 prose-a:font-medium hover:prose-a:text-purple-900
+      prose-strong:text-gray-900
+      prose-ul:my-4 prose-ol:my-4 prose-li:my-1
+      prose-li:marker:text-purple-500
+      prose-table:rounded-lg prose-table:overflow-hidden prose-table:shadow-sm
+      prose-th:bg-purple-50 prose-th:text-purple-900
+      [&_.lead]:text-lg [&_.lead]:sm:text-xl [&_.lead]:text-gray-600 [&_.lead]:leading-relaxed [&_.lead]:font-normal [&_.lead]:mb-8 [&_.lead]:border-l-4 [&_.lead]:border-purple-400 [&_.lead]:pl-4 [&_.lead]:italic
+    "
+  >
+    {children}
+  </article>
 );
 
 export const blogPosts: BlogPostData[] = [
