@@ -18,6 +18,8 @@ const Section = ({ children }: { children: React.ReactNode }) => (
       prose prose-sm sm:prose lg:prose-lg max-w-none
       prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
       prose-h1:text-3xl sm:prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:leading-tight prose-h1:mb-6 prose-h1:mt-0
+      [&>h1:first-child]:hidden
+      [&_.lead:first-of-type]:mt-0
       prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-purple-100
       prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-purple-900
       prose-p:text-gray-700 prose-p:leading-relaxed
