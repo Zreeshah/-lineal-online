@@ -11,18 +11,18 @@ import {
 import { Button } from '@/components/ui/button';
 
 const blogLinks = [
+  { to: '/blog', label: 'Alle Blogartikel' },
   { to: '/blog/lineal-10-cm-originalgroesse', label: 'Lineal 10 cm Originalgröße' },
+  { to: '/blog/handy-als-massband', label: 'Handy als Maßband' },
+  { to: '/blog/lineal-im-handy', label: 'Lineal im Handy' },
+  { to: '/blog/online-lineal-kalibrieren', label: 'Online-Lineal kalibrieren' },
+  { to: '/blog/ist-online-lineal-genau', label: 'Ist ein Online-Lineal genau?' },
+  { to: '/blog/lineal-online-20-cm', label: 'Lineal online 20 cm' },
   { to: '/blog/lineal-fuer-handy', label: 'Lineal für Handy' },
   { to: '/blog/massband-online', label: 'Maßband online' },
-  { to: '/blog/wie-benutzt-man-ein-lineal', label: 'Wie benutzt man ein Lineal' },
-  { to: '/blog/1-cm-in-mm', label: '1 cm in mm' },
-  { to: '/blog/metrisches-system', label: 'Metrisches System' },
-  { to: '/blog/mks-system', label: 'MKS-System' },
-  { to: '/blog/angloamerikanisches-system', label: 'Angloamerikanisches System' },
-  { to: '/blog/natuerliches-einheitensystem', label: 'Natürliches Einheitensystem' },
-  { to: '/blog/klinometer', label: 'Klinometer' },
-  { to: '/blog/tiefenmesser', label: 'Tiefenmesser' },
-  { to: '/blog/dimensionslose-zahlen', label: 'Dimensionslose Zahlen' },
+  { to: '/blog/cm-in-mm', label: 'cm in mm' },
+  { to: '/blog/ring-lineal-messen', label: 'Ring mit Lineal messen' },
+  { to: '/blog/schraube-lineal-messen', label: 'Schraube mit Lineal messen' },
 ];
 
 const MenuButton: React.FC = () => {

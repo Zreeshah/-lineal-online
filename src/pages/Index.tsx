@@ -168,7 +168,7 @@ const Index = () => {
                   alt="Kalibrierungsanleitung: Lineal online an Kreditkartenbreite anpassen"
                   className="w-full h-auto rounded-lg object-cover"
                   loading="eager"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   width={1200}
                   height={630}
                   decoding="async"

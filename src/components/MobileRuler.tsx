@@ -85,7 +85,7 @@ const MobileRuler: React.FC = () => {
       }
       const position = getPixelsFromValue(roundedValue);
       const showLabel = tickType === 'major';
-      let label = roundedValue.toString();
+      const label = roundedValue.toString();
       ticks.push({
         position,
         type: tickType,

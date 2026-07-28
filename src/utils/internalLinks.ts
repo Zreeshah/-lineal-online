@@ -1,5 +1,6 @@
 // Internal links utility for SEO optimisation (German content for lineal.onl)
 import React from 'react';
+import { measurementArticleLinks } from '@/data/measurementBlogPosts';
 
 export type ArticleLink = {
   url: string;
@@ -73,6 +74,7 @@ export const blogArticles: ArticleLink[] = [
     title: 'Dimensionslose Zahlen in der Physik',
     keywords: ['dimensionslos', 'physik'],
   },
+  ...measurementArticleLinks,
 ];
 
 export const getRelatedArticles = (currentUrl: string, count: number = 2): ArticleLink[] => {

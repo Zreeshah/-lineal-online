@@ -1,4 +1,5 @@
 import React from 'react';
+import { measurementBlogPosts } from './measurementBlogPosts';
 
 export interface BlogPostData {
   slug: string;
@@ -7,8 +8,13 @@ export interface BlogPostData {
   keywords: string;
   publishedAt: string;
   ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   heroImage?: string;
   heroAlt: string;
+  category?: string;
+  summary?: string;
+  skipBlogExtras?: boolean;
   content: React.ReactNode;
 }
 
@@ -779,6 +785,7 @@ export const blogPosts: BlogPostData[] = [
       </Section>
     ),
   },
+  ...measurementBlogPosts,
 ];
 
 export const blogPostSlugs = blogPosts.map((p) => p.slug);

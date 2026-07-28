@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lineal.onl/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://lineal.onl/lineal-drucken</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://lineal.onl/ueber-uns</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://lineal.onl/kontakt</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://lineal.onl/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
@@ -25,4 +26,24 @@
   <url><loc>https://lineal.onl/blog/bildschirm-kalibrieren</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://lineal.onl/blog/lineal-fuer-tablet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://lineal.onl/blog/mm-genau-messen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/handy-als-massband</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/massband-im-handy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/lineal-im-handy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/lineal-online-blog</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://lineal.onl/blog/lineal-online-20-cm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/vertikales-lineal-online</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/lineal-zum-ausdrucken-blog</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/online-lineal-kalibrieren</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/ist-online-lineal-genau</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/massband-online-cm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/zentimeter-online</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/10-cm-online-messen</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/cm-in-mm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/mm-in-cm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/cm-in-zoll</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://lineal.onl/blog/bildschirm-zoll-messen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/bankkartengroesse</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/ring-lineal-messen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/schraube-lineal-messen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://lineal.onl/blog/lineal-app-vs-online</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

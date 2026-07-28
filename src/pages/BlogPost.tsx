@@ -41,8 +41,8 @@ const BlogPost: React.FC = () => {
         <meta name="description" content={post.metaDescription} />
         <meta name="keywords" content={post.keywords} />
         <html lang="de" />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.metaDescription} />
+        <meta property="og:title" content={post.ogTitle || post.title} />
+        <meta property="og:description" content={post.ogDescription || post.metaDescription} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="de_DE" />
@@ -69,7 +69,7 @@ const BlogPost: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 mb-5 text-sm">
               <span className="inline-flex items-center gap-1.5 bg-purple-100 text-purple-800 font-semibold px-3 py-1 rounded-full">
                 <BookOpen size={14} />
-                Ratgeber
+                {post.category || 'Ratgeber'}
               </span>
               <span className="inline-flex items-center gap-1.5 text-gray-500">
                 <Clock size={14} />
@@ -104,7 +104,7 @@ const BlogPost: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 p-6 sm:p-10">
             {post.content}
 
-            <BlogExtras title={post.title} keywords={post.keywords} />
+            {!post.skipBlogExtras && <BlogExtras title={post.title} keywords={post.keywords} />}
 
             <RelatedArticlesSection currentUrl={`/blog/${post.slug}`} />
           </div>

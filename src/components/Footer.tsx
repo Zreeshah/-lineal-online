@@ -16,6 +16,9 @@ const Footer: React.FC = () => {
             <Link to="/kontakt" className="text-sm text-ruler-primary hover:underline">
               Kontakt
             </Link>
+            <Link to="/blog" className="text-sm text-ruler-primary hover:underline">
+              Blog
+            </Link>
             <Link to="/datenschutz" className="text-sm text-ruler-primary hover:underline">
               Datenschutz
             </Link>

@@ -145,7 +145,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
       
       const showLabel = tickType === 'major';
       
-      let label = roundedValue.toString();
+      const label = roundedValue.toString();
       
       ticks.push({
         position,
