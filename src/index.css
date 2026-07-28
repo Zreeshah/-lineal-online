@@ -140,6 +140,238 @@
   }
 }
 
+.ruler-ticks-horizontal {
+  background-image: repeating-linear-gradient(
+    to right,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: auto 11px;
+}
+
+.ruler-ticks-vertical {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  background-position: right;
+  background-repeat: repeat-y;
+  background-size: 11px auto;
+}
+
+.blog-prose {
+  color: #374151;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.blog-prose article {
+  max-width: none;
+}
+
+.blog-prose h1 {
+  display: none;
+}
+
+.blog-prose h2 {
+  scroll-margin-top: 1.5rem;
+  margin: 3.5rem 0 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.blog-prose h3 {
+  scroll-margin-top: 1.5rem;
+  margin: 2rem 0 0.75rem;
+  color: #4c1d95;
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.blog-prose p {
+  margin: 1.1rem 0;
+}
+
+.blog-prose p:first-child {
+  margin-top: 0;
+}
+
+.blog-prose .lead {
+  margin: 0 0 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #ddd6fe;
+  border-left: 4px solid #8b5cf6;
+  border-radius: 0 6px 6px 0;
+  background: #f5f3ff;
+  color: #312e81;
+  font-size: 1.125rem;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.blog-prose strong {
+  color: #111827;
+  font-weight: 750;
+}
+
+.blog-prose a {
+  color: #6d28d9;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: #c4b5fd;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.blog-prose a:hover {
+  color: #4c1d95;
+  text-decoration-color: #6d28d9;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.blog-prose ul {
+  list-style: disc;
+}
+
+.blog-prose ol {
+  list-style: decimal;
+}
+
+.blog-prose li {
+  margin: 0.55rem 0;
+  padding-left: 0.35rem;
+}
+
+.blog-prose li::marker {
+  color: #7c3aed;
+  font-weight: 800;
+}
+
+.blog-prose table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.blog-prose thead,
+.blog-prose tbody {
+  display: table;
+  width: 100%;
+  min-width: 520px;
+  table-layout: fixed;
+}
+
+.blog-prose th,
+.blog-prose td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-prose th {
+  background: #f5f3ff;
+  color: #312e81;
+  font-weight: 800;
+}
+
+.blog-prose tbody tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+.blog-prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.blog-prose .article-cta {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd6fe;
+  border-radius: 6px;
+  background: #faf8ff;
+}
+
+.blog-prose .article-cta h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.35rem;
+}
+
+.blog-prose .article-cta p {
+  margin: 0.5rem 0 0;
+  color: #4b5563;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.blog-prose .article-cta .article-cta-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  color: #6d28d9;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .blog-prose {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .blog-prose h2 {
+    margin-top: 2.75rem;
+    font-size: 1.5rem;
+  }
+
+  .blog-prose h3 {
+    font-size: 1.15rem;
+  }
+
+  .blog-prose .lead {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .blog-prose .article-cta {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Animation classes */
 .animate-fade-in {
   animation: fadeIn 0.6s ease-in-out;

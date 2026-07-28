@@ -22,12 +22,12 @@ type Topic = {
 };
 
 const heroImages = [
-  '/lovable-uploads/6f49caed-ebfe-4019-9c87-44395c2b5eef.jpg',
   '/lovable-uploads/regla-midiendo.jpg',
-  '/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg',
   '/lovable-uploads/regla-dibujo.jpg',
   '/lovable-uploads/381e2e34-ef77-4b15-a19c-117866a61d42.jpg',
-  '/lovable-uploads/6328a843-2738-47e0-a58d-69f6ab06586b.jpg',
+  '/lovable-uploads/79ba06b7-f526-4c13-8eda-7f0f2ac9be8f.jpg',
+  '/lovable-uploads/3d520faf-c186-4486-92e5-9bcbb32657b4.jpg',
+  '/lovable-uploads/6e30be3b-fb3c-45ac-9368-d0c966ceb463.jpg',
 ];
 
 const sourceLinks = [

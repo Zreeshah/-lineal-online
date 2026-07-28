@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Ruler } from 'lucide-react';
+import { BookOpen, Ruler } from 'lucide-react';
 import MenuButton from './MenuButton';
 import {
   NavigationMenu,
@@ -12,21 +12,9 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 
-const blogLinks: { to: string; label: string }[] = [
-  { to: '/blog', label: 'Alle Blogartikel' },
-  { to: '/blog/lineal-10-cm-originalgroesse', label: 'Lineal 10 cm Originalgröße' },
-  { to: '/blog/handy-als-massband', label: 'Handy als Maßband' },
-  { to: '/blog/online-lineal-kalibrieren', label: 'Online-Lineal kalibrieren' },
-  { to: '/blog/ist-online-lineal-genau', label: 'Ist ein Online-Lineal genau?' },
-  { to: '/blog/lineal-fuer-handy', label: 'Lineal für Handy' },
-  { to: '/blog/massband-online', label: 'Maßband online' },
-  { to: '/blog/cm-in-mm', label: 'cm in mm' },
-  { to: '/blog/schraube-lineal-messen', label: 'Schraube mit Lineal messen' },
-];
-
 const Header: React.FC = () => {
   return (
-    <header className="py-4 mb-6 border-b">
+    <header className="mb-6 border-b border-gray-200 bg-white py-4">
       <div className="container flex justify-between items-center">
         <Link to="/" className="flex items-center" aria-label="Lineal Online Startseite">
           <Ruler size={28} className="text-ruler-primary mr-2" />
@@ -49,23 +37,13 @@ const Header: React.FC = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[320px]">
-                    {blogLinks.map((link) => (
-                      <li key={link.to}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={link.to}
-                            className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground"
-                          >
-                            {link.label}
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <Link
+                  to="/blog"
+                  className={`${navigationMenuTriggerStyle()} mx-1 gap-2 border border-purple-200 bg-purple-50 px-4 text-purple-800 hover:bg-purple-100 hover:text-purple-950`}
+                >
+                  <BookOpen size={16} />
+                  Blog
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Mehr</NavigationMenuTrigger>

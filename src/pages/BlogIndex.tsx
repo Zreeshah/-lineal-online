@@ -1,19 +1,23 @@
 import React from 'react';
 import { Head as Helmet } from 'vite-react-ssg';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Printer, Ruler, Search } from 'lucide-react';
+import { ArrowRight, BookOpen, CalendarDays, Ruler } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CanonicalLink from '@/components/CanonicalLink';
-import { Card, CardContent } from '@/components/ui/card';
+import BlogFeaturedVisual from '@/components/BlogFeaturedVisual';
 import { blogPosts } from '@/data/blogPosts';
 
 const BlogIndex: React.FC = () => {
   const metaTitle = 'Blog – Lineal online, Maßband & Umrechnung | Lineal.online';
   const metaDescription =
     'Alle Ratgeber zu Lineal online, Handy-Maßband, Kalibrierung, cm/mm/Zoll-Umrechnung, Schrauben, Ringen und Lineal zum Ausdrucken.';
-  const categories = Array.from(new Set(blogPosts.map((post) => post.category || 'Ratgeber')));
-  const featuredPosts = blogPosts.slice(-6).reverse();
+  const featuredPost =
+    blogPosts.find((post) => post.slug === 'handy-als-massband') ||
+    blogPosts[blogPosts.length - 1];
+  const sortedPosts = [...blogPosts]
+    .filter((post) => post.slug !== featuredPost.slug)
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
   const collectionSchema = {
     '@context': 'https://schema.org',
@@ -31,7 +35,7 @@ const BlogIndex: React.FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-purple-50/50 via-white to-white">
+    <div className="flex min-h-screen flex-col bg-[#fbfbfa]">
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -47,128 +51,105 @@ const BlogIndex: React.FC = () => {
 
       <Header />
 
-      <main className="flex-1">
-        <section className="container py-10 sm:py-14">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-200 bg-white px-4 py-2 text-sm font-semibold text-purple-700 shadow-sm">
-              <BookOpen size={16} />
-              Ratgeber & Messwissen
+      <main className="flex-1 pb-16">
+        <section className="container max-w-7xl px-4 pb-10 pt-5 sm:px-6 sm:pb-14 sm:pt-9">
+          <div className="max-w-3xl">
+            <div className="mb-4 inline-flex items-center gap-2 text-sm font-bold uppercase text-purple-700">
+              <BookOpen size={17} />
+              Messwissen & Werkzeuge
             </div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-              Lineal.online Blog
+            <h1 className="text-4xl font-black leading-tight text-gray-950 sm:text-6xl">
+              Blog über Messen und Online-Lineale
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gray-600">
-              Kurze, praktische Erklärungen zu Online-Linealen, Handy-Messungen, Kalibrierung und Umrechnung
-              zwischen Zentimetern, Millimetern und Zoll.
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
+              Klare Anleitungen, Umrechnungstabellen und praktische Tipps für Messungen am Bildschirm,
+              Kalibrierung und druckbare Lineale.
             </p>
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-3">
-            <Link
-              to="/"
-              className="group flex items-center gap-3 rounded-lg border border-purple-100 bg-white p-4 shadow-sm transition hover:border-purple-300 hover:shadow-md"
-            >
-              <span className="rounded-md bg-purple-100 p-2 text-purple-700">
-                <Ruler size={20} />
-              </span>
-              <span>
-                <span className="block font-semibold text-gray-900">Online-Lineal</span>
-                <span className="text-sm text-gray-500">Direkt messen</span>
-              </span>
-            </Link>
-            <Link
-              to="/lineal-drucken"
-              className="group flex items-center gap-3 rounded-lg border border-purple-100 bg-white p-4 shadow-sm transition hover:border-purple-300 hover:shadow-md"
-            >
-              <span className="rounded-md bg-purple-100 p-2 text-purple-700">
-                <Printer size={20} />
-              </span>
-              <span>
-                <span className="block font-semibold text-gray-900">Lineal drucken</span>
-                <span className="text-sm text-gray-500">A4-Vorlage</span>
-              </span>
-            </Link>
-            <a
-              href="#artikel"
-              className="group flex items-center gap-3 rounded-lg border border-purple-100 bg-white p-4 shadow-sm transition hover:border-purple-300 hover:shadow-md"
-            >
-              <span className="rounded-md bg-purple-100 p-2 text-purple-700">
-                <Search size={20} />
-              </span>
-              <span>
-                <span className="block font-semibold text-gray-900">Alle Themen</span>
-                <span className="text-sm text-gray-500">{blogPosts.length} Artikel</span>
-              </span>
-            </a>
-          </div>
+          <Link
+            to={`/blog/${featuredPost.slug}`}
+            className="group mt-10 grid overflow-hidden rounded-md border border-gray-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:border-purple-300 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 lg:grid-cols-[1.35fr_1fr]"
+          >
+            <div className="aspect-[16/10] min-h-0 overflow-hidden border-b border-gray-200 lg:aspect-auto lg:border-b-0 lg:border-r">
+              <BlogFeaturedVisual post={featuredPost} priority />
+            </div>
+            <article className="flex flex-col justify-center p-7 sm:p-10">
+              <span className="mb-4 text-sm font-bold uppercase text-purple-700">Ausgewählter Artikel</span>
+              <h2 className="text-2xl font-black leading-tight text-gray-950 sm:text-4xl">{featuredPost.title}</h2>
+              <p className="mt-4 line-clamp-3 text-base leading-7 text-gray-600">
+                {featuredPost.summary || featuredPost.metaDescription}
+              </p>
+              <div className="mt-7 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500">
+                <span className="inline-flex items-center gap-2">
+                  <CalendarDays size={16} />
+                  {new Date(featuredPost.publishedAt).toLocaleDateString('de-DE', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </span>
+                <span className="inline-flex min-h-11 items-center gap-2 font-bold text-purple-700">
+                  Artikel lesen
+                  <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
+                </span>
+              </div>
+            </article>
+          </Link>
         </section>
 
-        <section className="border-y border-purple-100 bg-white/70">
-          <div className="container py-8">
-            <h2 className="mb-4 text-xl font-bold text-gray-900">Neue Mess-Ratgeber</h2>
-            <div className="grid gap-4 md:grid-cols-3">
-              {featuredPosts.map((post) => (
+        <section className="border-t border-gray-200 bg-white py-12 sm:py-16" aria-labelledby="all-posts-title">
+          <div className="container max-w-7xl px-4 sm:px-6">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="mb-2 text-sm font-bold uppercase text-purple-700">Bibliothek</p>
+                <h2 id="all-posts-title" className="text-3xl font-black text-gray-950 sm:text-4xl">Alle Artikel</h2>
+              </div>
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-500">
+                <Ruler size={16} />
+                {blogPosts.length} Ratgeber
+              </span>
+            </div>
+
+            <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
+              {sortedPosts.map((post) => (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
-                  className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition hover:border-purple-300 hover:shadow-md"
+                  className="group min-w-0 overflow-hidden rounded-md border border-gray-200 bg-[#fbfbfa] transition duration-200 hover:-translate-y-1 hover:border-purple-300 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
                 >
-                  <span className="mb-3 inline-flex rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700">
-                    {post.category || 'Ratgeber'}
-                  </span>
-                  <h3 className="mb-2 text-lg font-bold leading-snug text-gray-900">{post.title}</h3>
-                  <p className="text-sm leading-relaxed text-gray-600">{post.summary || post.metaDescription}</p>
+                  <article className="flex h-full flex-col">
+                    <div className="aspect-[16/10] overflow-hidden border-b border-gray-200">
+                      <BlogFeaturedVisual post={post} compact />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <span className="mb-3 text-xs font-bold uppercase text-purple-700">
+                        {post.category || 'Ratgeber'}
+                      </span>
+                      <h3 className="line-clamp-3 text-xl font-black leading-snug text-gray-950 transition-colors group-hover:text-purple-800">
+                        {post.title}
+                      </h3>
+                      <p className="mt-3 line-clamp-3 text-sm leading-6 text-gray-600">
+                        {post.summary || post.metaDescription}
+                      </p>
+                      <div className="mt-auto flex items-center justify-between gap-3 pt-6 text-sm">
+                        <time dateTime={post.publishedAt} className="text-gray-500">
+                          {new Date(post.publishedAt).toLocaleDateString('de-DE', {
+                            day: '2-digit',
+                            month: 'short',
+                            year: 'numeric',
+                          })}
+                        </time>
+                        <span className="inline-flex min-h-11 items-center gap-2 font-bold text-purple-700">
+                          Mehr
+                          <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                        </span>
+                      </div>
+                    </div>
+                  </article>
                 </Link>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="artikel" className="container py-10">
-          <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Alle Blogartikel</h2>
-              <p className="mt-1 text-gray-600">Von Handy-Lineal bis Schraubenmessung: die komplette Themenbibliothek.</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <span key={category} className="rounded-full border border-purple-100 bg-purple-50 px-3 py-1 text-xs font-medium text-purple-700">
-                  {category}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post) => (
-              <Card key={post.slug} className="h-full overflow-hidden border-gray-200 bg-white shadow-sm transition hover:border-purple-300 hover:shadow-md">
-                <CardContent className="flex h-full flex-col p-0">
-                  {post.heroImage && (
-                    <img
-                      src={post.heroImage}
-                      alt={post.heroAlt}
-                      className="h-40 w-full object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  )}
-                  <div className="flex flex-1 flex-col p-5">
-                    <span className="mb-3 inline-flex w-fit rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700">
-                      {post.category || 'Ratgeber'}
-                    </span>
-                    <h3 className="mb-2 text-lg font-bold leading-snug text-gray-900">{post.title}</h3>
-                    <p className="mb-4 text-sm leading-relaxed text-gray-600">{post.summary || post.metaDescription}</p>
-                    <Link
-                      to={`/blog/${post.slug}`}
-                      className="mt-auto inline-flex items-center gap-1 font-semibold text-purple-700 hover:text-purple-900"
-                    >
-                      Weiterlesen
-                      <ArrowRight size={16} />
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </section>
       </main>
