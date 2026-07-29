@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const SITE_ORIGIN = 'https://lineal.onl';
+const SITE_ORIGIN = 'https://www.lineal.onl';
 const HOST = new URL(SITE_ORIGIN).host;
 const ENDPOINT = 'https://api.indexnow.org/indexnow';
 const KEY_FILE_NAME = '32cf1deb4922b3f499bacecae60fc20a.txt';

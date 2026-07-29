@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lineal.onl/sitemap.xml
+Sitemap: https://www.lineal.onl/sitemap.xml

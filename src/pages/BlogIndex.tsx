@@ -24,12 +24,12 @@ const BlogIndex: React.FC = () => {
     '@type': 'CollectionPage',
     name: 'Lineal.online Blog',
     description: metaDescription,
-    url: 'https://lineal.onl/blog',
+    url: 'https://www.lineal.onl/blog',
     inLanguage: 'de-DE',
     mainEntity: blogPosts.map((post) => ({
       '@type': 'Article',
       headline: post.title,
-      url: `https://lineal.onl/blog/${post.slug}`,
+      url: `https://www.lineal.onl/blog/${post.slug}`,
       datePublished: post.publishedAt,
     })),
   };
@@ -43,7 +43,7 @@ const BlogIndex: React.FC = () => {
         <html lang="de" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content="https://lineal.onl/blog" />
+        <meta property="og:url" content="https://www.lineal.onl/blog" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
       </Helmet>

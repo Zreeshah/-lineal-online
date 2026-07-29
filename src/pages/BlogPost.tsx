@@ -66,7 +66,7 @@ const BlogPost: React.FC = () => {
 
   if (!post) return <NotFound />;
 
-  const url = `https://lineal.onl/blog/${post.slug}`;
+  const url = `https://www.lineal.onl/blog/${post.slug}`;
   const readingTime = post.skipBlogExtras ? 8 : 4;
   const reliableHeroImage = getReliableHeroImage(post);
   const shareImage = reliableHeroImage || '/lovable-uploads/regla-midiendo.jpg';
@@ -79,12 +79,12 @@ const BlogPost: React.FC = () => {
     datePublished: post.publishedAt,
     inLanguage: 'de-DE',
     mainEntityOfPage: url,
-    image: `https://lineal.onl${shareImage}`,
+    image: `https://www.lineal.onl${shareImage}`,
     author: { '@type': 'Organization', name: 'Redaktion Lineal.online' },
     publisher: {
       '@type': 'Organization',
       name: 'Lineal.online',
-      url: 'https://lineal.onl/',
+      url: 'https://www.lineal.onl/',
     },
   };
 
@@ -100,7 +100,7 @@ const BlogPost: React.FC = () => {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="de_DE" />
-        <meta property="og:image" content={`https://lineal.onl${shareImage}`} />
+        <meta property="og:image" content={`https://www.lineal.onl${shareImage}`} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

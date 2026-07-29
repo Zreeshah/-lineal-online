@@ -20,7 +20,7 @@ const Privacy = () => {
           <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md prose max-w-none">
             <h1 className="text-2xl font-bold mb-6 text-ruler-primary">Datenschutzerklärung</h1>
             <p>
-              Lineal.online betreibt die Website <a href="https://lineal.onl">https://lineal.onl</a>. Diese
+              Lineal.online betreibt die Website <a href="https://www.lineal.onl">https://www.lineal.onl</a>. Diese
               Seite informiert Sie über unsere Richtlinien zur Erfassung, Verwendung und Weitergabe
               personenbezogener Daten bei der Nutzung unseres Dienstes.
             </p>
