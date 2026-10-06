@@ -13,13 +13,13 @@ import { Link } from 'react-router-dom';
 import { blogArticles } from '@/utils/internalLinks';
 import CanonicalLink from '@/components/CanonicalLink';
 import calibrationGuide from '@/assets/calibration-guide.png';
-import reglaOnline from '@/assets/regla-online.jpg';
-import reglaPrecision from '@/assets/regla-precision.jpg';
+import onlineLinealImage from '@/assets/online-lineal.jpg';
+import linealMeasurementImage from '@/assets/lineal-messung.jpg';
 import HomeContent from '@/components/HomeContent';
 import HowToUseSection from '@/components/HowToUseSection';
 import WhyPerfectSection from '@/components/WhyPerfectSection';
-import FaqSection from '@/components/FaqSection';
 import RulerSizesTable from '@/components/RulerSizesTable';
+import HomepageMeasurementGuide from '@/components/HomepageMeasurementGuide';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -60,7 +60,30 @@ const Index = () => {
       { '@type': 'Question', name: t('faqQuestion1'), acceptedAnswer: { '@type': 'Answer', text: t('faqAnswer1') } },
       { '@type': 'Question', name: t('faqQuestion2'), acceptedAnswer: { '@type': 'Answer', text: t('faqAnswer2') } },
       { '@type': 'Question', name: t('faqQuestion3'), acceptedAnswer: { '@type': 'Answer', text: t('faqAnswer3') } },
+      { '@type': 'Question', name: t('faqQuestion4'), acceptedAnswer: { '@type': 'Answer', text: t('faqAnswer4') } },
+      { '@type': 'Question', name: t('faqQuestion5'), acceptedAnswer: { '@type': 'Answer', text: t('faqAnswer5') } },
+      { '@type': 'Question', name: t('faqQuestion6'), acceptedAnswer: { '@type': 'Answer', text: t('faqAnswer6') } },
     ],
+  };
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Lineal.online',
+    url: 'https://www.lineal.onl/',
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Lineal.online',
+    url: 'https://www.lineal.onl/',
+    inLanguage: 'de-DE',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Lineal.online',
+      url: 'https://www.lineal.onl/',
+    },
   };
 
   useEffect(() => {
@@ -73,10 +96,6 @@ const Index = () => {
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta
-          name="keywords"
-          content="lineal, lineal online, online lineal, lineal online handy, 1 centymetr, maßband online, lineal 10 cm anzeigen, lineal 10 cm originalgröße, lineal für handy"
-        />
         <html lang="de" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
@@ -87,6 +106,8 @@ const Index = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script type="application/ld+json">{JSON.stringify(webApplicationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
@@ -231,8 +252,6 @@ const Index = () => {
             <WhyPerfectSection />
           </div>
 
-          <FaqSection />
-
           <RulerSizesTable />
 
           <div className="mb-10">
@@ -251,8 +270,7 @@ const Index = () => {
                     <h3 className="text-xl font-semibold mb-3 text-gray-800">1. Maßeinheit wählen</h3>
                     <p className="text-gray-700">
                       Wählen Sie die gewünschte Einheit: Millimeter (mm), Zentimeter (cm) oder Zoll. Sie können
-                      jederzeit über das Lineal-Menü wechseln. <strong>1 centymetr</strong> entspricht dabei
-                      genau 10&nbsp;mm.
+                      jederzeit über das Lineal-Menü wechseln. <strong>1 cm = 10 mm</strong> gilt in jeder Ansicht.
                     </p>
                   </div>
 
@@ -282,8 +300,8 @@ const Index = () => {
 
                   <div className="my-6">
                     <img
-                      src={reglaOnline}
-                      alt="Präzises digitales Lineal online auf dunkler Oberfläche – perfekt zum Messen in cm und mm"
+                      src={onlineLinealImage}
+                      alt="Digitales Online-Lineal auf dunkler Oberfläche zum Messen in Zentimetern und Millimetern"
                       className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                       loading="lazy"
                       decoding="async"
@@ -326,8 +344,8 @@ const Index = () => {
 
                 <div className="my-6">
                   <img
-                    src={reglaPrecision}
-                    alt="Person nutzt ein präzises Lineal mit Millimeter-Genauigkeit – Maßband online für Designprojekte"
+                    src={linealMeasurementImage}
+                    alt="Person liest eine Millimeterskala für ein Designprojekt ab"
                     className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                     loading="lazy"
                     decoding="async"
@@ -364,6 +382,8 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+
+          <HomepageMeasurementGuide />
         </main>
 
         <Footer />

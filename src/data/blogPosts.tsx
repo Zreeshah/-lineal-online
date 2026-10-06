@@ -150,7 +150,7 @@ const allBlogPosts: BlogPostData[] = [
   },
   {
     slug: 'massband-online',
-    heroImage: '/lovable-uploads/regla-midiendo.jpg',
+    heroImage: '/lovable-uploads/online-lineal-messen.jpg',
     title: 'Maßband online – kostenlos in cm und mm messen',
     metaDescription:
       'Maßband online kostenlos – messen Sie Längen in cm, mm und Zoll direkt im Browser. Präzises Online-Maßband für Handy, Tablet und PC.',
@@ -196,19 +196,19 @@ const allBlogPosts: BlogPostData[] = [
   },
   {
     slug: '1-cm-in-mm',
-    heroImage: '/lovable-uploads/regla-dibujo.jpg',
-    title: '1 cm in mm – Umrechnung & 1 centymetr erklärt',
+    heroImage: '/lovable-uploads/digitales-lineal.jpg',
+    title: '1 cm in mm – Umrechnung einfach erklärt',
     metaDescription:
       '1 cm in mm einfach erklärt: 1 Zentimeter = 10 Millimeter. Umrechnungstabelle, Beispiele und ein kostenloses Online-Lineal zum direkten Messen.',
-    keywords: '1 centymetr, 1 cm in mm, zentimeter, millimeter, einheiten umrechnen, lineal online',
+    keywords: '1 cm in mm, zentimeter, millimeter, einheiten umrechnen, lineal online',
     publishedAt: '2026-06-01',
     heroAlt: '1 cm in mm – Umrechnung zwischen Zentimeter und Millimeter',
     content: (
       <Section>
         <h1>1 cm in mm – wie viele Millimeter sind 1 Zentimeter?</h1>
         <p className="lead">
-          Die Antwort ist einfach: <strong>1 cm = 10 mm</strong>. Ein <strong>1 centymetr</strong> entspricht
-          exakt zehn Millimetern. Mit unserem <strong>lineal online</strong> sehen Sie diese 10 Striche sofort in
+          Die Antwort ist einfach: <strong>1 cm = 10 mm</strong>. Ein Zentimeter entspricht exakt zehn
+          Millimetern. Mit unserem <strong>lineal online</strong> sehen Sie diese 10 Striche sofort in
           Originalgröße.
         </p>
 
@@ -598,7 +598,7 @@ const allBlogPosts: BlogPostData[] = [
         <h2>Was Sie damit machen können</h2>
         <ul>
           <li>Lineal 10 cm anzeigen in Originalgröße</li>
-          <li>1 centymetr exakt sehen (= 10 mm)</li>
+          <li>1 cm exakt sehen (= 10 mm)</li>
           <li>Längen auf Handy, Tablet oder PC messen</li>
           <li>Als <strong>maßband online</strong> nutzen</li>
         </ul>

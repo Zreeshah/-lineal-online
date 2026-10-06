@@ -23,8 +23,8 @@ type Topic = {
 };
 
 const heroImages = [
-  '/lovable-uploads/regla-midiendo.jpg',
-  '/lovable-uploads/regla-dibujo.jpg',
+  '/lovable-uploads/online-lineal-messen.jpg',
+  '/lovable-uploads/digitales-lineal.jpg',
   '/lovable-uploads/381e2e34-ef77-4b15-a19c-117866a61d42.jpg',
   '/lovable-uploads/79ba06b7-f526-4c13-8eda-7f0f2ac9be8f.jpg',
   '/lovable-uploads/3d520faf-c186-4486-92e5-9bcbb32657b4.jpg',

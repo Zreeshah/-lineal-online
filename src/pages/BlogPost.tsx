@@ -67,7 +67,7 @@ const BlogPost: React.FC = () => {
 
   const url = `https://www.lineal.onl/blog/${post.slug}`;
   const reliableHeroImage = getReliableHeroImage(post);
-  const shareImage = reliableHeroImage || '/lovable-uploads/regla-midiendo.jpg';
+  const shareImage = reliableHeroImage || '/lovable-uploads/online-lineal-messen.jpg';
 
   const articleSchema = {
     '@context': 'https://schema.org',

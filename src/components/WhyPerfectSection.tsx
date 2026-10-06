@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 
 const WhyPerfectSection: React.FC = () => {
@@ -10,10 +10,7 @@ const WhyPerfectSection: React.FC = () => {
     <section className="mb-10">
       <h2 className="text-2xl font-bold mb-4 text-ruler-primary">{t('whyPerfect')}</h2>
       <Card className="bg-white h-full">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-lg">{t('whyPerfect')}</CardTitle>
-        </CardHeader>
-        <CardContent>
+        <CardContent className="pt-6">
           <ul className="space-y-3">
             <li className="flex"><Check className="text-green-500 mr-2 shrink-0" size={20} /><span>{t('whyPerfectItem1')}</span></li>
             <li className="flex"><Check className="text-green-500 mr-2 shrink-0" size={20} /><span>{t('whyPerfectItem2')}</span></li>

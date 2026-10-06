@@ -50,8 +50,8 @@ const HomeContent: React.FC = () => {
         <li className="mb-2">
           <p>
             <strong>Einheit wählen</strong>: Wechseln Sie zwischen <strong>Zentimetern</strong>,{' '}
-            <strong>Millimetern</strong> und <strong>Zoll</strong>, ganz wie Sie möchten – auch{' '}
-            <strong>1 centymetr</strong> entspricht hier exakt 10 mm.
+            <strong>Millimetern</strong> und <strong>Zoll</strong>, ganz wie Sie möchten. Dabei gilt immer:{' '}
+            <strong>1 cm = 10 mm</strong>.
           </p>
         </li>
       </ol>

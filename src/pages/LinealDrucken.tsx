@@ -3,7 +3,7 @@ import { Head as Helmet } from 'vite-react-ssg';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Printer } from 'lucide-react';
-import reglaImage from '@/assets/Regla para Imprimir.png';
+import linealImage from '@/assets/Lineal-zum-Ausdrucken.png';
 import CanonicalLink from '@/components/CanonicalLink';
 
 const LinealDrucken: React.FC = () => {
@@ -48,7 +48,7 @@ const LinealDrucken: React.FC = () => {
               <div className="flex flex-col lg:flex-row gap-8 mb-8">
                 <div className="lg:w-auto flex-shrink-0 flex justify-center lg:justify-start">
                   <img
-                    src={reglaImage}
+                    src={linealImage}
                     alt="Lineal zum Ausdrucken in Originalgröße"
                     className="h-auto max-h-[500px] sm:max-h-[600px] lg:max-h-[800px] w-auto object-contain"
                     loading="lazy"
@@ -91,7 +91,7 @@ const LinealDrucken: React.FC = () => {
           </div>
 
           <div className="hidden print:block print:m-0 print:p-0">
-            <img src={reglaImage} alt="Lineal zum Ausdrucken" className="w-auto h-auto max-w-none" />
+            <img src={linealImage} alt="Lineal zum Ausdrucken" className="w-auto h-auto max-w-none" />
           </div>
         </div>
       </Layout>
