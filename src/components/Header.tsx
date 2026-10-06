@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Ruler } from 'lucide-react';
+import { BookOpen, Calculator, FileText, Monitor, Ruler } from 'lucide-react';
 import MenuButton from './MenuButton';
 import {
   NavigationMenu,
@@ -48,7 +48,37 @@ const Header: React.FC = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Mehr</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[200px]">
+                  <ul className="grid gap-1 p-4 w-[300px]">
+                    <li className="px-3 pb-2 text-xs font-semibold uppercase text-muted-foreground">
+                      Werkzeuge
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/zoll-in-cm-rechner" className="flex select-none items-center gap-3 rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          <Calculator size={18} aria-hidden="true" />
+                          Zoll in cm Rechner
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/papierformate" className="flex select-none items-center gap-3 rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          <FileText size={18} aria-hidden="true" />
+                          Papierformate
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/bildschirmgroesse-rechner" className="flex select-none items-center gap-3 rounded-md p-3 hover:bg-accent hover:text-accent-foreground">
+                          <Monitor size={18} aria-hidden="true" />
+                          Bildschirmgröße Rechner
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li className="mt-2 border-t px-3 pb-1 pt-4 text-xs font-semibold uppercase text-muted-foreground">
+                      Informationen
+                    </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <Link to="/ueber-uns" className="block select-none rounded-md p-3 hover:bg-accent hover:text-accent-foreground">

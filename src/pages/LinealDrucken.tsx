@@ -1,10 +1,30 @@
 import React from 'react';
 import { Head as Helmet } from 'vite-react-ssg';
+import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
-import { Printer } from 'lucide-react';
+import { CreditCard, Download, Printer } from 'lucide-react';
 import linealImage from '@/assets/Lineal-zum-Ausdrucken.png';
 import CanonicalLink from '@/components/CanonicalLink';
+
+const printFaqs = [
+  {
+    question: 'Warum darf „An Seite anpassen“ nicht aktiviert sein?',
+    answer: 'Diese Option verkleinert oder vergrößert die PDF auf den bedruckbaren Bereich des Druckers. Dadurch stimmen Zentimeter-, Millimeter- und Zollskala nicht mehr mit der Originalgröße überein.',
+  },
+  {
+    question: 'Welche PDF passt zu meinem Papier?',
+    answer: 'Verwenden Sie die A4-Datei für 210 × 297 mm und die US-Letter-Datei für 8,5 × 11 Zoll. Das im Druckdialog gewählte Papier muss zur Datei passen.',
+  },
+  {
+    question: 'Kann ich das Lineal nach dem Drucken ausschneiden?',
+    answer: 'Ja. Schneiden Sie entlang der Außenkante, ohne die Nullmarke zu entfernen. Stabileres Papier oder eine transparente Laminierung erleichtert die spätere Nutzung.',
+  },
+  {
+    question: 'Was mache ich, wenn die Bankkarte nicht in das Kontrollfeld passt?',
+    answer: 'Brechen Sie die Messung ab und prüfen Sie Papierformat sowie Skalierung. Drucken Sie erneut mit 100 Prozent oder „Tatsächliche Größe“ und ohne automatische Seitenanpassung.',
+  },
+];
 
 const LinealDrucken: React.FC = () => {
   const handlePrint = () => {
@@ -21,6 +41,15 @@ const LinealDrucken: React.FC = () => {
         />
         <meta name="keywords" content="lineal zum ausdrucken, lineal drucken, lineal 30 cm, lineal 12 zoll, druckbares lineal" />
         <html lang="de" />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: printFaqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+          })),
+        })}</script>
       </Helmet>
       <CanonicalLink />
 
@@ -88,6 +117,73 @@ const LinealDrucken: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            <section className="mx-auto max-w-4xl border-t border-gray-200 pt-10" aria-labelledby="print-download-title">
+              <h2 id="print-download-title" className="text-3xl font-bold text-gray-950">Druckvorlage maßhaltig ausgeben</h2>
+              <p className="mt-4 leading-7 text-gray-700">
+                Öffnen Sie die gewünschte PDF in einem PDF-Programm oder direkt im Browser. Wählen Sie im Druckdialog
+                exakt das Papierformat der Datei und stellen Sie die Skalierung auf <strong>100 %</strong> oder
+                <strong> „Tatsächliche Größe“</strong>. Optionen wie „An Seite anpassen“, „Einpassen“, „Verkleinern“
+                oder „Fit to page“ müssen deaktiviert bleiben, weil sie die physische Länge der Skala verändern.
+              </p>
+
+              <ol className="mt-6 space-y-4 border-l-2 border-purple-200 pl-6 text-gray-700">
+                <li><strong>1. Datei wählen:</strong> A4 oder US Letter muss mit dem eingelegten Papier übereinstimmen.</li>
+                <li><strong>2. Maßstab festlegen:</strong> 100 % einstellen und jede automatische Anpassung ausschalten.</li>
+                <li><strong>3. Vorschau prüfen:</strong> Keine Skalenlinie darf abgeschnitten oder auf eine zweite Seite verschoben sein.</li>
+                <li><strong>4. Kontrollseite drucken:</strong> Zunächst nur ein Blatt ausgeben, bevor mehrere Kopien gestartet werden.</li>
+              </ol>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <a
+                  href="/downloads/lineal-a4-cm-mm-zoll.pdf"
+                  download
+                  className="flex min-h-24 items-center gap-4 rounded-md border border-purple-200 bg-white p-5 font-semibold text-purple-800 shadow-sm hover:border-purple-400"
+                >
+                  <Download size={24} aria-hidden="true" />
+                  <span>A4-PDF: cm, mm und Zoll<span className="mt-1 block text-sm font-normal text-gray-600">210 × 297 mm</span></span>
+                </a>
+                <a
+                  href="/downloads/lineal-us-letter-cm-mm-zoll.pdf"
+                  download
+                  className="flex min-h-24 items-center gap-4 rounded-md border border-purple-200 bg-white p-5 font-semibold text-purple-800 shadow-sm hover:border-purple-400"
+                >
+                  <Download size={24} aria-hidden="true" />
+                  <span>US-Letter-PDF: cm, mm und Zoll<span className="mt-1 block text-sm font-normal text-gray-600">8,5 × 11 Zoll</span></span>
+                </a>
+              </div>
+
+              <div className="mt-10 grid gap-6 border-y border-gray-200 py-8 md:grid-cols-[auto_1fr] md:items-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-md bg-purple-100 text-purple-700">
+                  <CreditCard size={30} aria-hidden="true" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-950">Ausdruck mit einer Bankkarte kontrollieren</h2>
+                  <p className="mt-3 leading-7 text-gray-700">
+                    Legen Sie eine Bankkarte im üblichen Format 85,60 × 53,98 mm auf das eingezeichnete Kontrollfeld.
+                    Die lange und die kurze Kartenkante müssen gleichzeitig mit dem Rahmen übereinstimmen. Prüfen Sie
+                    zusätzlich eine 10-cm-Strecke der Skala. Passt nur eine Richtung, wurde möglicherweise mit einem
+                    falschen Seitenverhältnis oder einer druckerspezifischen Skalierung ausgegeben.
+                  </p>
+                </div>
+              </div>
+
+              <h2 className="mt-10 text-2xl font-bold text-gray-950">Häufige Fragen zur Druckvorlage</h2>
+              <div className="mt-4 divide-y divide-gray-200 border-y border-gray-200">
+                {printFaqs.map((faq) => (
+                  <section key={faq.question} className="py-5">
+                    <h3 className="text-lg font-semibold text-gray-950">{faq.question}</h3>
+                    <p className="mt-2 leading-7 text-gray-700">{faq.answer}</p>
+                  </section>
+                ))}
+              </div>
+
+              <p className="mt-8 leading-7 text-gray-700">
+                Die Maße der Papiergrößen können Sie unter <Link className="font-medium text-purple-700 hover:underline" to="/papierformate">DIN-Papierformate vergleichen</Link>.
+                Für eine Messung ohne Ausdruck bleibt das <Link className="font-medium text-purple-700 hover:underline" to="/">Online-Lineal in Originalgröße</Link> verfügbar;
+                Hinweise zur Kontrolle stehen im Ratgeber <Link className="font-medium text-purple-700 hover:underline" to="/blog/ist-online-lineal-genau">Genauigkeit eines Online-Lineals</Link>.
+              </p>
+            </section>
           </div>
 
           <div className="hidden print:block print:m-0 print:p-0">

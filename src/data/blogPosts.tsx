@@ -98,6 +98,11 @@ const allBlogPosts: BlogPostData[] = [
           <li>Funktioniert als <strong>Lineal für Handy</strong>, Tablet und PC.</li>
         </ul>
 
+        <p>
+          Soll die Skala unabhängig vom Bildschirm nutzbar sein, laden Sie das{' '}
+          <a href="/lineal-drucken">Lineal zum Ausdrucken mit Prüfmaß</a> als A4- oder US-Letter-PDF herunter.
+        </p>
+
         <p>Probieren Sie es jetzt aus – Ihr <strong>Lineal 10 cm online</strong> wartet.</p>
       </Section>
     ),
@@ -676,6 +681,11 @@ const allBlogPosts: BlogPostData[] = [
         <p>
           Bildschirmgrößen, Fahrrad- und Autoreifen, Felgen, Rohre und viele Maschinenteile werden in Zoll
           angegeben. Mit unserem <a href="/">Lineal online</a> wechseln Sie per Klick zwischen cm und Zoll.
+        </p>
+
+        <p>
+          Für beliebige Werte rechnet der <a href="/zoll-in-cm-rechner">Zoll-in-cm-Rechner</a> in beide
+          Richtungen und zeigt zusätzlich Millimeter an.
         </p>
       </Section>
     ),

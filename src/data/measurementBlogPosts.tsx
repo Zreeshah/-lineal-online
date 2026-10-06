@@ -373,7 +373,11 @@ const topics: Topic[] = [
     steps: ['Sichtbare Diagonale messen.', 'Wert in cm notieren.', 'Durch 2,54 teilen.', 'Zollwert runden.', 'Wert im Kalibrierungsfeld eintragen.'],
     mistakes: ['Breite statt Diagonale messen.', 'Gehäuserand mitmessen.', 'Gerundeten Marketingwert als exakte Größe behandeln.'],
     faqs: buildFaqs('Bildschirm in Zoll messen', 'Displaykalibrierung und Gerätevergleich'),
-    related: defaultRelated,
+    related: [
+      { to: '/bildschirmgroesse-rechner', label: 'Bildschirmgröße mit Seitenverhältnis berechnen' },
+      { to: '/zoll-in-cm-rechner', label: 'Zoll, Zentimeter und Millimeter umrechnen' },
+      ...defaultRelated.slice(0, 2),
+    ],
   },
   {
     focusKeyword: 'Bankkartengröße',

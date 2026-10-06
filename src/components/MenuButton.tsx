@@ -48,6 +48,19 @@ const MenuButton: React.FC = () => {
             </Link>
 
             <div className="pt-4 pb-2">
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Werkzeuge</p>
+            </div>
+            <Link to="/zoll-in-cm-rechner" className="text-base font-medium hover:text-ruler-primary py-2 pl-2" onClick={() => setIsOpen(false)}>
+              Zoll in cm Rechner
+            </Link>
+            <Link to="/papierformate" className="text-base font-medium hover:text-ruler-primary py-2 pl-2" onClick={() => setIsOpen(false)}>
+              Papierformate
+            </Link>
+            <Link to="/bildschirmgroesse-rechner" className="text-base font-medium hover:text-ruler-primary py-2 pl-2" onClick={() => setIsOpen(false)}>
+              Bildschirmgröße Rechner
+            </Link>
+
+            <div className="pt-4 pb-2">
               <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Informationen</p>
             </div>
             <Link to="/ueber-uns" className="text-base font-medium hover:text-ruler-primary py-2 pl-2" onClick={() => setIsOpen(false)}>

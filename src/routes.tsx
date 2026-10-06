@@ -7,6 +7,9 @@ import Privacy from './pages/Privacy';
 import Disclaimer from './pages/Disclaimer';
 import NotFound from './pages/NotFound';
 import LinealDrucken from './pages/LinealDrucken';
+import ZollInCmRechner from './pages/ZollInCmRechner';
+import Papierformate from './pages/Papierformate';
+import BildschirmgroesseRechner from './pages/BildschirmgroesseRechner';
 import BlogIndex from './pages/BlogIndex';
 import BlogPost from './pages/BlogPost';
 import { blogPostSlugs } from './data/blogPosts';
@@ -22,6 +25,13 @@ export const routes: RouteRecord[] = [
       { path: 'datenschutz', Component: Privacy, entry: 'src/pages/Privacy.tsx' },
       { path: 'impressum', Component: Disclaimer, entry: 'src/pages/Disclaimer.tsx' },
       { path: 'lineal-drucken', Component: LinealDrucken, entry: 'src/pages/LinealDrucken.tsx' },
+      { path: 'zoll-in-cm-rechner', Component: ZollInCmRechner, entry: 'src/pages/ZollInCmRechner.tsx' },
+      { path: 'papierformate', Component: Papierformate, entry: 'src/pages/Papierformate.tsx' },
+      {
+        path: 'bildschirmgroesse-rechner',
+        Component: BildschirmgroesseRechner,
+        entry: 'src/pages/BildschirmgroesseRechner.tsx',
+      },
       { path: 'blog', Component: BlogIndex, entry: 'src/pages/BlogIndex.tsx' },
       {
         path: 'blog/:slug',
