@@ -1,6 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const openCookieSettings = () => {
+  if (typeof window === 'undefined') return;
+
+  const googlefc = window.googlefc || { callbackQueue: [] };
+  window.googlefc = googlefc;
+  if (googlefc?.showRevocationMessage) {
+    googlefc.showRevocationMessage();
+    return;
+  }
+
+  googlefc.callbackQueue = googlefc.callbackQueue || [];
+  googlefc.callbackQueue.push({
+    CONSENT_API_READY: () => window.googlefc?.showRevocationMessage?.(),
+  });
+};
+
 const Footer: React.FC = () => {
   return (
     <footer className="py-6 border-t mt-10 bg-white">
@@ -25,6 +41,13 @@ const Footer: React.FC = () => {
             <Link to="/impressum" className="text-sm text-ruler-primary hover:underline">
               Impressum
             </Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="text-sm text-ruler-primary hover:underline"
+            >
+              Cookie-Einstellungen
+            </button>
           </div>
         </div>
       </div>
