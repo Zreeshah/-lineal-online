@@ -13,7 +13,7 @@ const BlogIndex: React.FC = () => {
   const metaDescription =
     'Alle Ratgeber zu Lineal online, Handy-Maßband, Kalibrierung, cm/mm/Zoll-Umrechnung, Schrauben, Ringen und Lineal zum Ausdrucken.';
   const featuredPost =
-    blogPosts.find((post) => post.slug === 'handy-als-massband') ||
+    blogPosts.find((post) => post.slug === 'lineal-fuer-handy') ||
     blogPosts[blogPosts.length - 1];
   const sortedPosts = [...blogPosts]
     .filter((post) => post.slug !== featuredPost.slug)

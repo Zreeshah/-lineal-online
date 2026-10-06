@@ -1,0 +1,18 @@
+export const retiredBlogPostSlugs = new Set([
+  'massband-im-handy',
+  'handy-als-massband',
+  'lineal-im-handy',
+  'lineal-online-blog',
+  'online-lineal-genau-messen',
+  '10-cm-online-messen',
+  'vertikales-lineal-online',
+  'online-lineal-kalibrieren',
+  '1-cm-in-mm',
+  'mm-in-cm',
+  'cm-in-zoll',
+  'lineal-zum-ausdrucken-blog',
+  'mks-system',
+  'natuerliches-einheitensystem',
+  'dimensionslose-zahlen',
+  'klinometer',
+]);

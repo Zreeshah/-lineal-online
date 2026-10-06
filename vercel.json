@@ -1,4 +1,23 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/blog/massband-im-handy", "destination": "/blog/lineal-fuer-handy", "statusCode": 301 },
+    { "source": "/blog/handy-als-massband", "destination": "/blog/lineal-fuer-handy", "statusCode": 301 },
+    { "source": "/blog/lineal-im-handy", "destination": "/blog/lineal-fuer-handy", "statusCode": 301 },
+    { "source": "/blog/lineal-online-blog", "destination": "/blog/lineal-online-kostenlos", "statusCode": 301 },
+    { "source": "/blog/online-lineal-genau-messen", "destination": "/blog/lineal-online-kostenlos", "statusCode": 301 },
+    { "source": "/blog/10-cm-online-messen", "destination": "/blog/lineal-online-kostenlos", "statusCode": 301 },
+    { "source": "/blog/vertikales-lineal-online", "destination": "/blog/lineal-online-kostenlos", "statusCode": 301 },
+    { "source": "/blog/online-lineal-kalibrieren", "destination": "/blog/bildschirm-kalibrieren", "statusCode": 301 },
+    { "source": "/blog/1-cm-in-mm", "destination": "/blog/cm-in-mm", "statusCode": 301 },
+    { "source": "/blog/mm-in-cm", "destination": "/blog/cm-in-mm", "statusCode": 301 },
+    { "source": "/blog/cm-in-zoll", "destination": "/blog/zoll-in-cm-umrechnen", "statusCode": 301 },
+    { "source": "/blog/lineal-zum-ausdrucken-blog", "destination": "/lineal-drucken", "statusCode": 301 },
+    { "source": "/blog/mks-system", "destination": "/blog/metrisches-system", "statusCode": 301 },
+    { "source": "/blog/natuerliches-einheitensystem", "destination": "/blog", "statusCode": 301 },
+    { "source": "/blog/dimensionslose-zahlen", "destination": "/blog", "statusCode": 301 },
+    { "source": "/blog/klinometer", "destination": "/blog", "statusCode": 301 }
+  ]
 }

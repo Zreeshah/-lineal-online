@@ -1,5 +1,6 @@
 import React from 'react';
 import { measurementBlogPosts } from './measurementBlogPosts';
+import { retiredBlogPostSlugs } from './blogRouting';
 
 export interface BlogPostData {
   slug: string;
@@ -42,7 +43,7 @@ const Section = ({ children }: { children: React.ReactNode }) => (
   </article>
 );
 
-export const blogPosts: BlogPostData[] = [
+const allBlogPosts: BlogPostData[] = [
   {
     slug: 'lineal-10-cm-originalgroesse',
     heroImage: '/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg',
@@ -787,6 +788,8 @@ export const blogPosts: BlogPostData[] = [
   },
   ...measurementBlogPosts,
 ];
+
+export const blogPosts = allBlogPosts.filter((post) => !retiredBlogPostSlugs.has(post.slug));
 
 export const blogPostSlugs = blogPosts.map((p) => p.slug);
 

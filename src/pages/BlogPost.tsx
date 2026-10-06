@@ -5,7 +5,6 @@ import {
   BookOpen,
   CalendarDays,
   ChevronRight,
-  Clock,
   Home,
   List,
   Ruler,
@@ -67,7 +66,6 @@ const BlogPost: React.FC = () => {
   if (!post) return <NotFound />;
 
   const url = `https://www.lineal.onl/blog/${post.slug}`;
-  const readingTime = post.skipBlogExtras ? 8 : 4;
   const reliableHeroImage = getReliableHeroImage(post);
   const shareImage = reliableHeroImage || '/lovable-uploads/regla-midiendo.jpg';
 
@@ -142,11 +140,6 @@ const BlogPost: React.FC = () => {
                 <span className="inline-flex items-center gap-1.5">
                   <UserRound size={15} />
                   Redaktion
-                </span>
-                <span aria-hidden="true" className="text-gray-300">•</span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Clock size={15} />
-                  {readingTime} Min. Lesezeit
                 </span>
               </div>
 

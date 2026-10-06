@@ -20,11 +20,6 @@ export const blogArticles: ArticleLink[] = [
     keywords: ['lineal', 'messen', 'anleitung', 'präzision'],
   },
   {
-    url: '/blog/1-cm-in-mm',
-    title: '1 cm in mm – Einheiten umrechnen',
-    keywords: ['zentimeter', 'millimeter', 'umrechnen', 'einheiten', '1 centymetr'],
-  },
-  {
     url: '/blog/lineal-10-cm-originalgroesse',
     title: 'Lineal 10 cm in Originalgröße anzeigen',
     keywords: ['lineal 10 cm anzeigen', 'lineal 10 cm originalgröße', 'lineal online'],
@@ -45,34 +40,14 @@ export const blogArticles: ArticleLink[] = [
     keywords: ['metrisches system', 'einheiten', 'meter'],
   },
   {
-    url: '/blog/mks-system',
-    title: 'Das MKS-System (Meter, Kilogramm, Sekunde)',
-    keywords: ['mks', 'einheiten', 'physik'],
-  },
-  {
     url: '/blog/angloamerikanisches-system',
     title: 'Das angloamerikanische Maßsystem',
     keywords: ['zoll', 'fuß', 'angloamerikanisch'],
   },
   {
-    url: '/blog/natuerliches-einheitensystem',
-    title: 'Das natürliche Einheitensystem',
-    keywords: ['natürliche einheiten', 'physik'],
-  },
-  {
-    url: '/blog/klinometer',
-    title: 'Klinometer – Was ist das und wie benutzt man es?',
-    keywords: ['klinometer', 'winkel messen'],
-  },
-  {
     url: '/blog/tiefenmesser',
     title: 'Tiefenmesser – Anwendung und Funktionsweise',
     keywords: ['tiefenmesser', 'messen'],
-  },
-  {
-    url: '/blog/dimensionslose-zahlen',
-    title: 'Dimensionslose Zahlen in der Physik',
-    keywords: ['dimensionslos', 'physik'],
   },
   ...measurementArticleLinks,
 ];

@@ -1,5 +1,6 @@
 import React from 'react';
 import type { BlogPostData } from './blogPosts';
+import { retiredBlogPostSlugs } from './blogRouting';
 
 type Topic = {
   focusKeyword: string;
@@ -30,42 +31,9 @@ const heroImages = [
   '/lovable-uploads/6e30be3b-fb3c-45ac-9368-d0c966ceb463.jpg',
 ];
 
-const sourceLinks = [
-  {
-    href: 'https://www.bipm.org/en/publications/si-brochure',
-    label: 'BIPM SI-Broschüre',
-    note: 'definiert das Internationale Einheitensystem als metrologische Grundlage.',
-  },
-  {
-    href: 'https://www.nist.gov/pml/owm/si-units-length',
-    label: 'NIST SI Units - Length',
-    note: 'erklärt Längeneinheiten und den exakten Zollwert von 25,4 mm.',
-  },
-  {
-    href: 'https://www.iso.org/standard/31432.html',
-    label: 'ISO/IEC 7810',
-    note: 'nennt die ID-1 Kartengröße von 85,60 mm x 53,98 mm.',
-  },
-  {
-    href: 'https://www.iso.org/standard/4165.html',
-    label: 'ISO 261',
-    note: 'ordnet metrische ISO-Schraubengewinde ein.',
-  },
-  {
-    href: 'https://www.iso.org/standard/65408.html',
-    label: 'ISO 8653',
-    note: 'beschreibt Ringgrößen und Messung im Schmuckbereich.',
-  },
-  {
-    href: 'https://support.apple.com/en-lamr/guide/iphone/iphd8ac2cfea/ios',
-    label: 'Apple Support Measure',
-    note: 'beschreibt Kameramessungen am iPhone als näherungsweise Messungen.',
-  },
-];
-
 const defaultRelated = [
   { to: '/', label: 'Lineal online in Originalgröße' },
-  { to: '/blog/online-lineal-kalibrieren', label: 'Online-Lineal kalibrieren' },
+  { to: '/blog/bildschirm-kalibrieren', label: 'Bildschirm kalibrieren' },
   { to: '/blog/ist-online-lineal-genau', label: 'Ist ein Online-Lineal genau?' },
   { to: '/blog/cm-in-mm', label: 'cm in mm umrechnen' },
 ];
@@ -485,6 +453,8 @@ const topics: Topic[] = [
   },
 ];
 
+const activeTopics = topics.filter((topic) => !retiredBlogPostSlugs.has(topic.slug));
+
 const conversionRows = [
   ['1 cm', '10 mm', '0,39 Zoll'],
   ['5 cm', '50 mm', '1,97 Zoll'],
@@ -493,10 +463,7 @@ const conversionRows = [
   ['30 cm', '300 mm', '11,81 Zoll'],
 ];
 
-const ArticleShell = ({ topic }: { topic: Topic }) => {
-  const selectedSources = sourceLinks;
-
-  return (
+const ArticleShell = ({ topic }: { topic: Topic }) => (
     <article
       className="
         prose prose-sm sm:prose lg:prose-lg max-w-none
@@ -513,37 +480,6 @@ const ArticleShell = ({ topic }: { topic: Topic }) => {
         Die Methode eignet sich für schnelle Messungen in cm, mm und Zoll, ersetzt aber kein geeichtes
         Messwerkzeug für technische Toleranzen.
       </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Bereich</th>
-            <th>Empfehlung</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Suchintention</td>
-            <td>{topic.intent}</td>
-          </tr>
-          <tr>
-            <td>Beste Nutzung</td>
-            <td>{topic.bestUse}</td>
-          </tr>
-          <tr>
-            <td>Genauigkeitscheck</td>
-            <td>{topic.calibrationTip}</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Key Takeaways zu {topic.focusKeyword}</h2>
-      <ul>
-        <li>{topic.summary}</li>
-        <li>1 cm sind 10 mm, und 1 Zoll entspricht exakt 25,4 mm.</li>
-        <li>Eine Bankkarte mit 85,60 mm Breite ist eine praktische Referenz für die Kalibrierung.</li>
-        <li>Für Schmuck, Schrauben oder kleine Ersatzteile ist die Millimeter-Skala wichtiger als volle Zentimeter.</li>
-      </ul>
 
       <h2>Was ist {topic.focusKeyword}?</h2>
       <p>
@@ -699,20 +635,6 @@ const ArticleShell = ({ topic }: { topic: Topic }) => {
         </tbody>
       </table>
 
-      <h2>Interne Orientierung: passende Hilfen</h2>
-      <p>
-        Wer direkt messen möchte, startet am besten mit dem
-        <a href="/"> Lineal online in Originalgröße</a>. Für längere Skalen hilft der Artikel
-        <a href="/blog/lineal-online-20-cm"> Lineal online 20 cm</a>. Wenn die Skala nicht stimmt, erklärt
-        <a href="/blog/online-lineal-kalibrieren"> Online-Lineal kalibrieren</a> den sauberen Abgleich. Für
-        Umrechnungen zwischen kleinen Einheiten ist
-        <a href="/blog/cm-in-mm"> cm in mm</a> die beste Ergänzung.
-      </p>
-      <p>
-        Diese internen Wege sind bewusst nah am Messprozess aufgebaut. Erst kommt die Skala, dann die Kalibrierung,
-        danach die Einheit. So bleibt der Ablauf klar und Nutzer verlieren sich nicht in theoretischen Details.
-      </p>
-
       <h2>Häufige Fehler bei {topic.focusKeyword}</h2>
       <ul>
         {topic.mistakes.map((mistake) => (
@@ -726,22 +648,6 @@ const ArticleShell = ({ topic }: { topic: Topic }) => {
         schräges Objekt, ein veränderter Zoom oder eine unklare Nullmarke reichen aus, um den Wert zu
         verschieben. Deshalb lohnt sich vor jeder wichtigen Messung ein kurzer Kontrollblick auf die Referenz.
       </p>
-
-      <h2>Quellen und Standards</h2>
-      <p>
-        Für die fachliche Einordnung stützt sich dieser Ratgeber auf etablierte Normen und Metrologiequellen.
-        Die <a href="https://www.bipm.org/en/publications/si-brochure">BIPM SI-Broschüre</a> ist die zentrale
-        Referenz für SI-Einheiten. NIST erklärt Längeneinheiten und den exakten Zollwert. ISO/IEC 7810 ist
-        hilfreich für die Bankkarte als Referenz. Je nach Anwendung sind auch ISO 261 für metrische Schrauben
-        und ISO 8653 für Ringgrößen relevant.
-      </p>
-      <ul>
-        {selectedSources.map((source) => (
-          <li key={source.href}>
-            <a href={source.href}>{source.label}</a>: {source.note}
-          </li>
-        ))}
-      </ul>
 
       <h2>FAQs zu {topic.focusKeyword}</h2>
       {topic.faqs.map((faq) => (
@@ -759,16 +665,15 @@ const ArticleShell = ({ topic }: { topic: Topic }) => {
         technische Grenzwerte bleibt ein physisches Präzisionswerkzeug die bessere Wahl.
       </p>
     </article>
-  );
-};
+);
 
-export const measurementArticleLinks = topics.map((topic) => ({
+export const measurementArticleLinks = activeTopics.map((topic) => ({
   url: `/blog/${topic.slug}`,
   title: topic.title.replace(/:.*$/, ''),
   keywords: [topic.focusKeyword.toLowerCase(), topic.category.toLowerCase(), 'lineal online'],
 }));
 
-export const measurementBlogPosts: BlogPostData[] = topics.map((topic, index) => ({
+export const measurementBlogPosts: BlogPostData[] = activeTopics.map((topic, index) => ({
   slug: topic.slug,
   title: topic.title,
   metaDescription: topic.metaDescription,
