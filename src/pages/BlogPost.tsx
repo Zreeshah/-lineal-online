@@ -75,10 +75,13 @@ const BlogPost: React.FC = () => {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
     inLanguage: 'de-DE',
     mainEntityOfPage: url,
     image: `https://www.lineal.onl${shareImage}`,
-    author: { '@type': 'Organization', name: 'Redaktion Lineal.online' },
+    author: post.author
+      ? { '@type': 'Person', name: post.author }
+      : { '@type': 'Organization', name: 'Redaktion Lineal.online' },
     publisher: {
       '@type': 'Organization',
       name: 'Lineal.online',
@@ -89,7 +92,7 @@ const BlogPost: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col bg-[#fbfbfa]">
       <Helmet>
-        <title>{post.title} | Lineal.online</title>
+        <title>{post.seoTitle || `${post.title} | Lineal.online`}</title>
         <meta name="description" content={post.metaDescription} />
         <meta name="keywords" content={post.keywords} />
         <html lang="de" />
@@ -130,16 +133,30 @@ const BlogPost: React.FC = () => {
                 <span aria-hidden="true" className="text-gray-300">•</span>
                 <span className="inline-flex items-center gap-1.5">
                   <CalendarDays size={15} />
+                  Veröffentlicht{' '}
                   {new Date(post.publishedAt).toLocaleDateString('de-DE', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
                   })}
                 </span>
+                {post.updatedAt && (
+                  <>
+                    <span aria-hidden="true" className="text-gray-300">•</span>
+                    <span className="inline-flex items-center gap-1.5">
+                      Aktualisiert{' '}
+                      {new Date(post.updatedAt).toLocaleDateString('de-DE', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
+                    </span>
+                  </>
+                )}
                 <span aria-hidden="true" className="text-gray-300">•</span>
                 <span className="inline-flex items-center gap-1.5">
                   <UserRound size={15} />
-                  Redaktion
+                  {post.author || 'Redaktion'}
                 </span>
               </div>
 
@@ -159,21 +176,36 @@ const BlogPost: React.FC = () => {
               <div ref={articleRef} className="blog-prose min-w-0">
                 {post.content}
 
+                {post.authorBio && (
+                  <aside className="not-prose my-10 flex gap-4 rounded-md border border-purple-200 bg-purple-50/60 p-5" aria-label="Über den Autor">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+                      <UserRound size={22} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold uppercase text-purple-700">Autor</p>
+                      <p className="mt-1 font-bold text-gray-950">{post.author}</p>
+                      <p className="mt-1 text-sm leading-6 text-gray-600">{post.authorBio}</p>
+                    </div>
+                  </aside>
+                )}
+
                 {!post.skipBlogExtras && <BlogExtras title={post.title} keywords={post.keywords} />}
 
-                <section className="article-cta" aria-labelledby="article-cta-title">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-purple-100 text-purple-700">
-                    <Ruler size={25} />
-                  </div>
-                  <div>
-                    <h2 id="article-cta-title">Jetzt direkt am Bildschirm messen</h2>
-                    <p>Öffnen Sie das kostenlose Online-Lineal, kalibrieren Sie die Skala und messen Sie in cm, mm oder Zoll.</p>
-                    <Link to="/" className="article-cta-link">
-                      Online-Lineal 1:1 starten
-                      <ChevronRight size={17} />
-                    </Link>
-                  </div>
-                </section>
+                {!post.hideArticleCta && (
+                  <section className="article-cta" aria-labelledby="article-cta-title">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-purple-100 text-purple-700">
+                      <Ruler size={25} />
+                    </div>
+                    <div>
+                      <h2 id="article-cta-title">Jetzt direkt am Bildschirm messen</h2>
+                      <p>Öffnen Sie das kostenlose Online-Lineal, kalibrieren Sie die Skala und messen Sie in cm, mm oder Zoll.</p>
+                      <Link to="/" className="article-cta-link">
+                        Online-Lineal 1:1 starten
+                        <ChevronRight size={17} />
+                      </Link>
+                    </div>
+                  </section>
+                )}
               </div>
 
               <aside className="hidden lg:block">

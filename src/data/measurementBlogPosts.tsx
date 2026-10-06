@@ -145,7 +145,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Lineal online 20 cm',
     slug: 'lineal-online-20-cm',
-    title: 'Lineal online 20 cm: 5 Mess-Tipps',
+    title: 'Lineal online 20 cm richtig anzeigen',
     metaDescription: 'Lineal online 20 cm anzeigen und richtig kalibrieren. Tipps für Handy, Tablet und Desktop.',
     ogTitle: 'Lineal online 20 cm anzeigen',
     ogDescription: 'Wann 20 cm auf dem Bildschirm funktionieren und wie die Skala genau bleibt.',
@@ -245,7 +245,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Maßband online in cm',
     slug: 'massband-online-cm',
-    title: 'Maßband online in cm: 6 schnelle Tipps',
+    title: 'Maßband online in cm richtig verwenden',
     metaDescription: 'Maßband online in cm nutzen: Zentimeter, Millimeter, Kalibrierung und Beispiele direkt im Browser.',
     ogTitle: 'Maßband online in cm verwenden',
     ogDescription: 'So messen Sie Zentimeterwerte online ohne App.',
@@ -397,7 +397,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Ring mit Lineal messen',
     slug: 'ring-lineal-messen',
-    title: 'Ring mit Lineal messen: 6 wichtige Tipps',
+    title: 'Ring mit Lineal messen: Größe richtig bestimmen',
     metaDescription: 'Ring mit Lineal messen: Innendurchmesser, mm-Wert, Ringgröße und Grenzen der Methode einfach erklärt.',
     ogTitle: 'Ring mit Lineal messen',
     ogDescription: 'So messen Sie einen Ring vorsichtig mit Lineal oder Online-Lineal.',

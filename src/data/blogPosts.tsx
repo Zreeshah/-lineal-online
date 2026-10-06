@@ -1,13 +1,18 @@
 import React from 'react';
 import { measurementBlogPosts } from './measurementBlogPosts';
 import { retiredBlogPostSlugs } from './blogRouting';
+import { impressionBlogBatchOne } from './impressionBlogBatchOne';
 
 export interface BlogPostData {
   slug: string;
   title: string;
+  seoTitle?: string;
   metaDescription: string;
   keywords: string;
   publishedAt: string;
+  updatedAt?: string;
+  author?: string;
+  authorBio?: string;
   ogImage?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -16,6 +21,7 @@ export interface BlogPostData {
   category?: string;
   summary?: string;
   skipBlogExtras?: boolean;
+  hideArticleCta?: boolean;
   content: React.ReactNode;
 }
 
@@ -789,7 +795,13 @@ const allBlogPosts: BlogPostData[] = [
   ...measurementBlogPosts,
 ];
 
-export const blogPosts = allBlogPosts.filter((post) => !retiredBlogPostSlugs.has(post.slug));
+const impressionPostOverrides = new Map(
+  impressionBlogBatchOne.map((post) => [post.slug, post]),
+);
+
+export const blogPosts = allBlogPosts
+  .map((post) => impressionPostOverrides.get(post.slug) || post)
+  .filter((post) => !retiredBlogPostSlugs.has(post.slug));
 
 export const blogPostSlugs = blogPosts.map((p) => p.slug);
 
