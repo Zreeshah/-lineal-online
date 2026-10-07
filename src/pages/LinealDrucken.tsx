@@ -39,7 +39,6 @@ const LinealDrucken: React.FC = () => {
           name="description"
           content="Lineal zum Ausdrucken kostenlos – 30 cm oder 12 Zoll in Originalgröße. Druckbares Lineal direkt aus dem Browser, ideal für Schule, Büro und Heimwerken."
         />
-        <meta name="keywords" content="lineal zum ausdrucken, lineal drucken, lineal 30 cm, lineal 12 zoll, druckbares lineal" />
         <html lang="de" />
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',
@@ -81,6 +80,8 @@ const LinealDrucken: React.FC = () => {
                     alt="Lineal zum Ausdrucken in Originalgröße"
                     className="h-auto max-h-[500px] sm:max-h-[600px] lg:max-h-[800px] w-auto object-contain"
                     loading="lazy"
+                    width={81}
+                    height={900}
                   />
                 </div>
 
@@ -187,7 +188,7 @@ const LinealDrucken: React.FC = () => {
           </div>
 
           <div className="hidden print:block print:m-0 print:p-0">
-            <img src={linealImage} alt="Lineal zum Ausdrucken" className="w-auto h-auto max-w-none" />
+            <img src={linealImage} alt="Lineal zum Ausdrucken" className="w-auto h-auto max-w-none" width={81} height={900} />
           </div>
         </div>
       </Layout>

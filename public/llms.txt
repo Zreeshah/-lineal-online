@@ -1,0 +1,18 @@
+# Lineal.online
+
+> Deutsches Online-Lineal und Messwerkzeuge für Bildschirm, Druck und Einheitenumrechnung.
+
+## Zentrale Seiten
+
+- https://www.lineal.onl/ — kalibrierbares Online-Lineal in cm, mm und Zoll
+- https://www.lineal.onl/lineal-drucken — druckbare Lineale als A4- und US-Letter-PDF
+- https://www.lineal.onl/zoll-in-cm-rechner — Zoll, Zentimeter und Millimeter umrechnen
+- https://www.lineal.onl/papierformate — DIN-A-Papierformate und 1:1-Ansicht
+- https://www.lineal.onl/bildschirmgroesse-rechner — Bildschirmbreite, Höhe und PPI berechnen
+- https://www.lineal.onl/blog — Messanleitungen und Hintergrundwissen
+
+## Hinweise
+
+- Inhalte sind auf Deutsch verfügbar.
+- Bildschirmmessungen erfordern eine Kalibrierung und sind kein Ersatz für ein geeichtes Messgerät.
+- Kanonischer Host: https://www.lineal.onl/

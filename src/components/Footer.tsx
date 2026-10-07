@@ -21,6 +21,20 @@ const Footer: React.FC = () => {
   return (
     <footer className="py-6 border-t mt-10 bg-white">
       <div className="container">
+        <nav aria-label="Werkzeuge" className="mb-5 flex flex-wrap justify-center gap-x-5 gap-y-2 border-b border-gray-100 pb-5">
+          <Link to="/zoll-in-cm-rechner" className="text-sm text-ruler-primary hover:underline">
+            Zoll in cm Rechner
+          </Link>
+          <Link to="/papierformate" className="text-sm text-ruler-primary hover:underline">
+            Papierformate
+          </Link>
+          <Link to="/bildschirmgroesse-rechner" className="text-sm text-ruler-primary hover:underline">
+            Bildschirmgröße Rechner
+          </Link>
+          <Link to="/lineal-drucken" className="text-sm text-ruler-primary hover:underline">
+            Lineal drucken
+          </Link>
+        </nav>
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-gray-500">© 2026 Lineal Online. Alle Rechte vorbehalten.</p>

@@ -5,15 +5,29 @@ import { Head as Helmet } from 'vite-react-ssg';
 import CanonicalLink from '@/components/CanonicalLink';
 
 const About = () => {
+  const title = 'Über uns – Lineal.online | Lineal online & Maßband für Handy';
+  const description = 'Lineal.online ist Ihr kostenloses Lineal online in Originalgröße. Erfahren Sie mehr über unser Maßband online für Handy, Tablet und PC.';
+  const url = 'https://www.lineal.onl/ueber-uns';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
+  const pageSchema = { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'Über Lineal.online', url, description, inLanguage: 'de-DE' };
   return (
     <>
       <Helmet>
-        <title>Über uns – Lineal.online | Lineal online & Maßband für Handy</title>
+        <title>{title}</title>
         <meta
           name="description"
-          content="Lineal.online ist Ihr kostenloses Lineal online in Originalgröße. Erfahren Sie mehr über unser Maßband online für Handy, Tablet und PC."
+          content={description}
         />
         <html lang="de" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       <CanonicalLink />
 
@@ -26,7 +40,7 @@ const About = () => {
               <h1 className="text-3xl font-bold mb-6 text-ruler-primary">Über uns</h1>
 
               <p>
-                Lineal.online wird von [NAME] betrieben. Die Website entstand aus einer einfachen Alltagssituation:
+                Hinter Lineal.online steht eine kleine unabhängige Redaktion. Die Website entstand aus einer einfachen Alltagssituation:
                 Ein kleines Objekt sollte schnell gemessen werden, aber ein physisches Lineal war gerade nicht zur
                 Hand. Das Werkzeug soll deshalb eine leicht zugängliche Messhilfe im Browser bereitstellen – ohne
                 Installation und auf Smartphone, Tablet oder Computer. Ergänzende Artikel erklären Maßeinheiten,
@@ -69,7 +83,7 @@ const About = () => {
                 unklare Formulierungen, defekte Links oder Darstellungsprobleme sind willkommen. Schreiben Sie an{' '}
                 <a href="mailto:info@lineal.onl">info@lineal.onl</a> oder nutzen Sie die{' '}
                 <a href="/kontakt">Kontaktseite</a>. Bitte senden Sie keine vertraulichen Daten. Rückmeldungen helfen
-                [NAME], das Werkzeug nachvollziehbar weiterzuentwickeln und bekannte Einschränkungen offen zu
+                der Redaktion, das Werkzeug nachvollziehbar weiterzuentwickeln und bekannte Einschränkungen offen zu
                 dokumentieren. Jede sachliche Rückmeldung wird geprüft.
               </p>
             </div>

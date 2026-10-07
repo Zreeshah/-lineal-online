@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useCalibration } from '@/contexts/CalibrationContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useDeviceInfo } from '@/hooks/use-device-info';
@@ -32,14 +32,23 @@ const MobileRuler: React.FC = () => {
     t
   } = useLanguage();
 
+  const deviceLabels: Record<string, string> = {
+    iPhone: 'iPhone',
+    Android: 'Android-Gerät',
+    iPad: 'iPad',
+    Desktop: 'Computer',
+    Unknown: 'Unbekanntes Gerät',
+  };
+  const unitLabel = unit === 'inch' ? 'ZOLL' : unit.toUpperCase();
+
   // Dynamic ruler height based on screen size
-  const calculateRulerHeight = () => {
+  const calculateRulerHeight = useCallback(() => {
     // Ensure we show at least up to 25 units or screen size + buffer, whichever is larger
     const minHeight = 400; // Minimum height
     const unitsToShow = Math.max(25, Math.ceil(screenSize) + 5); // Show at least screen size + 5 units
     const heightPerUnit = 40; // Approximate pixels per unit
     return Math.max(minHeight, unitsToShow * heightPerUnit);
-  };
+  }, [screenSize]);
   const [rulerHeight, setRulerHeight] = useState(calculateRulerHeight());
   const rulerRef = useRef<HTMLDivElement>(null);
   const [inputValue, setInputValue] = useState<string>(screenSize.toString());
@@ -48,7 +57,7 @@ const MobileRuler: React.FC = () => {
   useEffect(() => {
     setRulerHeight(calculateRulerHeight());
     setInputValue(screenSize.toString());
-  }, [screenSize]);
+  }, [calculateRulerHeight, screenSize]);
   useEffect(() => {
     calibrateByScreen(screenSize);
   }, [screenSize, calibrateByScreen]);
@@ -99,7 +108,7 @@ const MobileRuler: React.FC = () => {
   const ticks = generateTicks();
   return <div className="relative mobile-ruler-container">
       <div className="px-2 pt-2 text-center flex justify-between items-center">
-        <p className="text-xs text-gray-600 mb-1">(Scroll down to show full ruler)</p>
+        <p className="text-xs text-gray-600 mb-1">Nach unten scrollen, um das ganze Lineal zu sehen</p>
         <MenuButton />
       </div>
       
@@ -148,7 +157,7 @@ const MobileRuler: React.FC = () => {
             transform: 'rotate(-90deg)',
             transformOrigin: 'left bottom'
           }}>
-              {unit.toUpperCase()}
+              {unitLabel}
             </div>
           </div>
         </div>
@@ -156,21 +165,21 @@ const MobileRuler: React.FC = () => {
         <div className="flex-1 px-2 absolute top-0 right-0 w-[calc(100%-80px)]">
           <div className="bg-white p-3 rounded-lg shadow-sm mb-4 max-w-[200px] mx-auto">
             <p className="text-xs font-medium mb-2">
-              {deviceType} • {parseFloat(screenSize.toFixed(2))}"
+              {deviceLabels[deviceType]} • {parseFloat(screenSize.toFixed(2))}&nbsp;Zoll
             </p>
             
             <div className="flex items-center gap-2 mb-2">
               <div className="relative w-16 h-28 border border-gray-300 rounded-lg flex items-center justify-center flex-col">
-                <span className="text-sm text-gray-500">Screen</span>
+                <span className="text-sm text-gray-500">Bildschirm</span>
                 <Input type="number" min="3" max="25" step="0.1" value={inputValue} onChange={handleInputChange} onBlur={handleInputBlur} onKeyDown={handleKeyDown} className="text-center h-8 w-14 text-sm font-bold" />
-                <span className="text-xs">inches</span>
+                <span className="text-xs">Zoll</span>
               </div>
               
               <div className="flex-grow flex flex-col">
-                <p className="text-xs text-gray-500 mb-1">Enter your device's screen size</p>
+                <p className="text-xs text-gray-500 mb-1">Bildschirmdiagonale eingeben</p>
                 <Button onClick={redetectScreenSize} size="sm" variant="outline" className="w-full text-xs h-7 text-[#9b87f5] border-[#9b87f5] hover:bg-[#F1F0FB]">
                   <RefreshCw size={10} className="mr-1" />
-                  Re-detect
+                  Neu erkennen
                 </Button>
               </div>
             </div>
@@ -194,7 +203,7 @@ const MobileRuler: React.FC = () => {
           e.preventDefault();
           setUnit('inch');
         }}>
-            INCH
+            ZOLL
           </a>
           <span className="text-gray-300">|</span>
           <Link to="/blog/lineal-fuer-handy" className="text-[#9b87f5] text-sm">

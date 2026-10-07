@@ -33,6 +33,7 @@ const Papierformate: React.FC = () => {
   const title = 'Papierformate: DIN A0 bis A10 in cm, mm & Zoll';
   const description = 'Papierformate der DIN-A-Reihe vergleichen: A0 bis A10 in cm, mm und Zoll mit kalibrierter 1:1-Ansicht und praktischen Beispielen.';
   const url = 'https://www.lineal.onl/papierformate';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -41,6 +42,17 @@ const Papierformate: React.FC = () => {
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
     })),
+  };
+  const appSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'DIN-Papierformate in Originalgröße',
+    url,
+    description,
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    inLanguage: 'de-DE',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
   };
 
   return (
@@ -53,7 +65,12 @@ const Papierformate: React.FC = () => {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(appSchema)}</script>
       </Helmet>
       <CanonicalLink />
 

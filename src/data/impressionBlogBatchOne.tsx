@@ -176,9 +176,9 @@ const SegmentedMeasurementDiagram = () => (
   </figure>
 );
 
-const author = '[AUTOR]';
+const author = 'Redaktion Lineal.online';
 const authorBio =
-  '[AUTOR] schreibt für Lineal.online über digitale Messmethoden, Kalibrierung und verständliche Einheitenumrechnung.';
+  'Die Redaktion von Lineal.online prüft digitale Messmethoden, erklärt Kalibrierungsschritte und bereitet Einheitenumrechnungen nachvollziehbar auf.';
 
 export const impressionBlogBatchOne: BlogPostData[] = [
   {

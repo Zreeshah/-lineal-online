@@ -5,12 +5,26 @@ import { Head as Helmet } from 'vite-react-ssg';
 import CanonicalLink from '@/components/CanonicalLink';
 
 const Disclaimer = () => {
+  const title = 'Impressum & Haftungsausschluss – Lineal.online';
+  const description = 'Impressum und Haftungsausschluss von Lineal.online – Ihrem kostenlosen Lineal online und Maßband für Handy, Tablet und PC.';
+  const url = 'https://www.lineal.onl/impressum';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
+  const pageSchema = { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Impressum und Haftungsausschluss', url, description, inLanguage: 'de-DE' };
   return (
     <>
       <Helmet>
-        <title>Impressum & Haftungsausschluss – Lineal.online</title>
-        <meta name="description" content="Impressum und Haftungsausschluss von Lineal.online – Ihrem kostenlosen Lineal online und Maßband für Handy, Tablet und PC." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <html lang="de" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       <CanonicalLink />
 

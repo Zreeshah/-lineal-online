@@ -34,6 +34,7 @@ const ZollInCmRechner: React.FC = () => {
   const title = 'Zoll in cm Rechner: Inch, cm und mm umrechnen';
   const description = 'Zoll in cm Rechner für Inch, Zentimeter und Millimeter. Werte direkt umrechnen, Formeln verstehen und häufige Zollgrößen vergleichen.';
   const url = 'https://www.lineal.onl/zoll-in-cm-rechner';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -42,6 +43,17 @@ const ZollInCmRechner: React.FC = () => {
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
     })),
+  };
+  const appSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Zoll in cm Rechner',
+    url,
+    description,
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any',
+    inLanguage: 'de-DE',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
   };
 
   return (
@@ -54,7 +66,12 @@ const ZollInCmRechner: React.FC = () => {
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(appSchema)}</script>
       </Helmet>
       <CanonicalLink />
 

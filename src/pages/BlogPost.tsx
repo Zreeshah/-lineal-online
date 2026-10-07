@@ -67,6 +67,9 @@ const BlogPost: React.FC = () => {
   const url = `https://www.lineal.onl/blog/${post.slug}`;
   const reliableHeroImage = getReliableHeroImage(post);
   const shareImage = reliableHeroImage || '/lovable-uploads/online-lineal-messen.jpg';
+  const authorName = post.author || 'Redaktion Lineal.online';
+  const authorBio = post.authorBio ||
+    'Die Redaktion von Lineal.online erstellt und prüft Anleitungen zu Bildschirmmessung, Kalibrierung und Einheitenumrechnung.';
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -76,16 +79,27 @@ const BlogPost: React.FC = () => {
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     inLanguage: 'de-DE',
-    mainEntityOfPage: url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     image: `https://www.lineal.onl${shareImage}`,
-    author: post.author
-      ? { '@type': 'Person', name: post.author }
-      : { '@type': 'Organization', name: 'Redaktion Lineal.online' },
+    author: {
+      '@type': authorName === 'Redaktion Lineal.online' ? 'Organization' : 'Person',
+      name: authorName,
+      url: 'https://www.lineal.onl/ueber-uns',
+    },
     publisher: {
       '@type': 'Organization',
       name: 'Lineal.online',
       url: 'https://www.lineal.onl/',
     },
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://www.lineal.onl/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.lineal.onl/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: url },
+    ],
   };
 
   return (
@@ -93,7 +107,6 @@ const BlogPost: React.FC = () => {
       <Helmet>
         <title>{post.seoTitle || `${post.title} | Lineal.online`}</title>
         <meta name="description" content={post.metaDescription} />
-        <meta name="keywords" content={post.keywords} />
         <html lang="de" />
         <meta property="og:title" content={post.ogTitle || post.title} />
         <meta property="og:description" content={post.ogDescription || post.metaDescription} />
@@ -101,7 +114,11 @@ const BlogPost: React.FC = () => {
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="de_DE" />
         <meta property="og:image" content={`https://www.lineal.onl${shareImage}`} />
+        <meta name="twitter:title" content={post.ogTitle || post.title} />
+        <meta name="twitter:description" content={post.ogDescription || post.metaDescription} />
+        <meta name="twitter:image" content={`https://www.lineal.onl${shareImage}`} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <CanonicalLink />
@@ -155,7 +172,7 @@ const BlogPost: React.FC = () => {
                 <span aria-hidden="true" className="text-gray-300">•</span>
                 <span className="inline-flex items-center gap-1.5">
                   <UserRound size={15} />
-                  {post.author || 'Redaktion'}
+                  {authorName}
                 </span>
               </div>
 
@@ -175,18 +192,19 @@ const BlogPost: React.FC = () => {
               <div ref={articleRef} className="blog-prose min-w-0">
                 {post.content}
 
-                {post.authorBio && (
-                  <aside className="not-prose my-10 flex gap-4 rounded-md border border-purple-200 bg-purple-50/60 p-5" aria-label="Über den Autor">
+                <aside className="not-prose my-10 flex gap-4 rounded-md border border-purple-200 bg-purple-50/60 p-5" aria-label="Über die Redaktion">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-purple-100 text-purple-700">
                       <UserRound size={22} />
                     </div>
                     <div>
-                      <p className="text-xs font-bold uppercase text-purple-700">Autor</p>
-                      <p className="mt-1 font-bold text-gray-950">{post.author}</p>
-                      <p className="mt-1 text-sm leading-6 text-gray-600">{post.authorBio}</p>
+                      <p className="text-xs font-bold uppercase text-purple-700">Redaktion</p>
+                      <p className="mt-1 font-bold text-gray-950">{authorName}</p>
+                      <p className="mt-1 text-sm leading-6 text-gray-600">{authorBio}</p>
+                      <Link to="/ueber-uns" className="mt-2 inline-block text-sm font-semibold text-purple-700 hover:underline">
+                        Mehr über unsere Arbeitsweise
+                      </Link>
                     </div>
                   </aside>
-                )}
 
                 {!post.hideArticleCta && (
                   <section className="article-cta" aria-labelledby="article-cta-title">

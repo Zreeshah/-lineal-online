@@ -12,6 +12,7 @@ const BlogIndex: React.FC = () => {
   const metaTitle = 'Blog – Lineal online, Maßband & Umrechnung | Lineal.online';
   const metaDescription =
     'Alle Ratgeber zu Lineal online, Handy-Maßband, Kalibrierung, cm/mm/Zoll-Umrechnung, Schrauben, Ringen und Lineal zum Ausdrucken.';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
   const featuredPost =
     blogPosts.find((post) => post.slug === 'lineal-fuer-handy') ||
     blogPosts[blogPosts.length - 1];
@@ -39,12 +40,15 @@ const BlogIndex: React.FC = () => {
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="keywords" content="lineal online blog, maßband online, cm in mm, lineal für handy" />
         <html lang="de" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content="https://www.lineal.onl/blog" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={shareImage} />
         <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
       </Helmet>
       <CanonicalLink />

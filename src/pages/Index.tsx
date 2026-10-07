@@ -148,7 +148,7 @@ const Index = () => {
           {isMobile && (
             <div className="mb-6 text-center">
               <h1 className="text-2xl font-bold text-[#9b87f5] mb-2">
-                Lineal online Handy – in Originalgröße messen
+                Lineal online in Originalgröße – Maßband &amp; Lineal für Handy
               </h1>
               <p className="text-sm text-gray-600">
                 Digitales Lineal für Handy mit präziser Kalibrierung. Lineal 10 cm anzeigen und genaue Messungen

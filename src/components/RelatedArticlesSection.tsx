@@ -10,7 +10,21 @@ interface RelatedArticlesSectionProps {
 }
 
 const RelatedArticlesSection: React.FC<RelatedArticlesSectionProps> = ({ currentUrl }) => {
+  const editorialLinks: Record<string, string[]> = {
+    '/blog/metrisches-system': ['/blog/angloamerikanisches-system'],
+    '/blog/wie-benutzt-man-ein-lineal': ['/blog/lineal-online-kostenlos'],
+    '/blog/lineal-fuer-handy': ['/blog/lineal-app-vs-online'],
+  };
+  const editorialCandidates = (editorialLinks[currentUrl] || [])
+    .map((url) => {
+      const post = getBlogPostBySlug(url.split('/').pop());
+      return post
+        ? { url, title: post.title, keywords: post.keywords.split(',').map((keyword) => keyword.trim()) }
+        : null;
+    })
+    .filter((article): article is NonNullable<typeof article> => article !== null);
   const candidates = [
+    ...editorialCandidates,
     ...getRelatedArticles(currentUrl, 9),
     ...blogPosts.map((post) => ({
       url: `/blog/${post.slug}`,

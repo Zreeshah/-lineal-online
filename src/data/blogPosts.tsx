@@ -2,6 +2,7 @@ import React from 'react';
 import { measurementBlogPosts } from './measurementBlogPosts';
 import { retiredBlogPostSlugs } from './blogRouting';
 import { impressionBlogBatchOne } from './impressionBlogBatchOne';
+import { LegacyArticleSupplement } from './legacyBlogSupplements';
 
 export interface BlogPostData {
   slug: string;
@@ -31,7 +32,6 @@ const Section = ({ children }: { children: React.ReactNode }) => (
       prose prose-sm sm:prose lg:prose-lg max-w-none
       prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
       prose-h1:text-3xl sm:prose-h1:text-4xl lg:prose-h1:text-5xl prose-h1:leading-tight prose-h1:mb-6 prose-h1:mt-0
-      [&>h1:first-child]:hidden
       [&_.lead:first-of-type]:mt-0
       prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-purple-100
       prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-purple-900
@@ -45,7 +45,9 @@ const Section = ({ children }: { children: React.ReactNode }) => (
       [&_.lead]:text-lg [&_.lead]:sm:text-xl [&_.lead]:text-gray-600 [&_.lead]:leading-relaxed [&_.lead]:font-normal [&_.lead]:mb-8 [&_.lead]:border-l-4 [&_.lead]:border-purple-400 [&_.lead]:pl-4 [&_.lead]:italic
     "
   >
-    {children}
+    {React.Children.toArray(children).filter(
+      (child) => !(React.isValidElement(child) && child.type === 'h1'),
+    )}
   </article>
 );
 
@@ -54,10 +56,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'lineal-10-cm-originalgroesse',
     heroImage: '/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg',
     title: 'Lineal 10 cm in Originalgröße anzeigen',
+    seoTitle: 'Lineal 10 cm in Originalgröße anzeigen',
     metaDescription:
       'Lineal 10 cm in Originalgröße anzeigen, kalibrieren und kontrollieren – kostenlos auf Handy, Tablet und PC.',
     keywords: 'lineal 10 cm anzeigen, lineal 10 cm originalgröße, lineal online, online lineal, lineal',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Lineal 10 cm in Originalgröße auf einem Bildschirm angezeigt',
     content: (
       <Section>
@@ -105,6 +109,7 @@ const allBlogPosts: BlogPostData[] = [
         </p>
 
         <p>Probieren Sie es jetzt aus – Ihr <strong>Lineal 10 cm online</strong> wartet.</p>
+        <LegacyArticleSupplement slug="lineal-10-cm-originalgroesse" />
       </Section>
     ),
   },
@@ -112,10 +117,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'lineal-fuer-handy',
     heroImage: '/lovable-uploads/6f49caed-ebfe-4019-9c87-44395c2b5eef.jpg',
     title: 'Lineal für Handy – Lineal online Handy in cm und mm',
+    seoTitle: 'Lineal für Handy: Online messen ohne App',
     metaDescription:
       'Lineal für Handy kostenlos online – Lineal online Handy in cm, mm und Zoll. Messen direkt auf dem Smartphone, ohne App-Download.',
     keywords: 'lineal für handy, lineal online handy, lineal online, online lineal, maßband online',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Lineal für Handy – Online-Lineal auf Smartphone-Bildschirm',
     content: (
       <Section>
@@ -152,6 +159,7 @@ const allBlogPosts: BlogPostData[] = [
           Jetzt öffnen: <a href="/">Lineal.online</a> – Ihr <strong>Lineal online Handy</strong> in
           Originalgröße.
         </p>
+        <LegacyArticleSupplement slug="lineal-fuer-handy" />
       </Section>
     ),
   },
@@ -159,10 +167,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'massband-online',
     heroImage: '/lovable-uploads/online-lineal-messen.jpg',
     title: 'Maßband online in cm und mm',
+    seoTitle: 'Maßband online in cm und mm',
     metaDescription:
       'Maßband online kostenlos: kalibrierbare Skala in cm, mm und Zoll für kurze Messungen auf Handy, Tablet und PC.',
     keywords: 'maßband online, lineal online, online lineal, maßband, messen online',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Maßband online – digitales Online-Maßband',
     content: (
       <Section>
@@ -198,6 +208,7 @@ const allBlogPosts: BlogPostData[] = [
           Starten Sie jetzt mit dem kostenlosen <a href="/">Maßband online</a> – auch als{' '}
           <strong>Lineal für Handy</strong> nutzbar.
         </p>
+        <LegacyArticleSupplement slug="massband-online" />
       </Section>
     ),
   },
@@ -293,10 +304,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'metrisches-system',
     heroImage: '/lovable-uploads/79ba06b7-f526-4c13-8eda-7f0f2ac9be8f.jpg',
     title: 'Das metrische System einfach erklärt',
+    seoTitle: 'Das metrische System einfach erklärt',
     metaDescription:
       'Das metrische System: Geschichte, Einheiten und Vorteile. Meter, Zentimeter, Millimeter – alles auf einen Blick.',
     keywords: 'metrisches system, einheiten, meter, zentimeter, millimeter',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Metrisches System – Einheiten von mm bis km',
     content: (
       <Section>
@@ -325,6 +338,7 @@ const allBlogPosts: BlogPostData[] = [
           Unser <a href="/">Lineal online</a> nutzt selbstverständlich das metrische System. Sie können jederzeit
           zwischen cm, mm und Zoll wechseln.
         </p>
+        <LegacyArticleSupplement slug="metrisches-system" />
       </Section>
     ),
   },
@@ -368,10 +382,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'angloamerikanisches-system',
     heroImage: '/lovable-uploads/2bfee74f-0a29-4825-ba3c-d22d5a01c53d.jpg',
     title: 'Das angloamerikanische Maßsystem – Zoll, Fuß, Yard',
+    seoTitle: 'Angloamerikanisches Maßsystem: Zoll, Fuß, Yard',
     metaDescription:
       'Das angloamerikanische Maßsystem mit Inch, Foot, Yard und Mile – Definitionen, Umrechnung in cm und mm sowie praktische Beispiele.',
     keywords: 'angloamerikanisches system, zoll, inch, fuß, foot, yard',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Angloamerikanisches Maßsystem – Zoll, Fuß, Yard',
     content: (
       <Section>
@@ -394,6 +410,7 @@ const allBlogPosts: BlogPostData[] = [
           Bildschirmgrößen, Reifendurchmesser, Rohrgewinde und Maschinenteile werden oft in Zoll angegeben. Unser{' '}
           <a href="/">Lineal online</a> beherrscht beide Systeme – wechseln Sie per Klick zwischen cm und Zoll.
         </p>
+        <LegacyArticleSupplement slug="angloamerikanisches-system" />
       </Section>
     ),
   },
@@ -471,10 +488,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'tiefenmesser',
     heroImage: '/lovable-uploads/418b6e62-05e8-4066-b239-ae9919d11840.jpg',
     title: 'Tiefenmesser – Funktion, Anwendung und Tipps',
+    seoTitle: 'Tiefenmesser: Funktion, Anwendung und Messfehler',
     metaDescription:
       'Tiefenmesser: Was ist das, wie funktioniert er und wofür wird er eingesetzt? Übersicht über mechanische und digitale Tiefenmesser.',
     keywords: 'tiefenmesser, messen, tiefe, messschieber',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Tiefenmesser zur Messung von Tiefen und Bohrungen',
     content: (
       <Section>
@@ -502,6 +521,7 @@ const allBlogPosts: BlogPostData[] = [
           Für oberflächliche Längenmessungen genügt ein <a href="/">Lineal online</a> – Tiefenmessungen verlangen
           jedoch ein physisches Werkzeug.
         </p>
+        <LegacyArticleSupplement slug="tiefenmesser" />
       </Section>
     ),
   },
@@ -583,10 +603,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'lineal-online-kostenlos',
     heroImage: '/lovable-uploads/cb6e8a8e-753f-42a5-9096-0c85f9ac17d4.jpg',
     title: 'Lineal online kostenlos – ohne Anmeldung nutzen',
+    seoTitle: 'Lineal online kostenlos ohne Anmeldung',
     metaDescription:
       'Lineal online kostenlos und ohne Anmeldung: cm, mm, Zoll direkt im Browser. Funktioniert auf Handy, Tablet und PC.',
     keywords: 'lineal online, online lineal, lineal kostenlos, lineal ohne anmeldung',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Lineal online kostenlos im Browser',
     content: (
       <Section>
@@ -611,6 +633,7 @@ const allBlogPosts: BlogPostData[] = [
         </ul>
 
         <p>Jetzt öffnen: <a href="/">Lineal.online</a>.</p>
+        <LegacyArticleSupplement slug="lineal-online-kostenlos" />
       </Section>
     ),
   },
@@ -618,10 +641,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'lineal-30-cm-online',
     heroImage: '/lovable-uploads/ac043476-ab03-4ce6-b0b3-942cb4d79ac5.jpg',
     title: 'Lineal 30 cm online anzeigen',
+    seoTitle: 'Lineal 30 cm online anzeigen',
     metaDescription:
       'Lineal 30 cm online anzeigen: Voraussetzungen, Kalibrierung und Grenzen auf Handy, Tablet und PC verständlich erklärt.',
     keywords: 'lineal 30 cm, lineal online, schullineal, online lineal',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Lineal 30 cm online – Schullineal im Browser',
     content: (
       <Section>
@@ -647,6 +672,7 @@ const allBlogPosts: BlogPostData[] = [
         </ul>
 
         <p>Direkt nutzen: <a href="/">Lineal.online</a>.</p>
+        <LegacyArticleSupplement slug="lineal-30-cm-online" />
       </Section>
     ),
   },
@@ -654,10 +680,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'zoll-in-cm-umrechnen',
     heroImage: '/lovable-uploads/3aaf4fe4-39fa-4068-9fb3-a5d1decbbc8e.jpg',
     title: 'Zoll in cm umrechnen – Tabelle & Online-Lineal',
+    seoTitle: 'Zoll in cm umrechnen: Tabelle & Rechner',
     metaDescription:
       'Zoll in cm umrechnen: 1 Zoll = 2,54 cm. Umrechnungstabelle, Beispiele und ein kostenloses Online-Lineal in cm und Zoll.',
     keywords: 'zoll in cm, inch in cm, umrechnung, lineal online',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Zoll in cm umrechnen – Tabelle und Online-Lineal',
     content: (
       <Section>
@@ -690,6 +718,7 @@ const allBlogPosts: BlogPostData[] = [
           Für beliebige Werte rechnet der <a href="/zoll-in-cm-rechner">Zoll-in-cm-Rechner</a> in beide
           Richtungen und zeigt zusätzlich Millimeter an.
         </p>
+        <LegacyArticleSupplement slug="zoll-in-cm-umrechnen" />
       </Section>
     ),
   },
@@ -697,10 +726,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'bildschirm-kalibrieren',
     heroImage: '/lovable-uploads/c058baa5-0359-41f1-a81f-fdaeb13aa151.jpg',
     title: 'Bildschirm kalibrieren: Skala anpassen',
+    seoTitle: 'Bildschirm kalibrieren: Skala richtig anpassen',
     metaDescription:
       'Bildschirm für ein Online-Lineal kalibrieren: Anleitung mit Bankkarte, zweiter Referenz und realistischen Genauigkeitsgrenzen.',
     keywords: 'bildschirm kalibrieren, lineal kalibrieren, lineal online, online lineal',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Bildschirm für ein Online-Lineal mit einer Referenz kalibrieren',
     content: (
       <Section>
@@ -731,6 +762,7 @@ const allBlogPosts: BlogPostData[] = [
           Die Einstellung bleibt im lokalen Browserspeicher erhalten. Nach Änderungen an Zoom, Monitor,
           Display-Skalierung oder Browserdaten sollte sie erneut kontrolliert werden.
         </p>
+        <LegacyArticleSupplement slug="bildschirm-kalibrieren" />
       </Section>
     ),
   },
@@ -738,10 +770,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'lineal-fuer-tablet',
     heroImage: '/lovable-uploads/7f2b24cb-d011-4b17-aeb8-901c4b6b5fef.jpg',
     title: 'Lineal für Tablet in cm, mm und Zoll',
+    seoTitle: 'Lineal für Tablet in cm, mm und Zoll',
     metaDescription:
       'Lineal für Tablet kostenlos online: Skala auf iPad und Android in cm, mm und Zoll kalibrieren und richtig ablesen.',
     keywords: 'lineal tablet, lineal ipad, lineal online, online lineal',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Lineal für Tablet – iPad und Android',
     content: (
       <Section>
@@ -766,6 +800,7 @@ const allBlogPosts: BlogPostData[] = [
         </ul>
 
         <p>Direkt loslegen: <a href="/">Lineal.online</a>.</p>
+        <LegacyArticleSupplement slug="lineal-fuer-tablet" />
       </Section>
     ),
   },
@@ -773,10 +808,12 @@ const allBlogPosts: BlogPostData[] = [
     slug: 'mm-genau-messen',
     heroImage: '/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg',
     title: 'Millimeter messen: Lineal oder Messschieber?',
+    seoTitle: 'Millimeter messen: Lineal oder Messschieber?',
     metaDescription:
       'Millimeter messen: Anleitung zu Lineal, Messschieber und kalibriertem Online-Lineal mit realistischen Genauigkeitsgrenzen.',
     keywords: 'millimeter messen, mm messen, lineal online, präzise messen',
     publishedAt: '2026-06-01',
+    updatedAt: '2026-10-08',
     heroAlt: 'Millimeter genau messen mit Lineal und Messschieber',
     content: (
       <Section>
@@ -806,6 +843,7 @@ const allBlogPosts: BlogPostData[] = [
           Unser <a href="/">Lineal online</a> zeigt Millimeter-Markierungen für eine schnelle Kontrolle. Lesen Sie
           Werte nicht genauer ab, als Bildschirm und Objektkante es tatsächlich zulassen.
         </p>
+        <LegacyArticleSupplement slug="mm-genau-messen" />
       </Section>
     ),
   },

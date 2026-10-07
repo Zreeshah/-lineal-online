@@ -6,12 +6,26 @@ import { Mail } from 'lucide-react';
 import CanonicalLink from '@/components/CanonicalLink';
 
 const Contact = () => {
+  const title = 'Kontakt – Lineal.online | Lineal online für Handy';
+  const description = 'Kontaktieren Sie das Team von Lineal.online – dem kostenlosen Lineal online und Maßband für Handy, Tablet und PC.';
+  const url = 'https://www.lineal.onl/kontakt';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
+  const pageSchema = { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Kontakt', url, description, inLanguage: 'de-DE' };
   return (
     <>
       <Helmet>
-        <title>Kontakt – Lineal.online | Lineal online für Handy</title>
-        <meta name="description" content="Kontaktieren Sie das Team von Lineal.online – dem kostenlosen Lineal online und Maßband für Handy, Tablet und PC." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <html lang="de" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       <CanonicalLink />
 

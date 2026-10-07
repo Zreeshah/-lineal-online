@@ -5,12 +5,26 @@ import { Head as Helmet } from 'vite-react-ssg';
 import CanonicalLink from '@/components/CanonicalLink';
 
 const Privacy = () => {
+  const title = 'Datenschutzerklärung – Lineal.online';
+  const description = 'Datenschutzerklärung von Lineal.online – Informationen zur Verarbeitung Ihrer Daten beim Online-Lineal.';
+  const url = 'https://www.lineal.onl/datenschutz';
+  const shareImage = 'https://www.lineal.onl/lovable-uploads/online-lineal-messen.jpg';
+  const pageSchema = { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Datenschutzerklärung', url, description, inLanguage: 'de-DE' };
   return (
     <>
       <Helmet>
-        <title>Datenschutzerklärung – Lineal.online</title>
-        <meta name="description" content="Datenschutzerklärung von Lineal.online – Informationen zur Verarbeitung Ihrer Daten beim Online-Lineal." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <html lang="de" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       <CanonicalLink />
 
