@@ -7,8 +7,7 @@
       "source": "/:path*",
       "has": [{ "type": "host", "value": "lineal.onl" }],
       "destination": "https://www.lineal.onl/:path*",
-      "statusCode": 301,
-      "preserveQueryParams": true
+      "statusCode": 301
     },
     { "source": "/blog/massband-im-handy", "destination": "/blog/lineal-fuer-handy", "statusCode": 301 },
     { "source": "/blog/handy-als-massband", "destination": "/blog/lineal-fuer-handy", "statusCode": 301 },
