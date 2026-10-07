@@ -28,6 +28,11 @@ const Index = () => {
   const isMobile = useIsMobile();
 
   const featuredArticles = blogArticles.filter((article) => article.url !== '/').slice(0, 3);
+  const featuredDescriptions: Record<string, string> = {
+    '/blog/wie-benutzt-man-ein-lineal': 'Nullpunkt, Blickwinkel und Millimeterteilung richtig verwenden.',
+    '/blog/lineal-10-cm-originalgroesse': 'Eine 10-cm-Strecke anzeigen und mit einer Referenz kontrollieren.',
+    '/blog/lineal-fuer-handy': 'Kleine Gegenstände auf dem Smartphone messen und typische Fehler vermeiden.',
+  };
 
   const metaTitle = 'Lineal online in Originalgröße | Lineal 10 cm anzeigen | Maßband für Handy';
   const metaDescription =
@@ -169,7 +174,9 @@ const Index = () => {
                       <h3 className="font-semibold text-lg mb-2 text-gray-800 group-hover:text-[#9b87f5]">
                         {article.title}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-3">{article.keywords.slice(0, 3).join(', ')}</p>
+                      <p className="text-sm text-gray-600 mb-3">
+                        {featuredDescriptions[article.url] || 'Praktische Hinweise für Messungen und Umrechnungen.'}
+                      </p>
                       <div className="flex items-center text-[#9b87f5] text-sm font-medium">
                         Weiterlesen
                         <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -281,11 +288,11 @@ const Index = () => {
                     </p>
 
                     <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                      <h4 className="font-semibold mb-2 text-gray-800">Option A – Kreditkarte (empfohlen):</h4>
+                      <h4 className="font-semibold mb-2 text-gray-800">Option A – Bankkarte im ID-1-Format:</h4>
                       <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Legen Sie eine Kredit- oder EC-Karte an den Bildschirm.</li>
-                        <li>Verschieben Sie die Kalibrierung, bis die Karte auf dem Bildschirm 85,6 mm misst.</li>
-                        <li>Speichern – fertig.</li>
+                        <li>Legen Sie die lange Kartenkante vorsichtig an die Referenzfläche.</li>
+                        <li>Passen Sie die Anzeige an, bis die Kartenbreite 85,60 mm entspricht.</li>
+                        <li>Prüfen Sie anschließend eine zweite bekannte Länge.</li>
                       </ul>
                     </div>
 
@@ -315,7 +322,7 @@ const Index = () => {
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
                       <li>Legen Sie die Kante Ihres Objekts an die 0 des virtuellen Lineals.</li>
                       <li>Lesen Sie das Maß in der gewünschten Einheit ab – z.B. <strong>Lineal 10 cm Originalgröße</strong>.</li>
-                      <li>Bei längeren Objekten verschieben Sie das Lineal oder zoomen Sie hinein.</li>
+                      <li>Bei längeren Objekten markieren Sie Teilstrecken, ohne den Browserzoom zu verändern.</li>
                     </ul>
                   </div>
 
@@ -336,10 +343,10 @@ const Index = () => {
           <div className="mb-10">
             <Card className="bg-white p-6">
               <CardContent className="p-0">
-                <h2 className="text-2xl font-bold mb-4 text-[#9b87f5]">Jetzt mit dem Messen starten!</h2>
+                <h2 className="text-2xl font-bold mb-4 text-[#9b87f5]">Messung vorbereiten</h2>
                 <p className="text-lg text-gray-700 mb-4">
-                  Ihr Bildschirm wird zum kostenlosen, präzisen Messgerät. Mit unserem <strong>Lineal online</strong>{' '}
-                  messen Sie Objekte direkt am Handy, Tablet oder PC – ohne Download.
+                  Das <strong>Lineal online</strong> ist eine kostenlose Messhilfe für kleine, unkritische
+                  Größenkontrollen am Handy, Tablet oder PC. Vor dem Ablesen muss die Skala zum Bildschirm passen.
                 </p>
 
                 <div className="my-6">
@@ -356,26 +363,27 @@ const Index = () => {
 
                 <div className="space-y-6">
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800">⚡ Schnell, einfach und kostenlos</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">Ohne Installation nutzbar</h3>
                     <p className="text-gray-700">
-                      Einmal kalibrieren – immer nutzen. Funktioniert mit Zentimetern, Millimetern und Zoll.
+                      Die Skala unterstützt Zentimeter, Millimeter und Zoll. Kontrollieren Sie die Kalibrierung nach
+                      Änderungen an Zoom, Monitor oder Anzeige-Skalierung erneut.
                     </p>
                   </div>
 
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800">✓ So legen Sie los</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">So legen Sie los</h3>
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
                       <li>„Bildschirm kalibrieren" antippen.</li>
-                      <li>Per Kreditkarte oder Bildschirmgröße abgleichen.</li>
-                      <li>Sofort jedes Objekt messen, das Sie zur Hand haben.</li>
+                      <li>Mit einer Bankkarte oder einer bekannten Länge abgleichen.</li>
+                      <li>Ein kleines Objekt gerade an die Nullmarke legen und zweimal ablesen.</li>
                     </ul>
                   </div>
 
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800">🎯 Worauf warten?</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-800">Ergebnis richtig einordnen</h3>
                     <p className="text-gray-700">
-                      Messen, vergleichen und rechnen – sofort von jedem Gerät. Ideal für Schule, Design, Handwerk
-                      und jeden, der schnell und zuverlässig messen möchte.
+                      Für Schule, Büro, Basteln und einen schnellen Größenvergleich kann die Bildschirmskala
+                      ausreichen. Enge Toleranzen prüfen Sie mit einem geeigneten physischen Messgerät.
                     </p>
                   </div>
                 </div>

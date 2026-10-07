@@ -15,24 +15,34 @@ const HomepageMeasurementGuide: React.FC = () => (
         <strong> 1 cm = 10 mm</strong>.
       </p>
 
-      <h3>Begriffe für dasselbe Messwerkzeug</h3>
+      <h3>Welche Bezeichnung passt zu welchem Zweck?</h3>
       <p>
-        Auf dem Smartphone meinen <strong>lineal 10 cm handy</strong>, <strong>lineal online handy</strong>,{' '}
-        <strong>lineal handy</strong>, <strong>maßband handy ohne app</strong>, <strong>lineal online handy cm</strong>,{' '}
-        <strong>maßband handy</strong>, <strong>handy lineal</strong>, <strong>10 cm maßband handy</strong>,{' '}
-        <strong>5 cm auf handy anzeigen</strong>, <strong>10cm auf handy anzeigen</strong>,{' '}
-        <strong>zentimetermaß handy</strong>, <strong>cm maß handy</strong> und <strong>lineal auf handy</strong>
-        dieselbe Grundidee: eine kalibrierte Skala direkt auf dem Display.
+        Viele Suchbegriffe beschreiben dasselbe Werkzeug, setzen aber unterschiedliche Schwerpunkte. Entscheidend
+        ist nicht die Bezeichnung, sondern ob die Skala auf dem verwendeten Bildschirm kalibriert wurde.
       </p>
-      <p>
-        Auch <strong>lineal online</strong>, <strong>maßband online</strong>, <strong>online maßband</strong>,{' '}
-        <strong>lineal digital</strong>, <strong>digitales lineal</strong>, <strong>metermaß online</strong>,{' '}
-        <strong>lineal anzeigen</strong>, <strong>online-lineal</strong>, <strong>metermaß online kostenlos</strong>,{' '}
-        <strong>maßband online cm</strong> und <strong>maßband cm online</strong> bezeichnen digitale Messhilfen.
-        Die Zusätze <strong>lineal online originalgröße</strong>, <strong>lineal in originalgröße</strong>,{' '}
-        <strong>online-lineal cm originalgröße</strong> oder <strong>lineal echtgröße</strong> betonen, dass die
-        Anzeige kalibriert sein muss. <strong>Zentimetermaß anzeigen</strong> beschreibt denselben Vorgang.
-      </p>
+      <ul>
+        <li>
+          <strong>Auf dem Smartphone:</strong> Die Formulierungen <strong>lineal 10 cm handy</strong>,{' '}
+          <strong>lineal online handy</strong>, <strong>lineal handy</strong>, <strong>maßband handy ohne app</strong>,{' '}
+          <strong>lineal online handy cm</strong>, <strong>maßband handy</strong>, <strong>handy lineal</strong>,{' '}
+          <strong>10 cm maßband handy</strong>, <strong>5 cm auf handy anzeigen</strong>,{' '}
+          <strong>10cm auf handy anzeigen</strong>, <strong>zentimetermaß handy</strong>, <strong>cm maß handy</strong>{' '}
+          und <strong>lineal auf handy</strong> meinen eine Skala, die direkt im mobilen Browser erscheint.
+        </li>
+        <li>
+          <strong>Allgemeine Messhilfe:</strong> <strong>lineal online</strong>, <strong>maßband online</strong>,{' '}
+          <strong>online maßband</strong>, <strong>lineal digital</strong>, <strong>digitales lineal</strong>,{' '}
+          <strong>metermaß online</strong>, <strong>lineal anzeigen</strong>, <strong>online-lineal</strong>,{' '}
+          <strong>metermaß online kostenlos</strong>, <strong>maßband online cm</strong> und{' '}
+          <strong>maßband cm online</strong> stehen für browserbasierte Messhilfen in verschiedenen Einheiten.
+        </li>
+        <li>
+          <strong>Darstellung in realer Größe:</strong> Bei <strong>lineal online originalgröße</strong>,{' '}
+          <strong>lineal in originalgröße</strong>, <strong>online-lineal cm originalgröße</strong> und{' '}
+          <strong>lineal echtgröße</strong> kommt es besonders auf
+          den Referenzabgleich an. Auch <strong>zentimetermaß anzeigen</strong> setzt eine passende Skalierung voraus.
+        </li>
+      </ul>
 
       <h2>Kalibrieren mit der Bankkarte oder Bildschirmdiagonale</h2>
       <p>
@@ -55,25 +65,39 @@ const HomepageMeasurementGuide: React.FC = () => (
       </p>
 
       <h2>Typische Messungen</h2>
+      <ul>
+        <li>
+          <strong>Versandetikett:</strong> Prüfen Sie bei einem Sollmaß von 100 × 150 mm beide Kanten. Zeigt die
+          Skala 99 mm und 150 mm, ist die kurze Seite ungefähr 1 mm zu klein.
+        </li>
+        <li>
+          <strong>Ring:</strong> Messen Sie den Innendurchmesser. Bei 18,2 mm ergibt die Rechnung 18,2 × π einen
+          Innenumfang von ungefähr 57,2 mm. Die Grenzen dieser Methode erklärt die Anleitung zum{' '}
+          <Link to="/blog/ring-lineal-messen">Ringmessen</Link>.
+        </li>
+        <li>
+          <strong>Schraube:</strong> Beginnt die Messung bei 2 mm und endet die Spitze bei 32 mm, beträgt die
+          Differenz 30 mm. Welcher Startpunkt zur Kopfform gehört, zeigt der Beitrag{' '}
+          <Link to="/blog/schraube-lineal-messen">Schrauben mit dem Lineal messen</Link>.
+        </li>
+      </ul>
+
+      <h3>Konkrete Längen auf dem Bildschirm</h3>
       <p>
-        <strong>Versandetikett:</strong> Ein Sollmaß von 100 × 150 mm wird an beiden Kanten geprüft. Zeigt die Skala
-        99 mm und 150 mm, fehlt an der kurzen Seite etwa 1 mm. <strong>Ring:</strong> Messen Sie nur den
-        Innendurchmesser; 18,2 mm entsprechen einem Innenumfang von ungefähr 57,2 mm. Kontrollieren Sie das Ergebnis
-        mit der Anleitung zum <Link to="/blog/ring-lineal-messen">Ringmessen</Link>. <strong>Schraube:</strong> Liegt
-        die Spitze bei 32 mm, während der Messbeginn bei 2 mm steht, beträgt die gemessene Länge 30 mm. Welcher
-        Startpunkt zur Schraubenform gehört, erklärt der Beitrag{' '}
-        <Link to="/blog/schraube-lineal-messen">Schrauben mit dem Lineal messen</Link>.
+        Bei kleinen Referenzmaßen geht es meist darum, eine bestimmte Strecke sichtbar zu machen. Dazu gehören{' '}
+        <strong>1 cm anzeigen</strong>, <strong>1 cm originalgröße</strong>, <strong>2 cm anzeigen</strong>,{' '}
+        <strong>2 cm originalgröße</strong>, <strong>3 cm anzeigen</strong>, <strong>3 cm originalgröße</strong>,{' '}
+        <strong>5 cm anzeigen lineal</strong>, <strong>5 cm originalgröße</strong>,{' '}
+        <strong>6 cm originalgröße</strong> und <strong>7 cm anzeigen</strong>. Schreibweisen wie{' '}
+        <strong>2 5 cm anzeigen</strong> meinen in der Regel 2,5 cm.
       </p>
       <p>
-        Für kurze Strecken werden häufig <strong>lineal 10 cm originalgröße</strong>,{' '}
-        <strong>lineal 10 cm online</strong>, <strong>5 cm originalgröße</strong>, <strong>1 cm anzeigen</strong>,{' '}
-        <strong>2 cm originalgröße</strong>, <strong>6 cm originalgröße</strong>, <strong>7 cm anzeigen</strong>,{' '}
-        <strong>10 cm anzeigen</strong>, <strong>2 5 cm anzeigen</strong>, <strong>10 cm</strong>,{' '}
-        <strong>1 cm originalgröße</strong>, <strong>3 cm originalgröße</strong>, <strong>2 cm anzeigen</strong>,{' '}
-        <strong>10 centimeter</strong>, <strong>5 cm anzeigen lineal</strong>, <strong>lineal 15 cm online</strong>,{' '}
-        <strong>lineal 20 cm originalgröße</strong>, <strong>3 cm anzeigen</strong>,{' '}
-        <strong>10 cm originalgröße</strong> oder <strong>10cm anzeigen</strong> gesucht. Gemeint ist jeweils eine
-        konkrete Referenzlänge; ohne Kalibrierung ist ihre physische Größe nicht verlässlich.
+        Für längere Strecken werden <strong>10 cm</strong>, <strong>10 cm anzeigen</strong>,{' '}
+        <strong>10cm anzeigen</strong>, <strong>10 centimeter</strong>, <strong>10 cm originalgröße</strong>,{' '}
+        <strong>lineal 10 cm originalgröße</strong>, <strong>lineal 10 cm online</strong>,{' '}
+        <strong>lineal 15 cm online</strong> oder <strong>lineal 20 cm originalgröße</strong> verwendet. Diese
+        Angaben sind nur dann physisch verlässlich, wenn der Browserzoom unverändert bleibt und die Skala zuvor
+        mit einer bekannten Länge abgeglichen wurde.
       </p>
 
       <h2>Häufige Fehler</h2>

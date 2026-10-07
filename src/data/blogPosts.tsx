@@ -53,9 +53,9 @@ const allBlogPosts: BlogPostData[] = [
   {
     slug: 'lineal-10-cm-originalgroesse',
     heroImage: '/lovable-uploads/77d87cd2-00a5-424e-bf36-dc75ce21996e.jpg',
-    title: 'Lineal 10 cm anzeigen – Lineal 10 cm Originalgröße online',
+    title: 'Lineal 10 cm in Originalgröße anzeigen',
     metaDescription:
-      'Lineal 10 cm anzeigen in Originalgröße – kostenlos online, ohne Download. Präzises Online-Lineal in cm und mm für Handy, Tablet und PC.',
+      'Lineal 10 cm in Originalgröße anzeigen, kalibrieren und kontrollieren – kostenlos auf Handy, Tablet und PC.',
     keywords: 'lineal 10 cm anzeigen, lineal 10 cm originalgröße, lineal online, online lineal, lineal',
     publishedAt: '2026-06-01',
     heroAlt: 'Lineal 10 cm in Originalgröße auf einem Bildschirm angezeigt',
@@ -72,22 +72,23 @@ const allBlogPosts: BlogPostData[] = [
 
         <h2>Warum ein 10-cm-Lineal online?</h2>
         <p>
-          Ein 10-cm-Lineal ist die am häufigsten gesuchte Größe für schnelle Messungen: Schmuck, Schrauben, kleine
-          Werkstücke, Kleidung oder Bastelteile. Unser <strong>online lineal</strong> zeigt die echten 10 cm exakt
-          so an, wie ein Lineal aus dem Federmäppchen.
+          Eine 10-cm-Skala ist praktisch für Schmuck, Schrauben, kleine Werkstücke oder Bastelteile. Nach dem
+          Kalibrieren kann das <strong>online lineal</strong> diese Strecke als Referenz anzeigen; ohne Abgleich ist
+          die physische Darstellung nicht verlässlich.
         </p>
 
         <h2>So zeigen Sie ein Lineal 10 cm in Originalgröße</h2>
         <ol>
           <li>Öffnen Sie unsere <a href="/">Startseite</a>.</li>
-          <li>Kalibrieren Sie das Lineal kurz mit einer Kreditkarte (85,6 mm Breite).</li>
-          <li>Schon haben Sie ein präzises <strong>Lineal 10 cm Originalgröße</strong>.</li>
+          <li>Kalibrieren Sie das Lineal mit einer Bankkarte im ID-1-Format (85,60 mm Breite).</li>
+          <li>Kontrollieren Sie die 10-cm-Strecke anschließend mit einer zweiten bekannten Länge.</li>
         </ol>
 
         <h2>Genauigkeit prüfen</h2>
         <p>
-          Vergleichen Sie das angezeigte Lineal mit einem Gegenstand bekannter Größe – z.B. einer 1-Euro-Münze
-          (23,25 mm). Stimmt die Anzeige, sind Ihre 10 cm exakt.
+          Vergleichen Sie das angezeigte Lineal mit einem Gegenstand bekannter Größe, zum Beispiel einer
+          1-Euro-Münze mit 23,25 mm Durchmesser. Eine passende Kontrollmessung zeigt, dass die Skalierung plausibel
+          ist; sie macht den Bildschirm nicht zu einem geeichten Messgerät.
         </p>
 
         <h2>Vorteile gegenüber einem klassischen Lineal</h2>
@@ -120,16 +121,16 @@ const allBlogPosts: BlogPostData[] = [
       <Section>
         <h1>Lineal für Handy – kostenlos online messen</h1>
         <p className="lead">
-          Ein <strong>Lineal für Handy</strong> ist die schnellste Möglichkeit, Dinge unterwegs zu messen. Unser{' '}
-          <strong>lineal online handy</strong> verwandelt jedes Smartphone in ein präzises Messgerät – ganz ohne
-          App.
+          Ein <strong>Lineal für Handy</strong> hilft bei einer schnellen Größenkontrolle unterwegs. Das{' '}
+          <strong>lineal online handy</strong> zeigt dafür eine kalibrierbare Skala direkt im Browser, ohne dass
+          eine App installiert werden muss.
         </p>
 
         <h2>Wie funktioniert das Handy-Lineal?</h2>
         <p>
-          Smartphones haben unterschiedliche Pixeldichten. Damit das <strong>online lineal</strong> echte Maße
-          anzeigt, kalibrieren Sie es einmal mit Ihrer EC- oder Kreditkarte (85,6 mm). Danach werden cm, mm und
-          Zoll exakt angezeigt.
+          Smartphones haben unterschiedliche Pixeldichten. Gleichen Sie das <strong>online lineal</strong> deshalb
+          mit einer Bankkarte im ID-1-Format ab und prüfen Sie die Skala nach Änderungen an Zoom, Ausrichtung oder
+          Anzeige-Skalierung erneut.
         </p>
 
         <h2>Vorteile eines Online-Lineals fürs Handy</h2>
@@ -142,8 +143,9 @@ const allBlogPosts: BlogPostData[] = [
 
         <h2>Anwendungsfälle</h2>
         <p>
-          Schrauben, Kleidergrößen, Bastelteile, Schmuckmaße, Werkstücke – alles, was kleiner ist als Ihre
-          Bildschirmdiagonale, können Sie mit dem <strong>Lineal für Handy</strong> messen.
+          Das <strong>Lineal für Handy</strong> eignet sich vor allem für flache, kleine Gegenstände mit klaren
+          Kanten, etwa Karten, Etiketten oder Bastelteile. Für Durchmesser, Gewinde und enge Toleranzen ist ein
+          Messschieber geeigneter.
         </p>
 
         <p>
@@ -156,9 +158,9 @@ const allBlogPosts: BlogPostData[] = [
   {
     slug: 'massband-online',
     heroImage: '/lovable-uploads/online-lineal-messen.jpg',
-    title: 'Maßband online – kostenlos in cm und mm messen',
+    title: 'Maßband online in cm und mm',
     metaDescription:
-      'Maßband online kostenlos – messen Sie Längen in cm, mm und Zoll direkt im Browser. Präzises Online-Maßband für Handy, Tablet und PC.',
+      'Maßband online kostenlos: kalibrierbare Skala in cm, mm und Zoll für kurze Messungen auf Handy, Tablet und PC.',
     keywords: 'maßband online, lineal online, online lineal, maßband, messen online',
     publishedAt: '2026-06-01',
     heroAlt: 'Maßband online – digitales Online-Maßband',
@@ -167,7 +169,7 @@ const allBlogPosts: BlogPostData[] = [
         <h1>Maßband online – das kostenlose digitale Maßband</h1>
         <p className="lead">
           Ein <strong>maßband online</strong> ist ideal, wenn Sie schnell etwas messen müssen und kein klassisches
-          Maßband zur Hand haben. Bei Lineal.online finden Sie ein präzises digitales Maßband direkt im Browser.
+          Maßband zur Hand haben. Bei Lineal.online finden Sie dafür eine kalibrierbare digitale Skala im Browser.
         </p>
 
         <h2>Wie unterscheidet sich das Maßband vom Lineal?</h2>
@@ -177,11 +179,11 @@ const allBlogPosts: BlogPostData[] = [
           <strong>maßband online</strong> in einer Anwendung.
         </p>
 
-        <h2>Kalibrierung in 30 Sekunden</h2>
+        <h2>Kalibrierung mit einer Bankkarte</h2>
         <ol>
-          <li>EC-Karte an den Bildschirm halten.</li>
-          <li>Skala so verschieben, dass die Karte 85,6 mm misst.</li>
-          <li>Speichern – fertig.</li>
+          <li>Lange Kante einer Bankkarte im ID-1-Format als Referenz verwenden.</li>
+          <li>Skala so anpassen, dass die Kartenbreite 85,60 mm entspricht.</li>
+          <li>Mit einer zweiten bekannten Länge kontrollieren.</li>
         </ol>
 
         <h2>Wofür eignet sich ein Online-Maßband?</h2>
@@ -588,10 +590,10 @@ const allBlogPosts: BlogPostData[] = [
     heroAlt: 'Lineal online kostenlos im Browser',
     content: (
       <Section>
-        <h1>Lineal online kostenlos – das beste Tool im Browser</h1>
+        <h1>Lineal online kostenlos – direkt im Browser messen</h1>
         <p className="lead">
-          <strong>Lineal online</strong> ohne Anmeldung, ohne Werbung im Weg, ohne Download: Lineal.online ist
-          das schnellste Werkzeug für eine präzise Messung am Bildschirm.
+          <strong>Lineal online</strong> funktioniert ohne Anmeldung und ohne Download. Nach einem Referenzabgleich
+          eignet sich die Skala für schnelle, unkritische Größenkontrollen am Bildschirm.
         </p>
 
         <h2>Warum kostenlos?</h2>
@@ -603,7 +605,7 @@ const allBlogPosts: BlogPostData[] = [
         <h2>Was Sie damit machen können</h2>
         <ul>
           <li>Lineal 10 cm anzeigen in Originalgröße</li>
-          <li>1 cm exakt sehen (= 10 mm)</li>
+          <li>1 cm als Strecke anzeigen und mit 10 mm vergleichen</li>
           <li>Längen auf Handy, Tablet oder PC messen</li>
           <li>Als <strong>maßband online</strong> nutzen</li>
         </ul>
@@ -615,9 +617,9 @@ const allBlogPosts: BlogPostData[] = [
   {
     slug: 'lineal-30-cm-online',
     heroImage: '/lovable-uploads/ac043476-ab03-4ce6-b0b3-942cb4d79ac5.jpg',
-    title: 'Lineal 30 cm online – das klassische Schullineal digital',
+    title: 'Lineal 30 cm online anzeigen',
     metaDescription:
-      'Lineal 30 cm online in Originalgröße – ideal als Schullineal am Bildschirm. Kostenlos, präzise und für Handy, Tablet und PC.',
+      'Lineal 30 cm online anzeigen: Voraussetzungen, Kalibrierung und Grenzen auf Handy, Tablet und PC verständlich erklärt.',
     keywords: 'lineal 30 cm, lineal online, schullineal, online lineal',
     publishedAt: '2026-06-01',
     heroAlt: 'Lineal 30 cm online – Schullineal im Browser',
@@ -625,15 +627,16 @@ const allBlogPosts: BlogPostData[] = [
       <Section>
         <h1>Lineal 30 cm online – das Schullineal digital</h1>
         <p className="lead">
-          Das klassische 30-cm-Lineal ist Standard in Schule, Studium und Büro. Unser{' '}
-          <strong>lineal online</strong> zeigt es direkt am Bildschirm – auf großen Monitoren in echter
-          Originalgröße.
+          Das klassische 30-cm-Lineal ist in Schule, Studium und Büro verbreitet. Ein <strong>lineal online</strong>{' '}
+          kann eine vollständige 30-cm-Skala anzeigen, wenn die nutzbare Bildschirmbreite ausreicht und die Anzeige
+          korrekt kalibriert wurde.
         </p>
 
         <h2>Voraussetzungen</h2>
         <p>
-          Für ein vollständiges 30-cm-Lineal benötigen Sie einen Bildschirm mit mindestens 13 Zoll Diagonale.
-          Auf dem Handy zeigen wir automatisch ein kürzeres Lineal, das aber genauso exakt skaliert.
+          Entscheidend ist nicht allein die Bildschirmdiagonale, sondern die tatsächlich sichtbare Breite im
+          Browser. Auf kleinen Displays bleibt nur ein kürzerer Skalenabschnitt sichtbar. Prüfen Sie in beiden
+          Fällen zuerst Zoom und Kalibrierung.
         </p>
 
         <h2>Typische Einsätze</h2>
@@ -693,24 +696,24 @@ const allBlogPosts: BlogPostData[] = [
   {
     slug: 'bildschirm-kalibrieren',
     heroImage: '/lovable-uploads/c058baa5-0359-41f1-a81f-fdaeb13aa151.jpg',
-    title: 'Bildschirm kalibrieren – so wird Ihr Lineal exakt',
+    title: 'Bildschirm kalibrieren: Skala anpassen',
     metaDescription:
-      'Bildschirm kalibrieren für ein präzises Online-Lineal: Anleitung mit EC-Karte, Münze oder Maßband. Funktioniert auf Handy, Tablet und PC.',
+      'Bildschirm für ein Online-Lineal kalibrieren: Anleitung mit Bankkarte, zweiter Referenz und realistischen Genauigkeitsgrenzen.',
     keywords: 'bildschirm kalibrieren, lineal kalibrieren, lineal online, online lineal',
     publishedAt: '2026-06-01',
-    heroAlt: 'Bildschirm kalibrieren für exaktes Online-Lineal',
+    heroAlt: 'Bildschirm für ein Online-Lineal mit einer Referenz kalibrieren',
     content: (
       <Section>
-        <h1>Bildschirm kalibrieren – exakte Maße am Display</h1>
+        <h1>Bildschirm kalibrieren – Skala an das Display anpassen</h1>
         <p className="lead">
-          Damit ein <strong>online lineal</strong> exakte Maße anzeigt, muss der Bildschirm kalibriert werden.
-          Jedes Gerät hat eine andere Pixeldichte – ohne Kalibrierung gibt es Abweichungen.
+          Damit ein <strong>online lineal</strong> eine reale Länge möglichst passend abbildet, muss die Skala an
+          den verwendeten Bildschirm angepasst werden. Ohne diesen Abgleich sind sichtbare Abweichungen möglich.
         </p>
 
-        <h2>Methode 1: EC-/Kreditkarte</h2>
+        <h2>Methode 1: Bankkarte im ID-1-Format</h2>
         <p>
-          Standardkarten haben exakt <strong>85,6 × 53,98 mm</strong>. Karte ans Display halten und die Skala
-          unseres Lineals so verschieben, dass sie zur Karte passt.
+          Karten im ID-1-Format messen <strong>85,60 × 53,98 mm</strong>. Legen Sie die lange Kante vorsichtig an
+          die Referenzfläche und passen Sie die dargestellte Breite an.
         </p>
 
         <h2>Methode 2: Münze</h2>
@@ -720,20 +723,23 @@ const allBlogPosts: BlogPostData[] = [
 
         <h2>Methode 3: Maßband</h2>
         <p>
-          Wenn Sie ein klassisches Maßband zur Hand haben, vergleichen Sie damit eine 10-cm-Strecke. So wird Ihr{' '}
-          <strong>maßband online</strong> deckungsgleich mit dem echten Werkzeug.
+          Wenn Sie ein klassisches Maßband zur Hand haben, vergleichen Sie damit eine 10-cm-Strecke. Wiederholen Sie
+          den Abgleich, bis die Abweichung für Ihren Einsatzzweck klein genug ist.
         </p>
 
-        <p>Einmal kalibriert, bleibt die Einstellung für Ihr Gerät gespeichert.</p>
+        <p>
+          Die Einstellung bleibt im lokalen Browserspeicher erhalten. Nach Änderungen an Zoom, Monitor,
+          Display-Skalierung oder Browserdaten sollte sie erneut kontrolliert werden.
+        </p>
       </Section>
     ),
   },
   {
     slug: 'lineal-fuer-tablet',
     heroImage: '/lovable-uploads/7f2b24cb-d011-4b17-aeb8-901c4b6b5fef.jpg',
-    title: 'Lineal für Tablet – iPad und Android kostenlos messen',
+    title: 'Lineal für Tablet in cm, mm und Zoll',
     metaDescription:
-      'Lineal für Tablet kostenlos online: messen Sie auf iPad und Android-Tablets in cm, mm und Zoll. Größerer Bildschirm = längeres Lineal.',
+      'Lineal für Tablet kostenlos online: Skala auf iPad und Android in cm, mm und Zoll kalibrieren und richtig ablesen.',
     keywords: 'lineal tablet, lineal ipad, lineal online, online lineal',
     publishedAt: '2026-06-01',
     heroAlt: 'Lineal für Tablet – iPad und Android',
@@ -741,8 +747,8 @@ const allBlogPosts: BlogPostData[] = [
       <Section>
         <h1>Lineal für Tablet – die ideale Bildschirmgröße</h1>
         <p className="lead">
-          Tablets sind die perfekte Plattform für ein <strong>online lineal</strong>: groß genug für ein
-          komplettes 20-cm-Lineal, mobil genug für jeden Einsatzort.
+          Ein Tablet bietet häufig mehr sichtbare Skalenlänge als ein Smartphone. Ob ein vollständiger
+          20-cm-Abschnitt auf das Display passt, hängt von Gerätegröße, Ausrichtung und nutzbarer Browserfläche ab.
         </p>
 
         <h2>iPad, Galaxy Tab & Co.</h2>
@@ -753,7 +759,7 @@ const allBlogPosts: BlogPostData[] = [
 
         <h2>Vorteile</h2>
         <ul>
-          <li>Großes Display = langes Lineal (oft bis 25 cm)</li>
+          <li>Mehr sichtbare Skalenlänge als auf vielen Smartphones</li>
           <li>Touch-Bedienung für schnelle Kalibrierung</li>
           <li>Hoch- und Querformat unterstützt</li>
           <li>Auch als <strong>Lineal für Handy</strong> nutzbar</li>
@@ -766,9 +772,9 @@ const allBlogPosts: BlogPostData[] = [
   {
     slug: 'mm-genau-messen',
     heroImage: '/lovable-uploads/cfc618aa-7a76-41fd-b3e3-7680ab8f7538.jpg',
-    title: 'Millimeter genau messen – Tipps & Online-Tools',
+    title: 'Millimeter messen: Lineal oder Messschieber?',
     metaDescription:
-      'Millimeter genau messen: Anleitung für präzise mm-Messungen mit Lineal, Messschieber und Online-Lineal in Originalgröße.',
+      'Millimeter messen: Anleitung zu Lineal, Messschieber und kalibriertem Online-Lineal mit realistischen Genauigkeitsgrenzen.',
     keywords: 'millimeter messen, mm messen, lineal online, präzise messen',
     publishedAt: '2026-06-01',
     heroAlt: 'Millimeter genau messen mit Lineal und Messschieber',
@@ -776,8 +782,9 @@ const allBlogPosts: BlogPostData[] = [
       <Section>
         <h1>Millimeter genau messen – so geht's richtig</h1>
         <p className="lead">
-          Bei Heimwerken, Modellbau oder Schmuck zählt jeder Millimeter. Mit den richtigen Techniken und einem
-          präzisen <strong>online lineal</strong> erreichen Sie professionelle Genauigkeit.
+          Bei Heimwerken, Modellbau oder Schmuck kann ein Millimeter entscheidend sein. Ein kalibriertes{' '}
+          <strong>online lineal</strong> hilft bei der Vorprüfung; für belastbare Feinmaße benötigen Sie ein
+          geeignetes physisches Werkzeug.
         </p>
 
         <h2>Tipps für mm-genaue Messungen</h2>
@@ -796,8 +803,8 @@ const allBlogPosts: BlogPostData[] = [
 
         <h2>Online-Lineal mit mm-Skala</h2>
         <p>
-          Unser <a href="/">Lineal online</a> zeigt jede Millimeter-Markierung deutlich – ideal für präzise
-          Arbeiten am Bildschirm.
+          Unser <a href="/">Lineal online</a> zeigt Millimeter-Markierungen für eine schnelle Kontrolle. Lesen Sie
+          Werte nicht genauer ab, als Bildschirm und Objektkante es tatsächlich zulassen.
         </p>
       </Section>
     ),

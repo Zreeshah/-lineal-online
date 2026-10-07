@@ -3,6 +3,7 @@ import type { BlogPostData } from './blogPosts';
 import { retiredBlogPostSlugs } from './blogRouting';
 
 type Topic = {
+  kind?: 'measurement' | 'conversion' | 'comparison';
   focusKeyword: string;
   slug: string;
   title: string;
@@ -40,28 +41,28 @@ const defaultRelated = [
 
 const buildFaqs = (focusKeyword: string, useCase: string): Topic['faqs'] => [
   {
-    q: `Was bedeutet ${focusKeyword}?`,
-    a: `${focusKeyword} beschreibt eine Messmethode direkt im Browser. Die Skala wird auf dem Bildschirm angezeigt und nach der Kalibrierung in Zentimetern, Millimetern oder Zoll genutzt.`,
+    q: `Was ist mit dem Suchbegriff „${focusKeyword}“ gemeint?`,
+    a: `Das Thema „${focusKeyword}“ bezeichnet hier eine browserbasierte Mess- oder Umrechnungshilfe. Welche Schritte nötig sind, hängt davon ab, ob eine reale Länge abgelesen oder nur ein Zahlenwert umgerechnet wird.`,
   },
   {
-    q: `Ist ${focusKeyword} für genaue Messungen geeignet?`,
-    a: `Ja, für Alltag, Schule, Basteln und schnelle Kontrollen ist ${focusKeyword} gut geeignet. Für sicherheitskritische oder technische Toleranzen sollte ein Messschieber oder ein geprüftes Lineal verwendet werden.`,
+    q: `Wann ist die Methode beim Thema „${focusKeyword}“ sinnvoll?`,
+    a: `Die beschriebene Methode ist vor allem für ${useCase} sinnvoll. Liegt ein Wert nahe an einer wichtigen Grenze, sollte er mit einem geeigneten physischen Werkzeug kontrolliert werden.`,
   },
   {
-    q: 'Warum ist Kalibrierung wichtig?',
-    a: 'Displays haben unterschiedliche Pixeldichten. Die Kalibrierung gleicht diese Unterschiede aus, damit ein angezeigter Zentimeter möglichst nah an einem echten Zentimeter liegt.',
+    q: `Ist beim Thema „${focusKeyword}“ eine Kalibrierung nötig?`,
+    a: `Eine beim Thema „${focusKeyword}“ verwendete Bildschirmskala muss kalibriert werden, weil Pixel keine feste physische Größe besitzen. Für eine reine Einheitenumrechnung ist dagegen kein Bildschirmabgleich nötig.`,
   },
   {
-    q: 'Welche Referenz eignet sich am besten?',
-    a: 'Eine Bankkarte im ID-1 Format eignet sich gut, weil sie 85,60 mm breit ist. Alternativ funktioniert ein bekanntes physisches Lineal oder die echte Bildschirmdiagonale.',
+    q: `Welche Referenz passt zum Thema „${focusKeyword}“?`,
+    a: `Beim Thema „${focusKeyword}“ kann für eine physische Bildschirmmessung eine Bankkarte im ID-1-Format mit 85,60 mm Breite verwendet werden. Eine zweite bekannte Länge hilft, die Skalierung zu kontrollieren.`,
   },
   {
-    q: 'Funktioniert das auch ohne App?',
-    a: 'Ja. Lineal.online läuft im mobilen und Desktop-Browser. Es muss nichts installiert werden, und die Messung kann sofort gestartet werden.',
+    q: `Lässt sich die Hilfe zu „${focusKeyword}“ ohne App nutzen?`,
+    a: `Ja. Die für „${focusKeyword}“ beschriebenen Funktionen laufen im mobilen oder Desktop-Browser. Vor einer physischen Messung sollte die Skala trotzdem auf dem jeweiligen Gerät geprüft werden.`,
   },
   {
-    q: `Wann ist ${focusKeyword} besonders praktisch?`,
-    a: `${focusKeyword} ist praktisch für ${useCase}. Der Vorteil liegt darin, dass das Werkzeug sofort verfügbar ist und zwischen cm, mm und Zoll wechseln kann.`,
+    q: `Welche Grenzen gelten beim Thema „${focusKeyword}“?`,
+    a: `Beim Thema „${focusKeyword}“ ersetzt die Methode kein geprüftes Messgerät bei Fertigungstoleranzen, medizinischen Anpassungen oder sicherheitsrelevanten Entscheidungen. Runde oder schwer zugängliche Kanten erhöhen die Unsicherheit.`,
   },
 ];
 
@@ -137,7 +138,7 @@ const topics: Topic[] = [
     bestUse: 'kurze Objekte, schnelle Kontrollen und Umrechnungen zwischen cm, mm und Zoll',
     example: 'Ein Lineal online hilft, wenn ein Objekt fotografiert, verpackt oder verglichen werden soll und kein Werkzeug auf dem Tisch liegt.',
     calibrationTip: 'Die Genauigkeit steigt, wenn vor der ersten Messung eine echte Referenz angelegt wird.',
-    steps: ['Startseite öffnen.', 'Gewuenschte Einheit wählen.', 'Bildschirm kalibrieren.', 'Objekt anlegen.', 'Messwert notieren.'],
+    steps: ['Startseite öffnen.', 'Gewünschte Einheit wählen.', 'Bildschirm kalibrieren.', 'Objekt anlegen.', 'Messwert notieren.'],
     mistakes: ['Online-Lineal ohne Kalibrierung verwenden.', 'Browserzoom verändern.', 'Display schräg betrachten.'],
     faqs: buildFaqs('Lineal online', 'Browsermessungen auf Handy, Tablet und PC'),
     related: defaultRelated,
@@ -154,7 +155,7 @@ const topics: Topic[] = [
     summary: 'Ein 20-cm-Lineal online funktioniert besonders gut auf Tablets, Laptops und breiteren Smartphone-Ansichten.',
     intent: 'Nutzer wollen eine 20-cm-Skala online anzeigen.',
     bestUse: 'Notizbücher, kleine Pakete, Bastelmaterial, Stoffstücke und Tablet-Messungen',
-    example: 'Auf einem Tablet kann eine 20-cm-Skala reichen, um eine Kartenhuelle oder ein Heft direkt am Bildschirm zu prüfen.',
+    example: 'Auf einem Tablet kann eine 20-cm-Skala reichen, um eine Kartenhülle oder ein Heft direkt am Bildschirm zu prüfen.',
     calibrationTip: 'Querformat bietet oft mehr sichtbare Skala und reduziert Scrollen.',
     steps: ['Gerät ins Querformat drehen.', '20-cm-Bereich sichtbar machen.', 'Kalibrierung mit Karte prüfen.', 'Objekt parallel anlegen.', 'Endpunkt bei 20 cm kontrollieren.'],
     mistakes: ['20 cm auf kleinem Display erzwingen.', 'Scrollposition während der Messung verändern.', 'Ende der Skala mit Displayrand verwechseln.'],
@@ -226,7 +227,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Ist ein Online-Lineal genau',
     slug: 'ist-online-lineal-genau',
-    title: 'Ist ein Online-Lineal genau? 7 Fakten',
+    title: 'Ist ein Online-Lineal genau?',
     metaDescription: 'Ist ein Online-Lineal genau? Erfahren Sie, wann es reicht, wann nicht und wie Kalibrierung hilft.',
     ogTitle: 'Ist ein Online-Lineal genau?',
     ogDescription: 'Eine ehrliche Einordnung zur Genauigkeit von Browser-Linealen.',
@@ -236,9 +237,9 @@ const topics: Topic[] = [
     intent: 'Nutzer wollen die Verlässlichkeit digitaler Lineale einschätzen.',
     bestUse: 'Alltagsmessungen, Vorabkontrollen, Schule, Basteln und nicht-kritische Vergleiche',
     example: 'Für eine 45-mm-Schraube reicht ein kalibriertes Online-Lineal oft aus. Für ein Passungsteil mit Toleranzen nicht.',
-    calibrationTip: 'Nach jeder Aenderung von Zoom, Displaymodus oder Gerät sollte erneut geprüft werden.',
+    calibrationTip: 'Nach jeder Änderung von Zoom, Displaymodus oder Gerät sollte erneut geprüft werden.',
     steps: ['Kalibrierung mit Referenz durchführen.', '10 cm Kontrollstrecke prüfen.', 'Objekt gerade anlegen.', 'Messwert zweimal ablesen.', 'Bei kritischen Werten physisch nachmessen.'],
-    mistakes: ['Genauigkeit mit Werkstattpräzision verwechseln.', 'Displaykrümmung ignorieren.', 'Sehr kleine Innenmasse am Bildschirm messen.'],
+    mistakes: ['Genauigkeit mit Werkstattpräzision verwechseln.', 'Displaykrümmung ignorieren.', 'Sehr kleine Innenmaße am Bildschirm messen.'],
     faqs: buildFaqs('Ist ein Online-Lineal genau', 'Alltagsmessungen mit realistischem Genauigkeitsanspruch'),
     related: defaultRelated,
   },
@@ -264,7 +265,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Zentimeter online',
     slug: 'zentimeter-online',
-    title: 'Zentimeter online: 5 einfache Methoden',
+    title: 'Zentimeter online messen und umrechnen',
     metaDescription: 'Zentimeter online messen und umrechnen: Online-Lineal, Kalibrierung, 10-cm-Test und Alltagstipps.',
     ogTitle: 'Zentimeter online messen',
     ogDescription: 'So werden Zentimeter am Bildschirm nachvollziehbar und praktisch.',
@@ -300,9 +301,10 @@ const topics: Topic[] = [
     related: defaultRelated,
   },
   {
+    kind: 'conversion',
     focusKeyword: 'cm in mm',
     slug: 'cm-in-mm',
-    title: 'cm in mm: 10 Werte einfach erklärt',
+    title: 'cm in mm: Formel, Tabelle und Beispiele',
     metaDescription: 'cm in mm umrechnen: Formel, Tabelle, Beispiele und Online-Lineal für Zentimeter und Millimeter.',
     ogTitle: 'cm in mm umrechnen',
     ogDescription: 'Die einfache Regel: Zentimeter mal 10 ergibt Millimeter.',
@@ -312,10 +314,15 @@ const topics: Topic[] = [
     intent: 'Nutzer wollen Zentimeter in Millimeter umrechnen.',
     bestUse: 'Schule, technische Zeichnungen, Basteln, Schraubenlängen und kleine Objektmaße',
     example: 'Eine Länge von 4,5 cm entspricht 45 mm. Auf dem Online-Lineal sind das vier volle Zentimeter plus fünf Millimeter.',
-    calibrationTip: 'Wer mm genau messen will, sollte die Skala zuerst mit 10 cm prüfen.',
-    steps: ['Zentimeterwert notieren.', 'Mit 10 multiplizieren.', 'Ergebnis in mm schreiben.', 'Bei Dezimalwerten Komma mitnehmen.', 'Wert am Lineal prüfen.'],
+    calibrationTip: 'Für die reine Umrechnung ist keine Bildschirmkalibrierung nötig. Nur ein zuvor gemessener Ausgangswert hängt vom verwendeten Messwerkzeug ab.',
+    steps: ['Zentimeterwert notieren.', 'Mit 10 multiplizieren.', 'Ergebnis in mm schreiben.', 'Bei Dezimalwerten das Komma mitnehmen.', 'Das Ergebnis durch Rückrechnung prüfen.'],
     mistakes: ['Durch 10 teilen statt multiplizieren.', 'Kommafehler bei 0,5 cm.', 'cm und mm in Tabellen vermischen.'],
-    faqs: buildFaqs('cm in mm', 'Umrechnungen von Zentimetern in Millimeter'),
+    faqs: [
+      { q: 'Wie rechnet man cm in mm um?', a: 'Multiplizieren Sie den Zentimeterwert mit 10. Aus 4,5 cm werden damit 45 mm.' },
+      { q: 'Wie viele Millimeter sind 1 cm?', a: 'Ein Zentimeter entspricht genau 10 Millimetern.' },
+      { q: 'Wie werden Dezimalwerte umgerechnet?', a: 'Die Rechenregel bleibt gleich: 0,8 cm × 10 = 8 mm und 12,35 cm × 10 = 123,5 mm.' },
+      { q: 'Braucht die Umrechnung eine Kalibrierung?', a: 'Nein. Die mathematische Umrechnung ist unabhängig vom Bildschirm. Eine Kalibrierung ist nur nötig, wenn eine reale Länge am Display gemessen wird.' },
+    ],
     related: defaultRelated,
   },
   {
@@ -348,10 +355,10 @@ const topics: Topic[] = [
     category: 'Umrechnung',
     summary: 'cm in Zoll wird berechnet, indem Zentimeter durch 2,54 geteilt werden.',
     intent: 'Nutzer wollen Zentimeter in Inch/Zoll umrechnen.',
-    bestUse: 'Bildschirmgrößen, Werkzeugangaben, Versandmasse, DIY und internationale Produktdaten',
+    bestUse: 'Bildschirmgrößen, Werkzeugangaben, Versandmaße, DIY und internationale Produktdaten',
     example: '20 cm entsprechen rund 7,87 Zoll. Das hilft, wenn Produktangaben in Zoll und eigene Messwerte in cm vorliegen.',
     calibrationTip: 'Bei Zollwerten lohnt sich ein zweiter Blick, weil Dezimalzoll und Bruchzoll unterschiedlich notiert werden.',
-    steps: ['cm-Wert notieren.', 'Durch 2,54 teilen.', 'Ergebnis runden.', 'Zoll-Einheit am Online-Lineal prüfen.', 'Bei Bedarf in mm zurueckrechnen.'],
+    steps: ['cm-Wert notieren.', 'Durch 2,54 teilen.', 'Ergebnis runden.', 'Zoll-Einheit am Online-Lineal prüfen.', 'Bei Bedarf in mm zurückrechnen.'],
     mistakes: ['2,54 multiplizieren statt teilen.', 'Zollzeichen mit Minutenzeichen verwechseln.', 'Zu stark runden.'],
     faqs: buildFaqs('cm in Zoll', 'Umrechnungen zwischen metrischen und angloamerikanischen Angaben'),
     related: defaultRelated,
@@ -359,7 +366,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Bildschirm in Zoll messen',
     slug: 'bildschirm-zoll-messen',
-    title: 'Bildschirm in Zoll messen: 4 Methoden',
+    title: 'Bildschirm in Zoll messen',
     metaDescription: 'Bildschirm in Zoll messen: Diagonale bestimmen, cm in Zoll umrechnen und Online-Lineal kalibrieren.',
     ogTitle: 'Bildschirm in Zoll messen',
     ogDescription: 'So bestimmen Sie die Bildschirmdiagonale für Kalibrierung und Vergleich.',
@@ -390,11 +397,11 @@ const topics: Topic[] = [
     category: 'Kalibrierung',
     summary: 'Die Bankkartengröße im ID-1 Format beträgt 85,60 mm x 53,98 mm und eignet sich als Kalibrierreferenz.',
     intent: 'Nutzer suchen die Maße einer Bankkarte oder Kreditkarte.',
-    bestUse: 'Kalibrierung, Größenvergleich, Wallets, Kartenhalter und Online-Lineal-Pruefung',
+    bestUse: 'Kalibrierung, Größenvergleich, Wallets, Kartenhalter und Online-Lineal-Prüfung',
     example: 'Wer eine Karte an die Skala legt und 85,60 mm Breite trifft, hat einen starken Hinweis auf eine passende Lineal-Skalierung.',
     calibrationTip: 'Die lange Kante ist einfacher abzulesen als die kurze Kante.',
     steps: ['Bankkarte bereitlegen.', 'Lange Kante wählen.', 'Millimeter-Skala anzeigen.', '85,60 mm anpassen.', 'Mit 10 cm Strecke gegenprüfen.'],
-    mistakes: ['Abgenutzte oder gebogene Karte nutzen.', 'Kurze und lange Seite verwechseln.', 'Kartenhuelle mitmessen.'],
+    mistakes: ['Abgenutzte oder gebogene Karte nutzen.', 'Kurze und lange Seite verwechseln.', 'Kartenhülle mitmessen.'],
     faqs: buildFaqs('Bankkartengröße', 'Kalibrierung und Referenzmessungen'),
     related: defaultRelated,
   },
@@ -409,7 +416,7 @@ const topics: Topic[] = [
     category: 'Praxis',
     summary: 'Ein Ring kann mit einem Lineal grob über den Innendurchmesser gemessen werden; für Schmuckkauf ist ein Ringmaß genauer.',
     intent: 'Nutzer wollen die Ringgröße mit einem Lineal bestimmen.',
-    bestUse: 'grobe Ringgrößen-Pruefung, vorhandene Ringe, Geschenkvorbereitung und Schmuckvergleich',
+    bestUse: 'grobe Ringgrößen-Prüfung, vorhandene Ringe, Geschenkvorbereitung und Schmuckvergleich',
     example: 'Ein Ring mit 18 mm Innendurchmesser liegt etwa im Bereich gängiger mittlerer Größen. Vor dem Kauf sollte der Wert professionell geprüft werden.',
     calibrationTip: 'Beim Online-Lineal muss der Ring flach liegen und der innere Rand exakt sichtbar sein.',
     steps: ['Ring flach auflegen.', 'Innendurchmesser wählen.', 'Null an inneren Rand setzen.', 'Gegenüberliegenden inneren Rand ablesen.', 'Wert in mm notieren.'],
@@ -420,7 +427,7 @@ const topics: Topic[] = [
   {
     focusKeyword: 'Schraube mit Lineal messen',
     slug: 'schraube-lineal-messen',
-    title: 'Schraube mit Lineal messen: 7 Regeln',
+    title: 'Schraube mit Lineal messen: Länge bestimmen',
     metaDescription: 'Schraube mit Lineal messen: Länge, Durchmesser, Gewinde und Grenzen der Lineal-Methode erklärt.',
     ogTitle: 'Schraube mit Lineal messen',
     ogDescription: 'So messen Sie Schraubenlänge und grobe Maße mit Lineal oder Online-Lineal.',
@@ -437,9 +444,10 @@ const topics: Topic[] = [
     related: defaultRelated,
   },
   {
+    kind: 'comparison',
     focusKeyword: 'Lineal-App vs Online-Lineal',
     slug: 'lineal-app-vs-online',
-    title: 'Lineal-App vs Online-Lineal: 7 Unterschiede',
+    title: 'Lineal-App vs. Online-Lineal',
     metaDescription: 'Lineal-App vs Online-Lineal: Vorteile, Datenschutz, Genauigkeit, Installation und beste Einsatzfälle.',
     ogTitle: 'Lineal-App vs Online-Lineal',
     ogDescription: 'Welche Lösung passt besser für schnelle Messungen?',
@@ -449,10 +457,15 @@ const topics: Topic[] = [
     intent: 'Nutzer vergleichen App und Browser-Lösung.',
     bestUse: 'Entscheidung zwischen Installation, Browsermessung, Datenschutz und Zusatzfunktionen',
     example: 'Wer nur eine Karte oder Schraube messen will, ist mit dem Online-Lineal schneller. Wer AR-Funktionen braucht, prüft eine App.',
-    calibrationTip: 'Beide Varianten muessen geprüft werden, weil Kamera-AR und Bildschirmskala unterschiedliche Fehlerquellen haben.',
+    calibrationTip: 'Beide Varianten müssen geprüft werden, weil Kamera-AR und Bildschirmskala unterschiedliche Fehlerquellen haben.',
     steps: ['Messziel klären.', 'Datenschutzbedarf prüfen.', 'Online-Lineal für kurze Skalen testen.', 'App nur bei AR-Bedarf installieren.', 'Messwerte mit Referenz vergleichen.'],
     mistakes: ['App automatisch für genauer halten.', 'Berechtigungen nicht prüfen.', 'AR-Messung für Millimeterwerte verwenden.'],
-    faqs: buildFaqs('Lineal-App vs Online-Lineal', 'die Wahl zwischen App und Browser-Werkzeug'),
+    faqs: [
+      { q: 'Was ist schneller einsatzbereit?', a: 'Ein Online-Lineal startet direkt im Browser. Eine App muss zuerst installiert und je nach Funktion eingerichtet werden.' },
+      { q: 'Ist eine Lineal-App automatisch genauer?', a: 'Nein. Bildschirmskalen müssen in beiden Varianten kalibriert werden. Kamera- oder AR-Funktionen haben andere Fehlerquellen und sollten mit einer bekannten Länge geprüft werden.' },
+      { q: 'Wann lohnt sich eine App?', a: 'Eine App kann sinnvoll sein, wenn Sie häufig offline messen oder Funktionen wie Kamera-AR und gespeicherte Messungen benötigen.' },
+      { q: 'Wann reicht ein Online-Lineal?', a: 'Für kurze, gerade Alltagsmessungen ist die Browserlösung oft ausreichend, sofern die Skala auf dem aktuellen Gerät kontrolliert wurde.' },
+    ],
     related: defaultRelated,
   },
 ];
@@ -467,209 +480,323 @@ const conversionRows = [
   ['30 cm', '300 mm', '11,81 Zoll'],
 ];
 
-const ArticleShell = ({ topic }: { topic: Topic }) => (
-    <article
-      className="
-        prose prose-sm sm:prose lg:prose-lg max-w-none
-        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
-        prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-purple-100
-        prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-purple-900
-        prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-purple-700 prose-a:font-medium hover:prose-a:text-purple-900
-        prose-strong:text-gray-900 prose-ul:my-4 prose-ol:my-4 prose-li:my-1 prose-li:marker:text-purple-500
-        prose-table:rounded-lg prose-table:overflow-hidden prose-table:shadow-sm prose-th:bg-purple-50 prose-th:text-purple-900
-      "
-    >
-      <p className="lead text-lg sm:text-xl text-gray-600 leading-relaxed border-l-4 border-purple-400 pl-4 italic">
-        {topic.focusKeyword} funktioniert am besten, wenn die Bildschirmskala vor der Messung kalibriert wird.
-        Die Methode eignet sich für schnelle Messungen in cm, mm und Zoll, ersetzt aber kein geeichtes
-        Messwerkzeug für technische Toleranzen.
-      </p>
+const articleClassName = `
+  prose prose-sm sm:prose lg:prose-lg max-w-none
+  prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
+  prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-purple-100
+  prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-purple-900
+  prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-purple-700 prose-a:font-medium hover:prose-a:text-purple-900
+  prose-strong:text-gray-900 prose-ul:my-4 prose-ol:my-4 prose-li:my-1 prose-li:marker:text-purple-500
+  prose-table:rounded-lg prose-table:overflow-hidden prose-table:shadow-sm prose-th:bg-purple-50 prose-th:text-purple-900
+`;
 
-      <h2>Was ist {topic.focusKeyword}?</h2>
-      <p>
-        {topic.focusKeyword} ist eine praktische Art, eine sichtbare Skala auf dem Bildschirm zu nutzen. Die
-        Messung passiert nicht durch Schätzen, sondern durch eine kalibrierte Pixel-Skala. Dadurch wird aus einem
-        Display ein digitales Lineal. Je besser die Kalibrierung, desto näher liegt der angezeigte Wert am echten
-        Maß.
-      </p>
-      <p>
-        Der wichtigste Punkt ist die Beziehung zwischen Display, Einheit und Referenz. Ein Browser kennt die
-        physische Größe eines Bildschirms nicht immer sicher. Deshalb rechnet Lineal.online die Skala nach einer
-        Referenz. Das kann eine Bankkarte, ein bekanntes Lineal oder die Bildschirmdiagonale in Zoll sein. Dadurch
-        wird {topic.focusKeyword} deutlich verlässlicher als eine nicht geprüfte Bildschirmgrafik.
-      </p>
-      <p>
-        Im Alltag reicht diese Methode oft aus. Sie hilft beim Vergleichen, Vorbereiten und Kontrollieren. Wer
-        jedoch Bauteile mit engen Toleranzen misst, sollte den Wert mit einem Messschieber oder einem geprüften
-        Werkzeug bestätigen. Diese klare Grenze macht das Online-Lineal nicht schlechter; sie macht die Messung
-        ehrlich.
-      </p>
+// eslint-disable-next-line react-refresh/only-export-components
+const ConversionArticleShell = ({ topic }: { topic: Topic }) => (
+  <article className={articleClassName}>
+    <p className="lead border-l-4 border-purple-400 pl-4 text-lg leading-relaxed text-gray-600 italic sm:text-xl">
+      {topic.summary} Die Umrechnung ist mathematisch eindeutig und benötigt weder ein Online-Lineal noch eine
+      Kalibrierung.
+    </p>
 
-      <h2>So funktioniert {topic.focusKeyword} Schritt für Schritt</h2>
-      <ol>
-        {topic.steps.map((step) => (
-          <li key={step}>{step}</li>
-        ))}
-      </ol>
-      <p>
-        Für die meisten Nutzer ist die Reihenfolge wichtiger als die Technik dahinter. Erst wird die Skala
-        vorbereitet, dann wird das Objekt angelegt, danach wird abgelesen. Wer diesen Ablauf beibehält, vermeidet
-        typische Fehler. Besonders hilfreich ist eine ruhige Unterlage, weil das Objekt sonst leicht verrutscht.
-      </p>
-      <p>
-        {topic.example} Bei solchen Messungen sollte die Kante des Objekts exakt an der Nullmarke liegen. Wenn die
-        Kante rund oder weich ist, wird der Wert eher als Näherung gelesen. Bei harten, geraden Kanten ist das
-        Ergebnis leichter wiederholbar.
-      </p>
+    <h2>Die Formel für Zentimeter und Millimeter</h2>
+    <p>
+      Ein Zentimeter besteht aus zehn Millimetern. Für die Richtung <strong>cm in mm</strong> wird deshalb mit 10
+      multipliziert: <strong>Millimeter = Zentimeter × 10</strong>. In der Gegenrichtung teilen Sie den
+      Millimeterwert durch 10.
+    </p>
+    <p>
+      Die Einheiten gehören beide zum metrischen System. Dadurch verschiebt sich beim Umrechnen lediglich das
+      Dezimalkomma um eine Stelle. Die Anzahl der Nachkommastellen sagt dabei nichts darüber aus, wie genau der
+      ursprüngliche Wert gemessen wurde.
+    </p>
 
-      <h2>Kalibrierung, Einheiten und Genauigkeit</h2>
-      <p>
-        Kalibrierung bedeutet, dass die angezeigte Skala mit einem realen Maß abgeglichen wird. Die
-        <a href="https://www.iso.org/standard/31432.html"> ISO/IEC 7810</a> beschreibt für ID-1 Karten eine
-        Breite von 85,60 mm und eine Höhe von 53,98 mm. Genau deshalb ist eine Bankkarte ein nützlicher
-        Alltagsstandard. Sie liegt fast immer griffbereit und ist lang genug, um kleine Skalierungsfehler sichtbar
-        zu machen.
-      </p>
-      <p>
-        Für Einheiten gilt eine einfache Regel. Das Internationale Einheitensystem beschreibt den Meter als
-        Basiseinheit für Länge. Zentimeter und Millimeter sind daraus abgeleitet. Nach
-        <a href="https://www.nist.gov/pml/owm/si-units-length"> NIST</a> ist ein Zoll seit 1959 exakt 25,4 mm.
-        Daraus folgt: 1 cm sind 10 mm, und 1 cm sind etwa 0,3937 Zoll.
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th>Zentimeter</th>
-            <th>Millimeter</th>
-            <th>Zoll</th>
-          </tr>
-        </thead>
-        <tbody>
-          {conversionRows.map(([cm, mm, inch]) => (
-            <tr key={cm}>
-              <td>{cm}</td>
-              <td>{mm}</td>
-              <td>{inch}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h2>Wann ist die Methode sinnvoll?</h2>
-      <p>
-        {topic.focusKeyword} ist sinnvoll, wenn ein schneller Messwert mehr hilft als eine perfekte Laborangabe.
-        Typische Beispiele sind Etiketten, Verpackungen, Bastelmaterial, kleine Werkzeuge, Papier, Schmuck und
-        Ersatzteile. Außerdem eignet sich die Methode gut für Unterricht und Erklärungen, weil die Skala sofort
-        sichtbar ist.
-      </p>
-      <p>
-        Weniger geeignet ist die Methode für sicherheitsrelevante Bauteile, medizinische Anpassungen oder
-        Fertigungstoleranzen. Dort zählen reproduzierbare Messbedingungen, definierte Messkraft und geprüfte
-        Instrumente. Ein Online-Lineal kann in solchen Fällen eine Vorprüfung liefern, aber nicht die
-        Endentscheidung.
-      </p>
-
-      <h2>Praktische Checkliste vor der Messung</h2>
-      <p>
-        Eine gute Messung beginnt vor dem Ablesen. Zuerst sollte das Gerät ruhig liegen. Danach sollte der
-        Browserzoom bei 100 Prozent bleiben. Anschließend wird geprüft, ob die Skala an einer bekannten Referenz
-        stimmt. Diese Reihenfolge klingt einfach, verhindert aber die meisten Abweichungen. Besonders bei
-        Smartphone-Messungen lohnt sich dieser kurze Ablauf, weil kleine Bewegungen den Endpunkt schnell um einen
-        Millimeter verschieben können.
-      </p>
-      <ul>
-        <li>Display reinigen, damit Kanten und Skalenstriche klar sichtbar bleiben.</li>
-        <li>Objekt flach anlegen und nicht in der Luft halten.</li>
-        <li>Nullmarke bewusst wählen und nicht den Displayrand als Startpunkt nutzen.</li>
-        <li>Wert zweimal ablesen, einmal in cm und einmal in mm.</li>
-        <li>Bei Unsicherheit eine zweite Referenz oder ein physisches Lineal nutzen.</li>
-      </ul>
-      <p>
-        Diese Checkliste ist auch hilfreich, wenn mehrere Personen denselben Gegenstand messen. Alle nutzen dann
-        denselben Startpunkt, dieselbe Einheit und dieselbe Referenz. Dadurch werden Ergebnisse besser
-        vergleichbar. Genau das ist bei kleinen Objekten wichtig, weil schon ein leicht anderer Blickwinkel den
-        Messwert verändern kann.
-      </p>
-
-      <h2>Beispiel: vom schnellen Check zum belastbaren Wert</h2>
-      <p>
-        Ein typischer Ablauf beginnt mit einer einfachen Frage: Passt das Objekt in einen bestimmten Bereich?
-        Dafür reicht oft ein schneller Check mit {topic.focusKeyword}. Wenn der Messwert weit von der Grenze
-        entfernt ist, kann die Entscheidung sofort fallen. Liegt der Wert jedoch direkt an der Grenze, sollte die
-        Messung wiederholt werden. Danach wird mit einer Bankkarte, einem gedruckten Lineal oder einem Messschieber
-        kontrolliert.
-      </p>
-      <p>
-        Dieses Vorgehen spart Zeit, ohne Genauigkeit vorzutäuschen. Das Online-Lineal übernimmt die schnelle
-        Orientierung. Die Referenzmessung übernimmt die Absicherung. Für Schule, Büro, Versand, Basteln und viele
-        Haushaltsmessungen reicht die erste Stufe oft aus. Für Ersatzteile, Schmuckgrößen oder Schrauben sollte
-        die zweite Stufe folgen, weil kleine Unterschiede dort stärker ins Gewicht fallen.
-      </p>
-
-      <h2>Entscheidungstabelle für {topic.focusKeyword}</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Situation</th>
-            <th>Empfohlene Methode</th>
-            <th>Warum das passt</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Schneller Größenvergleich</td>
-            <td>Online-Lineal nach kurzer Kalibrierung</td>
-            <td>Schnell, kostenlos und ohne Installation.</td>
-          </tr>
-          <tr>
-            <td>Wert liegt nah an einer Grenze</td>
-            <td>Online messen und mit Referenz wiederholen</td>
-            <td>Zwei Messungen reduzieren Ablesefehler.</td>
-          </tr>
-          <tr>
-            <td>Technisches Ersatzteil</td>
-            <td>Messschieber oder geprüftes physisches Werkzeug</td>
-            <td>Durchmesser, Tiefe und Gewinde brauchen mehr Präzision.</td>
-          </tr>
-          <tr>
-            <td>Unterricht oder Erklärung</td>
-            <td>Online-Lineal plus Umrechnungstabelle</td>
-            <td>Skala, cm, mm und Zoll werden direkt sichtbar.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Häufige Fehler bei {topic.focusKeyword}</h2>
-      <ul>
-        {topic.mistakes.map((mistake) => (
-          <li key={mistake}>{mistake}</li>
-        ))}
-        <li>Der Messwert wird zu stark gerundet, obwohl Millimeter sichtbar sind.</li>
-        <li>Das Ergebnis wird nicht mit einer zweiten Referenz geprüft.</li>
-      </ul>
-      <p>
-        Die meisten Fehler entstehen nicht durch das Online-Lineal selbst, sondern durch die Messsituation. Ein
-        schräges Objekt, ein veränderter Zoom oder eine unklare Nullmarke reichen aus, um den Wert zu
-        verschieben. Deshalb lohnt sich vor jeder wichtigen Messung ein kurzer Kontrollblick auf die Referenz.
-      </p>
-
-      <h2>FAQs zu {topic.focusKeyword}</h2>
-      {topic.faqs.map((faq) => (
-        <React.Fragment key={faq.q}>
-          <h3>{faq.q}</h3>
-          <p>{faq.a}</p>
-        </React.Fragment>
+    <h2>Schritt für Schritt umrechnen</h2>
+    <ol>
+      {topic.steps.map((step) => (
+        <li key={step}>{step}</li>
       ))}
+    </ol>
+    <p>
+      Ein schneller Gegencheck verhindert Richtungsfehler: Teilen Sie das Ergebnis durch 10. Wenn wieder der
+      ursprüngliche Zentimeterwert entsteht, stimmt die Umrechnung.
+    </p>
 
-      <h2>Fazit zu {topic.focusKeyword}</h2>
-      <p>
-        {topic.focusKeyword} ist eine einfache, schnelle und nützliche Messmethode, wenn sie bewusst eingesetzt
-        wird. Der wichtigste Erfolgsfaktor ist die Kalibrierung. Danach helfen klare Nullmarke, gerader Blick und
-        passende Einheit. Für Alltag, Schule, Basteln und Vorabkontrollen ist das mehr als genug. Für
-        technische Grenzwerte bleibt ein physisches Präzisionswerkzeug die bessere Wahl.
-      </p>
-    </article>
+    <h2>Beispiele mit ganzen Zahlen und Dezimalwerten</h2>
+    <p>{topic.example}</p>
+    <ul>
+      <li><strong>8 cm × 10 = 80 mm</strong></li>
+      <li><strong>0,8 cm × 10 = 8 mm</strong></li>
+      <li><strong>12,35 cm × 10 = 123,5 mm</strong></li>
+      <li><strong>250 mm ÷ 10 = 25 cm</strong> als Rückrechnung</li>
+    </ul>
+    <p>
+      Bei 0,8 cm wird aus der führenden Null kein zusätzlicher Zentimeter. Das Ergebnis sind 8 mm, nicht 80 mm.
+      Gerade bei Produktmaßen lohnt es sich, Einheit und Dezimalkomma gemeinsam zu notieren.
+    </p>
+
+    <h2>Umrechnungstabelle cm in mm</h2>
+    <table>
+      <thead>
+        <tr><th>Zentimeter</th><th>Millimeter</th><th>Zoll, gerundet</th></tr>
+      </thead>
+      <tbody>
+        {conversionRows.map(([cm, mm, inch]) => (
+          <tr key={cm}><td>{cm}</td><td>{mm}</td><td>{inch}</td></tr>
+        ))}
+      </tbody>
+    </table>
+    <p>
+      Die Zollwerte dienen nur als zusätzliche Orientierung. Für beliebige Eingaben können Sie den{' '}
+      <a href="/zoll-in-cm-rechner">Zoll-, Zentimeter- und Millimeter-Rechner</a> verwenden.
+    </p>
+
+    <h2>Wann braucht man trotzdem ein Lineal?</h2>
+    <p>
+      {topic.calibrationTip} Wenn ein vorhandener Zentimeterwert lediglich in Millimeter umgeschrieben wird, ist das
+      Ergebnis exakt. Wird die Ausgangslänge dagegen erst an einem Bildschirm abgelesen, hängt ihre Verlässlichkeit
+      von Kalibrierung, Zoom, Objektkante und Blickwinkel ab.
+    </p>
+    <p>
+      Zum Erfassen einer realen Länge können Sie das <a href="/">Online-Lineal in Originalgröße</a> verwenden. Für
+      kleine Bauteile oder enge Toleranzen ist ein Messschieber geeigneter; der Ratgeber zum{' '}
+      <a href="/blog/mm-genau-messen">Messen in Millimetern</a> erklärt die Unterschiede.
+    </p>
+
+    <h2>Häufige Fehler</h2>
+    <ul>
+      {topic.mistakes.map((mistake) => <li key={mistake}>{mistake}</li>)}
+      <li>Das Einheitenzeichen wird weggelassen und der Zahlenwert dadurch missverständlich.</li>
+      <li>Ein gerundeter Messwert wird durch zusätzliche Nachkommastellen scheinbar genauer gemacht.</li>
+    </ul>
+
+    <h2>Fragen und Antworten</h2>
+    {topic.faqs.map((faq) => (
+      <React.Fragment key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></React.Fragment>
+    ))}
+
+    <h2>Fazit</h2>
+    <p>
+      Für <strong>cm in mm</strong> genügt eine feste Regel: Zentimeter mal 10. Schreiben Sie die Einheit zum Wert
+      und prüfen Sie Dezimalzahlen kurz durch die Rückrechnung.
+    </p>
+  </article>
 );
+
+// eslint-disable-next-line react-refresh/only-export-components
+const ComparisonArticleShell = ({ topic }: { topic: Topic }) => (
+  <article className={articleClassName}>
+    <p className="lead border-l-4 border-purple-400 pl-4 text-lg leading-relaxed text-gray-600 italic sm:text-xl">
+      {topic.summary} Entscheidend sind Messaufgabe, gewünschte Zusatzfunktionen und der Umgang mit Berechtigungen.
+    </p>
+
+    <h2>Der Unterschied in einem Satz</h2>
+    <p>
+      Ein <a href="/">Online-Lineal</a> läuft direkt im Browser und zeigt eine kalibrierbare Skala. Eine Lineal-App
+      wird installiert und kann je nach Anbieter zusätzliche Funktionen wie Kamera-AR, Messwertspeicherung oder
+      Offline-Nutzung enthalten. Keine der beiden Varianten ist allein durch ihre Form automatisch genauer.
+    </p>
+
+    <h2>Lineal-App und Online-Lineal im Vergleich</h2>
+    <table>
+      <thead><tr><th>Kriterium</th><th>Online-Lineal</th><th>Lineal-App</th></tr></thead>
+      <tbody>
+        <tr><td>Start</td><td>Direkt im Browser</td><td>Installation erforderlich</td></tr>
+        <tr><td>Kurze Bildschirmskala</td><td>Ja, nach Kalibrierung</td><td>Ja, nach Kalibrierung</td></tr>
+        <tr><td>Kamera oder AR</td><td>Meist nicht nötig</td><td>Je nach App verfügbar</td></tr>
+        <tr><td>Offline-Nutzung</td><td>Nur nach vollständigem Laden möglich</td><td>Je nach App möglich</td></tr>
+        <tr><td>Berechtigungen</td><td>Für die Skala keine Kamera nötig</td><td>Bei AR oft Kamera nötig</td></tr>
+        <tr><td>Updates</td><td>Webseite liefert aktuelle Version</td><td>Über den App-Store</td></tr>
+      </tbody>
+    </table>
+
+    <h2>So treffen Sie die passende Wahl</h2>
+    <ol>
+      {topic.steps.map((step) => <li key={step}>{step}</li>)}
+    </ol>
+    <p>
+      Vergleichen Sie beide Lösungen mit derselben bekannten Länge. Für eine Bildschirmskala eignet sich etwa die
+      lange Kante einer Karte im ID-1-Format mit 85,60 mm. Ändern Sie Zoom oder Anzeige-Skalierung danach nicht,
+      ohne erneut zu kontrollieren.
+    </p>
+
+    <h2>Beispiel aus dem Alltag</h2>
+    <p>{topic.example}</p>
+    <p>
+      Für eine gerade Schraube oder Karte liefert eine kalibrierte Skala meist schneller eine brauchbare
+      Vorabkontrolle. Bei einem Tisch, Raum oder unregelmäßigen Objekt kann eine Kamera-App bequemer sein, doch auch
+      dort sollte ein wichtiger Messwert mit einem physischen Werkzeug bestätigt werden.
+    </p>
+
+    <h2>Genauigkeit fair vergleichen</h2>
+    <p>{topic.calibrationTip}</p>
+    <p>
+      Eine Bildschirmmessung hängt von Pixeldichte, Zoom und sauberem Anlegen ab. Eine AR-Messung hängt zusätzlich
+      von Kamera, Abstand, Licht, erkannten Flächen und der Bewegung des Geräts ab. Der Beitrag{' '}
+      <a href="/blog/ist-online-lineal-genau">Wie genau ist ein Online-Lineal?</a> ordnet diese Grenzen ein; die{' '}
+      <a href="/blog/bildschirm-kalibrieren">Anleitung zur Bildschirmkalibrierung</a> zeigt den Referenzabgleich.
+    </p>
+
+    <h2>Datenschutz und Berechtigungen prüfen</h2>
+    <p>
+      Eine einfache Browserskala benötigt weder Kamera noch Fotobibliothek. Apps mit AR-Funktion brauchen häufig
+      Kamerazugriff. Prüfen Sie vor der Installation die Berechtigungen, die Datenschutzerklärung und ob Messdaten
+      lokal oder in einem Benutzerkonto gespeichert werden. Das unterscheidet sich von Anbieter zu Anbieter.
+    </p>
+
+    <h2>Häufige Fehler</h2>
+    <ul>
+      {topic.mistakes.map((mistake) => <li key={mistake}>{mistake}</li>)}
+      <li>Zusatzfunktionen werden mit höherer Messgenauigkeit gleichgesetzt.</li>
+      <li>Ein einzelner Testwert wird ohne zweite Referenz übernommen.</li>
+    </ul>
+
+    <h2>Fragen und Antworten</h2>
+    {topic.faqs.map((faq) => (
+      <React.Fragment key={faq.q}><h3>{faq.q}</h3><p>{faq.a}</p></React.Fragment>
+    ))}
+
+    <h2>Fazit</h2>
+    <p>
+      Für kurze, gerade Messungen ist ein Online-Lineal meist der schnellere Einstieg. Eine App lohnt sich vor allem
+      für benötigte Zusatzfunktionen; wichtige Maße sollten unabhängig von der Variante kontrolliert werden.
+    </p>
+  </article>
+);
+
+// eslint-disable-next-line react-refresh/only-export-components
+const MeasurementArticleShell = ({ topic }: { topic: Topic }) => (
+  <article className={articleClassName}>
+    <p className="lead border-l-4 border-purple-400 pl-4 text-lg leading-relaxed text-gray-600 italic sm:text-xl">
+      {topic.summary} Für technische Grenzwerte, medizinische Anwendungen oder sicherheitsrelevante Entscheidungen
+      ist ein dafür vorgesehenes physisches Messgerät erforderlich.
+    </p>
+
+    <h2>Die Frage hinter dem Suchbegriff</h2>
+    <p>{topic.intent} Konkret eignet sich das Thema für {topic.bestUse}.</p>
+    <p>
+      Beim Thema „{topic.focusKeyword}“ ist wichtig: Bei einer echten Bildschirmmessung muss die sichtbare Skala zuerst zum Gerät passen. Ein Browser kennt die
+      reale Breite eines Pixels nicht in jeder Kombination aus Display, Zoom und Betriebssystem-Skalierung. Eine
+      reine Umrechnung zwischen cm, mm und Zoll benötigt dagegen keine Kalibrierung, weil sie mit festen Faktoren
+      arbeitet.
+    </p>
+    <p>
+      Beim Thema „{topic.focusKeyword}“ gilt deshalb zunächst: Klären Sie, ob eine physische Länge gemessen oder nur eine Einheit
+      umgerechnet werden soll. Diese Unterscheidung verhindert, dass ein korrekt berechneter Zahlenwert mit einer
+      ungeprüften Bildschirmanzeige verwechselt wird.
+    </p>
+
+    <h2>Schritt für Schritt vorgehen</h2>
+    <ol>
+      {topic.steps.map((step) => (
+        <li key={step}>{step}</li>
+      ))}
+    </ol>
+    <p>
+      Arbeiten Sie die Schritte für „{topic.focusKeyword}“ in dieser Reihenfolge ab und verändern Sie den Browserzoom danach nicht mehr. Bei
+      einer Messung sollte das Gerät ruhig liegen, die Objektkante klar erkennbar sein und der Startpunkt auf der
+      Nullmarke liegen. Runde oder weiche Kanten liefern eher einen Näherungswert als eine eindeutig ablesbare Länge.
+    </p>
+
+    <h2>Durchgerechnetes oder praktisches Beispiel</h2>
+    <p>{topic.example}</p>
+    <p>
+      Beim Thema „{topic.focusKeyword}“ gilt: Liegt das Ergebnis deutlich innerhalb des erwarteten Bereichs, genügt
+      die Kontrolle häufig für eine erste Entscheidung. Liegt es direkt an einer Größen-, Kauf- oder Passgrenze,
+      wiederholen Sie die Messung und nutzen Sie eine zweite Referenz. So bleibt die beschriebene Vorgehensweise eine
+      Orientierungshilfe und wird nicht mit einer technischen Endprüfung verwechselt.
+    </p>
+
+    <h2>Kalibrierung und Einheiten richtig einordnen</h2>
+    <p>
+      {topic.calibrationTip} Für einen Kartenabgleich beschreibt die{' '}
+      <a href="https://www.iso.org/standard/31432.html">ISO/IEC 7810</a> das ID-1-Format mit 85,60 mm Breite und
+      53,98 mm Höhe. Verwenden Sie die lange Kante und kontrollieren Sie das Resultat möglichst mit einer zweiten
+      bekannten Strecke.
+    </p>
+    <p>
+      Für „{topic.focusKeyword}“ gilt bei den zugehörigen Umrechnungen: 1 cm sind 10 mm. Nach{' '}
+      <a href="https://www.nist.gov/pml/owm/si-units-length">NIST</a> entspricht 1 Zoll genau 25,4 mm. Die Rechnung
+      kann exakt sein, obwohl ein zuvor abgelesener Messwert nur begrenzt genau war. Runden Sie deshalb passend zum
+      verwendeten Werkzeug und nicht passend zur Anzahl der Rechnerstellen.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Zentimeter</th>
+          <th>Millimeter</th>
+          <th>Zoll</th>
+        </tr>
+      </thead>
+      <tbody>
+        {conversionRows.map(([cm, mm, inch]) => (
+          <tr key={cm}>
+            <td>{cm}</td>
+            <td>{mm}</td>
+            <td>{inch}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>Wann reicht die Methode aus?</h2>
+    <p>
+      Für {topic.bestUse} kann die Methode eine schnelle und nachvollziehbare Antwort liefern. Sie ist besonders
+      nützlich, wenn ein ungefährer Größenbereich genügt oder zwei Werte miteinander verglichen werden sollen. Eine
+      wiederholte Ablesung zeigt außerdem, ob der Wert stabil bleibt.
+    </p>
+    <p>
+      Beim Thema „{topic.focusKeyword}“ reicht die Methode nicht aus, wenn Bruchteile eines Millimeters über Sicherheit, Funktion oder
+      Passung entscheiden. Innenmaße, Gewinde, Tiefe und gekrümmte Flächen lassen sich mit einem Messschieber oder
+      einem spezialisierten Werkzeug besser erfassen. Auch ein sauber kalibrierter Bildschirm ist kein geeichtes
+      Messgerät.
+    </p>
+
+    <h2>Kontrollliste vor dem Ablesen</h2>
+    <ul>
+      <li>Browserzoom auf 100 Prozent stellen und während der Messung nicht verändern.</li>
+      <li>Skala auf demselben Gerät und in derselben Ausrichtung kalibrieren.</li>
+      <li>Objekt flach, parallel und ohne schützende Hülle anlegen.</li>
+      <li>Nullmarke und tatsächliche Messkante bewusst unterscheiden.</li>
+      <li>Ergebnis wiederholen und bei wichtigen Entscheidungen physisch kontrollieren.</li>
+    </ul>
+    <p>
+      Diese Kontrolle ist beim Thema „{topic.focusKeyword}“ wichtiger als zusätzliche Nachkommastellen. Wenn zwei
+      Wiederholungen unterschiedliche Ergebnisse liefern, sollte nicht gemittelt werden, bevor die Ursache geklärt
+      ist. Häufig sind Zoom, Ausrichtung, eine verrutschte Kante oder eine ungeeignete Referenz verantwortlich.
+    </p>
+
+    <h2>Häufige Fehler</h2>
+    <ul>
+      {topic.mistakes.map((mistake) => (
+        <li key={mistake}>{mistake}</li>
+      ))}
+      <li>Das Resultat wird genauer angegeben, als Skala und Objektkante es erlauben.</li>
+      <li>Eine einzelne Messung wird ohne Plausibilitätskontrolle übernommen.</li>
+    </ul>
+
+    <h2>Fragen und Antworten</h2>
+    {topic.faqs.map((faq) => (
+      <React.Fragment key={faq.q}>
+        <h3>{faq.q}</h3>
+        <p>{faq.a}</p>
+      </React.Fragment>
+    ))}
+
+    <h2>Fazit</h2>
+    <p>
+      Die Informationen zu „{topic.focusKeyword}“ sind dann hilfreich, wenn Methode und Anspruch zusammenpassen. Nutzen Sie die
+      für dieses Thema beschriebenen Schritte, prüfen Sie die Skala bei physischen Messungen und wechseln Sie bei engen
+      Toleranzen zu einem geeigneten Messgerät.
+    </p>
+  </article>
+);
+
+// eslint-disable-next-line react-refresh/only-export-components
+const ArticleShell = ({ topic }: { topic: Topic }) => {
+  if (topic.kind === 'conversion') return <ConversionArticleShell topic={topic} />;
+  if (topic.kind === 'comparison') return <ComparisonArticleShell topic={topic} />;
+  return <MeasurementArticleShell topic={topic} />;
+};
 
 export const measurementArticleLinks = activeTopics.map((topic) => ({
   url: `/blog/${topic.slug}`,

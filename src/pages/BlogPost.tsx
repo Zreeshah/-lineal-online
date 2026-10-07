@@ -14,7 +14,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import RelatedArticlesSection from '@/components/RelatedArticlesSection';
 import CanonicalLink from '@/components/CanonicalLink';
-import BlogExtras from '@/components/BlogExtras';
 import BlogFeaturedVisual from '@/components/BlogFeaturedVisual';
 import { getBlogPostBySlug } from '@/data/blogPosts';
 import { getReliableHeroImage } from '@/utils/blogImages';
@@ -188,8 +187,6 @@ const BlogPost: React.FC = () => {
                     </div>
                   </aside>
                 )}
-
-                {!post.skipBlogExtras && <BlogExtras title={post.title} keywords={post.keywords} />}
 
                 {!post.hideArticleCta && (
                   <section className="article-cta" aria-labelledby="article-cta-title">
