@@ -505,7 +505,7 @@ const allBlogPosts: BlogPostData[] = [
   },
   {
     slug: 'dimensionslose-zahlen',
-    heroImage: '/lovable-uploads/numeros-adimensionales.jpg',
+    heroImage: '/lovable-uploads/dimensionslose-zahlen.jpg',
     title: 'Dimensionslose Zahlen – Bedeutung & Beispiele',
     metaDescription:
       'Was sind dimensionslose Zahlen? Reynolds-Zahl, Mach-Zahl und mehr – Definition, Beispiele und Bedeutung in der Physik.',

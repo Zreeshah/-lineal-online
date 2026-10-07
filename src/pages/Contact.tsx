@@ -37,8 +37,8 @@ const Contact = () => {
                 info@lineal.onl
               </a>
               <p className="mt-4 mb-0 text-sm text-gray-700">
-                Wir bemühen uns, Anfragen innerhalb von [ANTWORTZEIT] zu beantworten. An Wochenenden und Feiertagen
-                kann die Bearbeitung länger dauern.
+                Wir beantworten Anfragen so bald wie möglich. Je nach Anfrageaufkommen sowie an Wochenenden und
+                Feiertagen kann die Bearbeitung mehrere Werktage dauern.
               </p>
             </div>
           </div>

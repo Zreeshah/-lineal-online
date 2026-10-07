@@ -1,13 +1,12 @@
-# Welcome to your Regla project
+# Lineal.online
 
 ## Project info
 
-**URL**: https://lineal.onl/
+**URL**: https://www.lineal.onl/
 
 
 
 ## Live Site
 
 https://www.lineal.onl/
-
 

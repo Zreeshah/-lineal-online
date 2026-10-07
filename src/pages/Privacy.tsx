@@ -30,12 +30,17 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">2. Hosting und Server-Protokolldaten</h2>
             <p>
-              Die Website wird bei [HOSTING-ANBIETER, ANSCHRIFT] gehostet. Beim Aufruf können technisch notwendige
-              Server-Protokolldaten verarbeitet werden: IP-Adresse, Datum und Uhrzeit, angeforderte Datei oder URL,
-              übertragene Datenmenge, Referrer-URL, Browser, Betriebssystem und HTTP-Statuscode. Die Verarbeitung
-              erfolgt zur sicheren, stabilen Bereitstellung und zur Abwehr von Missbrauch auf Grundlage von Art. 6
-              Abs. 1 lit. f DSGVO. Protokolldaten werden nach [SPEICHERDAUER SERVER-LOGS] gelöscht, sofern keine
-              sicherheitsrelevante Prüfung oder gesetzliche Aufbewahrung eine längere Speicherung erfordert.
+              Die Website wird bei Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA, gehostet. Beim
+              Aufruf können technisch notwendige Server-Protokolldaten verarbeitet werden: IP-Adresse, Datum und
+              Uhrzeit, angeforderte Datei oder URL, übertragene Datenmenge, Referrer-URL, Browser, Betriebssystem und
+              HTTP-Statuscode. Die Verarbeitung erfolgt zur sicheren, stabilen Bereitstellung und zur Abwehr von
+              Missbrauch auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Im eingesetzten Hobby-Tarif sind
+              Runtime-Protokolle für bis zu eine Stunde einsehbar. Eine längere Verarbeitung durch den Dienstleister
+              kann erfolgen, soweit sie für Sicherheit, Abrechnung oder gesetzliche Pflichten erforderlich ist.
+              Weitere Angaben enthält die{' '}
+              <a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noreferrer">
+                Datenschutzerklärung von Vercel
+              </a>.
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">3. Kalibrierungsdaten im Browser</h2>
@@ -64,11 +69,10 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">5. Reichweitenanalyse</h2>
             <p>
-              Als Analysedienst ist [ANALYSE-DIENST, ANBIETER, ANSCHRIFT] vorgesehen. Soweit der Dienst aktiviert
-              wird, kann er Nutzungsdaten wie Seitenaufrufe, Geräteinformationen, gekürzte oder vollständige
-              IP-Adresse, Referrer und Interaktionen verarbeiten. Die Verarbeitung und das Setzen nicht notwendiger
-              Cookies erfolgen ausschließlich nach Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Die vorgesehene
-              Speicherdauer beträgt [SPEICHERDAUER ANALYSEDATEN].
+              Derzeit wird kein eigenständiger Reichweiten- oder Analysedienst eingesetzt. Sollte künftig ein solcher
+              Dienst aktiviert werden, erfolgt dies für Besucher mit anwendbaren europäischen Datenschutzvorgaben
+              erst nach Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Diese Erklärung wird vor der Aktivierung um
+              Anbieter, verarbeitete Daten und Speicherdauer ergänzt.
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">6. Werbung: Google AdSense und Monetag</h2>

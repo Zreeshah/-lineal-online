@@ -12,7 +12,7 @@ import { Ruler as RulerIcon, Maximize, Square, Pencil, Book, ArrowRight } from '
 import { Link } from 'react-router-dom';
 import { blogArticles } from '@/utils/internalLinks';
 import CanonicalLink from '@/components/CanonicalLink';
-import calibrationGuide from '@/assets/calibration-guide.png';
+import calibrationGuide from '@/assets/calibration-guide.webp';
 import onlineLinealImage from '@/assets/online-lineal.jpg';
 import linealMeasurementImage from '@/assets/lineal-messung.jpg';
 import HomeContent from '@/components/HomeContent';
@@ -190,8 +190,8 @@ const Index = () => {
                   className="w-full h-auto rounded-lg object-cover"
                   loading="eager"
                   fetchpriority="high"
-                  width={1200}
-                  height={630}
+                  width={986}
+                  height={796}
                   decoding="async"
                 />
               </CardContent>
@@ -305,8 +305,8 @@ const Index = () => {
                       className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                       loading="lazy"
                       decoding="async"
-                      width={800}
-                      height={420}
+                      width={739}
+                      height={439}
                     />
                   </div>
 
@@ -349,8 +349,8 @@ const Index = () => {
                     className="w-full max-w-md mx-auto h-auto rounded-lg shadow-md object-cover"
                     loading="lazy"
                     decoding="async"
-                    width={800}
-                    height={420}
+                    width={409}
+                    height={572}
                   />
                 </div>
 
