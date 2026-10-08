@@ -35,25 +35,14 @@ const Disclaimer = () => {
           <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md prose max-w-none">
             <h1 className="text-2xl font-bold mb-6 text-ruler-primary">Impressum & Haftungsausschluss</h1>
 
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Angaben gemäß § 5 DDG</h2>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Anbieter und Kontakt</h2>
             <p>
-              [NAME]<br />
-              [STRASSE]<br />
-              [PLZ ORT]
-            </p>
-
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Kontakt</h2>
-            <p>
-              Telefon: [TELEFON]<br />
+              Website: <a href="https://www.lineal.onl">Lineal.online</a><br />
               E-Mail: <a href="mailto:info@lineal.onl">info@lineal.onl</a>
             </p>
-
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Verantwortlich für den Inhalt</h2>
             <p>
-              Verantwortlich gemäß § 18 Abs. 2 MStV:<br />
-              [NAME]<br />
-              [STRASSE]<br />
-              [PLZ ORT]
+              Fragen zur Website, zu redaktionellen Inhalten oder zu Messfunktionen können per E-Mail an die
+              Redaktion von Lineal.online gerichtet werden.
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Haftungsausschluss</h2>
