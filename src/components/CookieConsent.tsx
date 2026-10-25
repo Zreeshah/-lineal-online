@@ -21,7 +21,6 @@ declare global {
   }
 }
 
-const ADSENSE_SCRIPT_ID = 'lineal-adsense';
 const MONETAG_SCRIPT_ID = 'lineal-monetag';
 
 const statusAllowsLoading = (status: number, statuses?: Record<string, number>) => {
@@ -35,15 +34,6 @@ const statusAllowsLoading = (status: number, statuses?: Record<string, number>) 
 };
 
 const loadAdvertisingScripts = () => {
-  if (!document.getElementById(ADSENSE_SCRIPT_ID)) {
-    const adsense = document.createElement('script');
-    adsense.id = ADSENSE_SCRIPT_ID;
-    adsense.async = true;
-    adsense.crossOrigin = 'anonymous';
-    adsense.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6218065184548996';
-    document.head.appendChild(adsense);
-  }
-
   if (!document.getElementById(MONETAG_SCRIPT_ID)) {
     const monetag = document.createElement('script');
     monetag.id = MONETAG_SCRIPT_ID;

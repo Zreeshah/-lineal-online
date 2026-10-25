@@ -89,21 +89,18 @@ const Privacy = () => {
               Anbieter, verarbeitete Daten und Speicherdauer ergänzt.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">6. Werbung: Google AdSense und Monetag</h2>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">6. Werbung: Monetag</h2>
             <p>
-              Nach Einwilligung können Google AdSense (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
-              Irland) und Monetag (betrieben durch Unternehmen der Propeller-Ads-Gruppe) geladen werden. Beide Dienste
-              können Cookies, vergleichbare Kennungen, IP-Adresse, Geräte- und Browserdaten, ungefähren Standort sowie
-              Informationen über Seitenaufrufe und Anzeigeninteraktionen verarbeiten. Diese Daten können für
-              Anzeigenbereitstellung, Reichweitenmessung, Betrugsprävention und – sofern ausgewählt – personalisierte
-              Werbung verwendet werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO.
+              Nach Einwilligung kann Monetag (betrieben durch Unternehmen der Propeller-Ads-Gruppe) geladen werden.
+              Der Dienst kann Cookies, vergleichbare Kennungen, IP-Adresse, Geräte- und Browserdaten sowie ungefähren
+              Standort und Informationen über Seitenaufrufe und Anzeigeninteraktionen verarbeiten. Die Daten können zur
+              Anzeigenbereitstellung und -messung, Betrugsprävention und – sofern ausgewählt – personalisierter Werbung
+              verwendet werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO.
             </p>
             <p>
               Eine Verarbeitung oder Übermittlung in Drittländer kann nicht ausgeschlossen werden. Weitere
-              Informationen bieten die{' '}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Datenschutzhinweise von Google</a>,
-              die <a href="https://monetag.com/privacy/" target="_blank" rel="noreferrer">Datenschutzhinweise von Monetag</a>{' '}
-              und die <a href="https://adssettings.google.com/partnerads" target="_blank" rel="noreferrer">Google-Einstellungen für Anzeigen auf Partnerseiten</a>.
+              Weitere Informationen bieten die{' '}
+              <a href="https://monetag.com/privacy/" target="_blank" rel="noreferrer">Datenschutzhinweise von Monetag</a>.
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">7. Speicherdauer</h2>
