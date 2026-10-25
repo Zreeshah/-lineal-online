@@ -60,7 +60,7 @@ const applyConsent = () => {
 
   window.gtag?.('consent', 'update', consent);
 
-  if (Object.values(consent).every((value) => value === 'granted')) {
+  if (consent.ad_storage === 'granted') {
     loadAdvertisingScripts();
   }
 };
