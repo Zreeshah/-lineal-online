@@ -91,7 +91,7 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">6. Werbung: Monetag</h2>
             <p>
-              Nach Einwilligung kann Monetag (betrieben durch Unternehmen der Propeller-Ads-Gruppe) geladen werden.
+              Das Monetag-Skript (betrieben durch Unternehmen der Propeller-Ads-Gruppe) wird im Seitenkopf geladen.
               Der Dienst kann Cookies, vergleichbare Kennungen, IP-Adresse, Geräte- und Browserdaten sowie ungefähren
               Standort und Informationen über Seitenaufrufe und Anzeigeninteraktionen verarbeiten. Die Daten können zur
               Anzeigenbereitstellung und -messung, Betrugsprävention und – sofern ausgewählt – personalisierter Werbung
@@ -99,7 +99,7 @@ const Privacy = () => {
             </p>
             <p>
               Eine Verarbeitung oder Übermittlung in Drittländer kann nicht ausgeschlossen werden. Weitere
-              Weitere Informationen bieten die{' '}
+              Informationen bieten die{' '}
               <a href="https://monetag.com/privacy/" target="_blank" rel="noreferrer">Datenschutzhinweise von Monetag</a>.
             </p>
 

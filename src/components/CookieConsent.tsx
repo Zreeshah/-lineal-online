@@ -21,8 +21,6 @@ declare global {
   }
 }
 
-const MONETAG_SCRIPT_ID = 'lineal-monetag';
-
 const statusAllowsLoading = (status: number, statuses?: Record<string, number>) => {
   if (!statuses) return status === 1 || status === 3 || status === 4;
 
@@ -31,18 +29,6 @@ const statusAllowsLoading = (status: number, statuses?: Record<string, number>) 
     statuses.CONSENT_MODE_PURPOSE_STATUS_NOT_APPLICABLE,
     statuses.CONSENT_MODE_PURPOSE_STATUS_NOT_CONFIGURED,
   ].includes(status);
-};
-
-const loadAdvertisingScripts = () => {
-  if (!document.getElementById(MONETAG_SCRIPT_ID)) {
-    const monetag = document.createElement('script');
-    monetag.id = MONETAG_SCRIPT_ID;
-    monetag.async = true;
-    monetag.dataset.zone = '291122';
-    monetag.dataset.cfasync = 'false';
-    monetag.src = 'https://quge5.com/88/tag.min.js';
-    document.head.appendChild(monetag);
-  }
 };
 
 const applyConsent = () => {
@@ -59,10 +45,6 @@ const applyConsent = () => {
   };
 
   window.gtag?.('consent', 'update', consent);
-
-  if (consent.ad_storage === 'granted') {
-    loadAdvertisingScripts();
-  }
 };
 
 const CookieConsent = () => {
