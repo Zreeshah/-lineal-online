@@ -249,7 +249,7 @@ const Ruler: React.FC<RulerProps> = ({ className }) => {
                     placeholder={t('screenSize') || ""}
                   />
                   <Button type="submit" size="sm" className="h-8 bg-[#9b87f5] hover:bg-[#7E69AB]">
-                    OK
+                    Übernehmen
                   </Button>
                 </form>
               </div>

@@ -37,8 +37,17 @@ const Disclaimer = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">Anbieter und Kontakt</h2>
             <p>
-              Website: <a href="https://www.lineal.onl">Lineal.online</a><br />
-              E-Mail: <a href="mailto:info@lineal.onl">info@lineal.onl</a>
+              Sabine T Fenstermacher<br />
+              Inge Beisheim Platz 111<br />
+              23942 Barendorf<br />
+              Mecklenburg-Vorpommern
+            </p>
+            <p>
+              E-Mail: <a href="mailto:info@lineal.onl">info@lineal.onl</a><br />
+              Website: <a href="https://www.lineal.onl">Lineal.online</a>
+            </p>
+            <p>
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Sabine T Fenstermacher
             </p>
             <p>
               Fragen zur Website, zu redaktionellen Inhalten oder zu Messfunktionen können per E-Mail an die

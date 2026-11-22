@@ -125,7 +125,7 @@ const LinealDrucken: React.FC = () => {
                 Öffnen Sie die gewünschte PDF in einem PDF-Programm oder direkt im Browser. Wählen Sie im Druckdialog
                 exakt das Papierformat der Datei und stellen Sie die Skalierung auf <strong>100 %</strong> oder
                 <strong> „Tatsächliche Größe“</strong>. Optionen wie „An Seite anpassen“, „Einpassen“, „Verkleinern“
-                oder „Fit to page“ müssen deaktiviert bleiben, weil sie die physische Länge der Skala verändern.
+                müssen deaktiviert bleiben, weil sie die physische Länge der Skala verändern.
               </p>
 
               <ol className="mt-6 space-y-4 border-l-2 border-purple-200 pl-6 text-gray-700">

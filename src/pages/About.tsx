@@ -47,6 +47,16 @@ const About = () => {
                 Kalibrierung und typische Anwendungen. Die Nutzung der Grundfunktionen ist kostenlos.
               </p>
 
+              <h2>Wer betreibt Lineal.online?</h2>
+              <p>
+                Hinter Lineal.online steht Sabine T Fenstermacher. Sie betreibt die Website und ist für die
+                Redaktion verantwortlich: Sie prüft die Messanleitungen, die Kalibrierungshinweise und die
+                Umrechnungsbeiträge und entwickelt das Online-Lineal weiter. Fragen zur Website richten Sie
+                bitte an{' '}
+                <a href="mailto:info@lineal.onl">info@lineal.onl</a> oder nutzen Sie die{' '}
+                <a href="/kontakt">Kontaktseite</a>.
+              </p>
+
               <h2>Warum eine Kalibrierung notwendig ist</h2>
               <p>
                 Browser kennen zunächst nur Pixel. Ein Pixel hat jedoch nicht auf jedem Bildschirm dieselbe physische

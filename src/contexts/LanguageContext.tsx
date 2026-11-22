@@ -33,7 +33,7 @@ const translations = {
     howToUseStep1: '1. Kalibrieren Sie das Online-Lineal mit einer der verfügbaren Methoden',
     howToUseStep2: '2. Wählen Sie Ihre bevorzugte Maßeinheit (cm, mm oder Zoll)',
     howToUseStep3: '3. Ändern Sie die Ausrichtung des digitalen Lineals nach Bedarf',
-    howToUseStep4: '4. Bewegen Sie das Lineal in Originalgröße per Drag & Drop über den Bildschirm',
+    howToUseStep4: '4. Bewegen Sie das Lineal in Originalgröße durch Ziehen über den Bildschirm',
     whyPerfectItem1: 'Referenzabgleich: Die Skala wird an den verwendeten Bildschirm angepasst',
     whyPerfectItem2: 'Gerätewechsel: Auf jedem neuen Display ist eine eigene Kontrolle nötig',
     whyPerfectItem3: 'Ablesung: Objektkante, Nullmarke und Blickwinkel müssen übereinstimmen',

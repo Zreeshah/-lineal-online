@@ -20,29 +20,11 @@ const HomepageMeasurementGuide: React.FC = () => (
         Viele Suchbegriffe beschreiben dasselbe Werkzeug, setzen aber unterschiedliche Schwerpunkte. Entscheidend
         ist nicht die Bezeichnung, sondern ob die Skala auf dem verwendeten Bildschirm kalibriert wurde.
       </p>
-      <ul>
-        <li>
-          <strong>Auf dem Smartphone:</strong> Die Formulierungen <strong>lineal 10 cm handy</strong>,{' '}
-          <strong>lineal online handy</strong>, <strong>lineal handy</strong>, <strong>maßband handy ohne app</strong>,{' '}
-          <strong>lineal online handy cm</strong>, <strong>maßband handy</strong>, <strong>handy lineal</strong>,{' '}
-          <strong>10 cm maßband handy</strong>, <strong>5 cm auf handy anzeigen</strong>,{' '}
-          <strong>10cm auf handy anzeigen</strong>, <strong>zentimetermaß handy</strong>, <strong>cm maß handy</strong>{' '}
-          und <strong>lineal auf handy</strong> meinen eine Skala, die direkt im mobilen Browser erscheint.
-        </li>
-        <li>
-          <strong>Allgemeine Messhilfe:</strong> <strong>lineal online</strong>, <strong>maßband online</strong>,{' '}
-          <strong>online maßband</strong>, <strong>lineal digital</strong>, <strong>digitales lineal</strong>,{' '}
-          <strong>metermaß online</strong>, <strong>lineal anzeigen</strong>, <strong>online-lineal</strong>,{' '}
-          <strong>metermaß online kostenlos</strong>, <strong>maßband online cm</strong> und{' '}
-          <strong>maßband cm online</strong> stehen für browserbasierte Messhilfen in verschiedenen Einheiten.
-        </li>
-        <li>
-          <strong>Darstellung in realer Größe:</strong> Bei <strong>lineal online originalgröße</strong>,{' '}
-          <strong>lineal in originalgröße</strong>, <strong>online-lineal cm originalgröße</strong> und{' '}
-          <strong>lineal echtgröße</strong> kommt es besonders auf
-          den Referenzabgleich an. Auch <strong>zentimetermaß anzeigen</strong> setzt eine passende Skalierung voraus.
-        </li>
-      </ul>
+      <p>
+        Auf dem Smartphone, auf dem Tablet und am Computer zeigt das Online-Lineal die Skala direkt im
+        Browser — nach der Kalibrierung in Zentimetern, Millimetern oder Zoll. Entscheidend ist nicht die
+        Bezeichnung, sondern ob die Skala auf dem verwendeten Bildschirm kalibriert wurde.
+      </p>
 
       <h2>Kalibrieren mit der Bankkarte oder Bildschirmdiagonale</h2>
       <p>
@@ -84,20 +66,11 @@ const HomepageMeasurementGuide: React.FC = () => (
 
       <h3>Konkrete Längen auf dem Bildschirm</h3>
       <p>
-        Bei kleinen Referenzmaßen geht es meist darum, eine bestimmte Strecke sichtbar zu machen. Dazu gehören{' '}
-        <strong>1 cm anzeigen</strong>, <strong>1 cm originalgröße</strong>, <strong>2 cm anzeigen</strong>,{' '}
-        <strong>2 cm originalgröße</strong>, <strong>3 cm anzeigen</strong>, <strong>3 cm originalgröße</strong>,{' '}
-        <strong>5 cm anzeigen lineal</strong>, <strong>5 cm originalgröße</strong>,{' '}
-        <strong>6 cm originalgröße</strong> und <strong>7 cm anzeigen</strong>. Schreibweisen wie{' '}
-        <strong>2 5 cm anzeigen</strong> meinen in der Regel 2,5 cm.
-      </p>
-      <p>
-        Für längere Strecken werden <strong>10 cm</strong>, <strong>10 cm anzeigen</strong>,{' '}
-        <strong>10cm anzeigen</strong>, <strong>10 centimeter</strong>, <strong>10 cm originalgröße</strong>,{' '}
-        <strong>lineal 10 cm originalgröße</strong>, <strong>lineal 10 cm online</strong>,{' '}
-        <strong>lineal 15 cm online</strong> oder <strong>lineal 20 cm originalgröße</strong> verwendet. Diese
-        Angaben sind nur dann physisch verlässlich, wenn der Browserzoom unverändert bleibt und die Skala zuvor
-        mit einer bekannten Länge abgeglichen wurde.
+        Kleine Strecken von einem bis sieben Zentimetern lassen sich direkt an der Skala ablesen, längere
+        Strecken von zehn, fünfzehn oder zwanzig Zentimetern in Teilabschnitten. Schreibweisen mit Komma,
+        zum Beispiel 2,5 cm, meinen dieselbe Strecke wie die ausgeschriebene Form. Alle Angaben sind nur
+        dann physisch verlässlich, wenn der Browserzoom unverändert bleibt und die Skala zuvor mit einer
+        bekannten Länge abgeglichen wurde.
       </p>
 
       <h2>Häufige Fehler</h2>
