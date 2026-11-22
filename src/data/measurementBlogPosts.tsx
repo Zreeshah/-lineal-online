@@ -1,6 +1,7 @@
 import React from 'react';
 import type { BlogPostData } from './blogPosts';
 import { retiredBlogPostSlugs } from './blogRouting';
+import { LegacyArticleSupplement } from './legacyBlogSupplements';
 
 type Topic = {
   kind?: 'measurement' | 'conversion' | 'comparison';
@@ -579,6 +580,7 @@ const ConversionArticleShell = ({ topic }: { topic: Topic }) => (
       Für <strong>cm in mm</strong> genügt eine feste Regel: Zentimeter mal 10. Schreiben Sie die Einheit zum Wert
       und prüfen Sie Dezimalzahlen kurz durch die Rückrechnung.
     </p>
+    <LegacyArticleSupplement slug={topic.slug} />
   </article>
 );
 
@@ -660,6 +662,7 @@ const ComparisonArticleShell = ({ topic }: { topic: Topic }) => (
       Für kurze, gerade Messungen ist ein Online-Lineal meist der schnellere Einstieg. Eine App lohnt sich vor allem
       für benötigte Zusatzfunktionen; wichtige Maße sollten unabhängig von der Variante kontrolliert werden.
     </p>
+    <LegacyArticleSupplement slug={topic.slug} />
   </article>
 );
 
@@ -788,6 +791,7 @@ const MeasurementArticleShell = ({ topic }: { topic: Topic }) => (
       für dieses Thema beschriebenen Schritte, prüfen Sie die Skala bei physischen Messungen und wechseln Sie bei engen
       Toleranzen zu einem geeigneten Messgerät.
     </p>
+    <LegacyArticleSupplement slug={topic.slug} />
   </article>
 );
 

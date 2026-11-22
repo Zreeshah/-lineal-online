@@ -650,7 +650,7 @@ const allBlogPosts: BlogPostData[] = [
     heroAlt: 'Lineal 30 cm online – Schullineal im Browser',
     content: (
       <Section>
-        <h1>Lineal 30 cm online – das Schullineal digital</h1>
+        <h1>Lineal 30 cm online – das digitale Schullineal</h1>
         <p className="lead">
           Das klassische 30-cm-Lineal ist in Schule, Studium und Büro verbreitet. Ein <strong>lineal online</strong>{' '}
           kann eine vollständige 30-cm-Skala anzeigen, wenn die nutzbare Bildschirmbreite ausreicht und die Anzeige

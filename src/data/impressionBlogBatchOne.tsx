@@ -336,7 +336,6 @@ export const impressionBlogBatchOne: BlogPostData[] = [
         <h3>Soll ein Messwert in cm oder mm notiert werden?</h3>
         <p>Für kurze Objekte ist Millimeter meist eindeutiger. 7,4 cm und 74 mm sind gleich, doch 74 mm lässt den abgelesenen Teilstrich klar erkennen.</p>
 
-        <h2>One Last Thing.</h2>
         <p>
           Vor dem Ablesen lohnt sich ein kurzer Kontrollblick auf Anfang, Ende und Augenposition. Der beste letzte Tipp:
           dieselbe Strecke ein zweites Mal messen, ohne sich am ersten Ergebnis zu orientieren.
@@ -511,7 +510,6 @@ export const impressionBlogBatchOne: BlogPostData[] = [
         <h3>Muss nach jedem Seitenaufruf neu kalibriert werden?</h3>
         <p>Nicht zwingend. Nach Änderungen an Zoom, Display-Skalierung, Browser, Gerät oder Ausrichtung sollte die Referenz jedoch erneut geprüft werden.</p>
 
-        <h2>One Last Thing.</h2>
         <h3>Fazit zu Lineal online 20 cm</h3>
         <p>
           Die Zahl 20 auf dem Bildschirm ist erst dann ein echtes Maß, wenn die Strecke geprüft wurde. Als letzter Test
@@ -687,7 +685,6 @@ export const impressionBlogBatchOne: BlogPostData[] = [
         <h3>Warum passt dieselbe Größe bei breiten Ringen anders?</h3>
         <p>Eine breite Schiene berührt mehr Hautfläche und kann sich enger anfühlen. Deshalb sollte die Anprobe eine ähnliche Ringbreite verwenden.</p>
 
-        <h2>One Last Thing.</h2>
         <h3>Fazit zu Ring mit Lineal messen</h3>
         <p>
           Ein sauber gemessener Innendurchmesser grenzt die passende Größe gut ein, ersetzt aber keine Anprobe. Der
@@ -861,7 +858,6 @@ export const impressionBlogBatchOne: BlogPostData[] = [
         <h3>Wie lang darf ein Objekt für die Abschnittsmethode sein?</h3>
         <p>Es gibt keine feste Grenze, doch mit jeder zusätzlichen Teilstrecke steigt die Unsicherheit. Für deutlich längere Objekte ist ein durchgehendes Rollmaßband effizienter.</p>
 
-        <h2>One Last Thing.</h2>
         <h3>Fazit zu Maßband online in cm</h3>
         <p>
           Teilstrecken funktionieren nur mit sauberen Übergängen und einer nachvollziehbaren Rechnung. Der letzte Tipp:
