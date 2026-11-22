@@ -83,24 +83,19 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">5. Reichweitenanalyse</h2>
             <p>
-              Derzeit wird kein eigenständiger Reichweiten- oder Analysedienst eingesetzt. Sollte künftig ein solcher
-              Dienst aktiviert werden, erfolgt dies für Besucher mit anwendbaren europäischen Datenschutzvorgaben
-              erst nach Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Diese Erklärung wird vor der Aktivierung um
-              Anbieter, verarbeitete Daten und Speicherdauer ergänzt.
+              Zur Reichweitenanalyse wird Google Analytics 4 (Google Ireland Limited, Mess-ID G-902GNESFKH)
+              eingesetzt. Dabei können IP-Adresse, Geräte- und Browserdaten sowie Informationen über Seitenaufrufe
+              verarbeitet werden. Für Besucher mit anwendbaren europäischen Datenschutzvorgaben erfolgt die
+              Analyse erst nach Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO; bis dahin bleiben die
+              Consent-Mode-Signale auf „denied“ gesetzt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO.
             </p>
 
-            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">6. Werbung: Monetag</h2>
+            <h2 className="text-xl font-semibold mb-3 text-ruler-primary">6. Werbung</h2>
             <p>
-              Das Monetag-Skript (betrieben durch Unternehmen der Propeller-Ads-Gruppe) wird im Seitenkopf geladen.
-              Der Dienst kann Cookies, vergleichbare Kennungen, IP-Adresse, Geräte- und Browserdaten sowie ungefähren
-              Standort und Informationen über Seitenaufrufe und Anzeigeninteraktionen verarbeiten. Die Daten können zur
-              Anzeigenbereitstellung und -messung, Betrugsprävention und – sofern ausgewählt – personalisierter Werbung
-              verwendet werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO.
-            </p>
-            <p>
-              Eine Verarbeitung oder Übermittlung in Drittländer kann nicht ausgeschlossen werden. Weitere
-              Informationen bieten die{' '}
-              <a href="https://monetag.com/privacy/" target="_blank" rel="noreferrer">Datenschutzhinweise von Monetag</a>.
+              Derzeit wird kein Werbenetzwerk auf dieser Website geladen. Eine Anzeigenschaltung über Google
+              AdSense ist beantragt; Anzeigen werden erst nach einer Freigabe und nur nach Einwilligung gemäß
+              Art. 6 Abs. 1 lit. a DSGVO geladen. Diese Erklärung wird vor der Aktivierung um Anbieter,
+              verarbeitete Daten und Speicherdauer ergänzt.
             </p>
 
             <h2 className="text-xl font-semibold mb-3 text-ruler-primary">7. Speicherdauer</h2>
