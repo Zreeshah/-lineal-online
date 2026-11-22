@@ -451,7 +451,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
           Vorprüfung, nicht die Endkontrolle.
         </p>
 
-        <h2>Praktische Checkliste vor der Messung</h2>
+        <h2>Praktische Prüfliste vor der Messung</h2>
         <ul>
           <li>Ist die sichtbare Bildschirmbreite größer als 20 cm?</li>
           <li>Steht der Browserzoom auf 100 Prozent?</li>
@@ -461,7 +461,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
           <li>Kann die Oberfläche durch das Objekt beschädigt werden?</li>
         </ul>
 
-        <h2>Beispiel: vom schnellen Check zum belastbaren Wert</h2>
+        <h2>Beispiel: von der schnellen Prüfung zum belastbaren Wert</h2>
         <p>
           Ein Notizbuch soll höchstens 19 cm breit sein. Nach der Kartenkalibrierung liegt seine linke Kante bei 0,0 cm,
           die rechte bei 18,7 cm. Eine zweite Messung ergibt 18,8 cm. Für die Kaufentscheidung „unter 19 cm“ reicht das
@@ -627,7 +627,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
           Messung wählen.
         </p>
 
-        <h2>Praktische Checkliste vor der Messung</h2>
+        <h2>Praktische Prüfliste vor der Messung</h2>
         <ul>
           <li>Passt der ausgewählte Ring am richtigen Finger?</li>
           <li>Ist der Ring kreisförmig und nicht verformt?</li>
@@ -637,7 +637,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
           <li>Wurde der Wert nach einer Vierteldrehung kontrolliert?</li>
         </ul>
 
-        <h2>Beispiel: vom schnellen Check zum belastbaren Wert</h2>
+        <h2>Beispiel: von der schnellen Prüfung zum belastbaren Wert</h2>
         <p>
           Die erste Messung zeigt 18 mm, die zweite 18,5 mm. Statt den Mittelwert sofort zu verwenden, wird die Ursache
           gesucht. Der Ring lag beim ersten Versuch nicht mittig über der Skala. Nach sauberer Ausrichtung ergeben drei
@@ -788,7 +788,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
           Wände oder Möbel werden mit Rollmaßband oder Laser erfasst, weil häufiges Umsetzen Fehler summiert.
         </p>
 
-        <h2>Praktische Checkliste vor der Messung</h2>
+        <h2>Praktische Prüfliste vor der Messung</h2>
         <ul>
           <li>Ist das Objekt gerade und kann es flach ausgerichtet werden?</li>
           <li>Stimmen Nullmarke und gewählte Einheit?</li>
@@ -798,7 +798,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
           <li>Ist eine zweite Messung möglich, bevor die Marke entfernt wird?</li>
         </ul>
 
-        <h2>Beispiel: vom schnellen Check zum belastbaren Wert</h2>
+        <h2>Beispiel: von der schnellen Prüfung zum belastbaren Wert</h2>
         <p>
           Eine schmale Holzleiste ist länger als die sichtbare 20-cm-Skala. Der erste Abschnitt misst 20,0 cm und wird
           markiert. Der zweite Abschnitt misst ebenfalls 20,0 cm. Vom zweiten Übergang bis zum Ende bleiben 18,4 cm.
@@ -819,7 +819,7 @@ export const impressionBlogBatchOne: BlogPostData[] = [
             <tr><td>Postkarte oder Foto</td><td>direkt geeignet</td><td>nicht nötig</td></tr>
             <tr><td>60-cm-Leiste</td><td>abschnittsweise möglich</td><td>Rollmaßband bei Grenzmaß</td></tr>
             <tr><td>Flaschenumfang</td><td>nicht direkt geeignet</td><td>flexibles Maßband</td></tr>
-            <tr><td>Schraubendurchmesser</td><td>nur grober Check</td><td>Messschieber</td></tr>
+            <tr><td>Schraubendurchmesser</td><td>nur grobe Prüfung</td><td>Messschieber</td></tr>
           </tbody>
         </table>
 
